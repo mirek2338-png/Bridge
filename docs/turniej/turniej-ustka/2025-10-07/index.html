@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <title>Statystyki</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
-        header { background:#f2f2f2; padding:20px; text-align:center; border-bottom:1px solid #ddd; }
-        header h1 { margin:0; font-size:22px; }
-        nav { background:#ffffff; padding:10px; border-bottom:1px solid #ccc; text-align:center; }
-        nav a { text-decoration:none; color:#333; padding:6px 10px; border:1px solid #ccc; border-radius:4px; margin:0 5px; }
-        nav a:hover { background:#e8e8e8; }
-
-        .button-link {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #007BFF;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #0056b3;
-            transition: 0.3s;
-            margin: 5px;
-        }
-        .button-link:hover { background: #0056b3; }
-
-        .content { padding:20px; }
-        .back-top { margin: 15px; display: inline-block; font-weight: bold; }
-    </style>
+    <meta name="description" content="Strona ze statystykami - galeria, wyniki, historia i protokoły">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="../../../index.html" class="back-top" aria-label="Powrót do strony głównej">← Powrót</a>
 
-    <!-- POWRÓT -->
-    <a href="../../../index.html" class="back-top">← Powrót</a>
-
-<header>
-    <h1>Statystyki</h1>
-</header>
-
+    <header role="banner">
+        <h1>Statystyki</h1>
+    </header>
     
-<nav>
-    <a href="index.html">Galeria</a>
-    <a href="0710F.html">Długa fala</a>
-    <a href="Wyniki.html">Wyniki</a>
-    <a href="Historia.html">Historia</a>
-    <a href="Protokoły.html">Protokoły</a>
-</nav>
+    <nav role="navigation" aria-label="Główne menu">
+        <a href="index.html">Galeria</a>
+        <a href="0710F.html">Długa fala</a>
+        <a href="Wyniki.html">Wyniki</a>
+        <a href="Historia.html">Historia</a>
+        <a href="Protokoły.html">Protokoły</a>
+    </nav>
 
+    <main role="main" class="content">
+        <section>
+            <h2>Witamy w dziale Statystyki</h2>
+            <p>Wybierz interesującą Cię sekcję z menu powyżej.</p>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2023 Statystyki. Wszelkie prawa zastrzeżone.</p>
+    </footer>
 </body>
 </html>

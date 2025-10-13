@@ -2,35 +2,80 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Statystyki</title>
+    <title>Statystyki — Turniej Ustka 2025-10-07</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Strona ze statystykami - galeria, wyniki, historia i protokoły">
+    <!-- Jeśli masz lokalny styles.css w tym katalogu, poniższy link go użyje.
+         Dodatkowo poniżej znajduje się minimalny style fallback inline -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Minimalny, samowystarczalny styl (fallback, działa gdy styles.css zwraca 404) */
+      :root{
+        --bg:#f8f9fa; --card:#fff; --text:#222; --accent:#0d6efd;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        font-family:system-ui,Segoe UI,Roboto,Arial;
+        background:var(--bg);
+        color:var(--text);
+        padding:1rem;
+        -webkit-font-smoothing:antialiased;
+      }
+      .container{max-width:980px;margin:0 auto}
+      .back-top{display:inline-block;margin-bottom:.5rem;color:#444;text-decoration:none}
+      header h1{margin:.25rem 0 .5rem 0;font-size:1.4rem}
+      nav{display:flex;flex-wrap:wrap;gap:.5rem;margin: .5rem 0 1rem 0}
+      nav a{
+        display:inline-block;padding:.45rem .75rem;
+        background:var(--card);border:1px solid #dcdcdc;border-radius:6px;
+        color:var(--accent);text-decoration:none;font-weight:600;
+      }
+      nav a:hover{background:#f1f5ff}
+      main.content{background:var(--card);padding:1rem;border-radius:8px;border:1px solid #e6e6e6}
+      footer{margin-top:1rem;font-size:.9rem;color:#666}
+      .note{font-size:.95rem;color:#333}
+      .links-list{margin-top:.5rem}
+      .links-list a{display:block;padding:.35rem 0;color:var(--text);text-decoration:none}
+      .links-list a:hover{text-decoration:underline}
+    </style>
 </head>
 <body>
-    <a href="../index.html">← Powrót</a>
+  <div class="container">
+    <a href="../../../index.html" class="back-top" aria-label="Powrót do strony głównej">← Powrót</a>
 
     <header role="banner">
-        <h1>Statystyki</h1>
+      <h1>Statystyki — Turniej Ustka (2025-10-07)</h1>
     </header>
-    
+
     <nav role="navigation" aria-label="Główne menu">
-        <a href="index.html">Galeria</a>
-        <a href="0710F.html">Długa fala</a>
-        <a href="Wyniki.html">Wyniki</a>
-        <a href="Historia.html">Historia</a>
-        <a href="Protokoły.html">Protokoły</a>
+        <!-- Normalizowane nazwy plików: używaj ASCII i małych liter, aby uniknąć 404 -->
+        <a href="gallery.html">Galeria</a>
+        <a href="dluga-fala.html">Długa fala</a>
+        <a href="wyniki.html">Wyniki</a>
+        <a href="historia.html">Historia</a>
+        <a href="protokoly.html">Protokoły</a>
     </nav>
 
     <main role="main" class="content">
         <section>
             <h2>Witamy w dziale Statystyki</h2>
-            <p>Wybierz interesującą Cię sekcję z menu powyżej.</p>
+            <p class="note">Wybrałeś sekcję z menu powyżej. Jeśli któryś link zwraca 404, utwórz plik o podanej niżej nazwie w tym samym katalogu lub zaktualizuj odnośnik w tym pliku.</p>
+
+            <div class="links-list" aria-hidden="false">
+              <a href="gallery.html">Galeria — gallery.html</a>
+              <a href="dluga-fala.html">Długa fala — dluga-fala.html</a>
+              <a href="wyniki.html">Wyniki — wyniki.html</a>
+              <a href="historia.html">Historia — historia.html</a>
+              <a href="protokoly.html">Protokoły — protokoly.html</a>
+            </div>
         </section>
     </main>
 
     <footer role="contentinfo">
         <p>&copy; 2023 Statystyki. Wszelkie prawa zastrzeżone.</p>
     </footer>
+  </div>
 </body>
 </html>

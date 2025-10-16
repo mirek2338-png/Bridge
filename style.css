@@ -1,0 +1,42 @@
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: #f2f5f7;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.tile {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #0b3d91;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform .2s, box-shadow .2s;
+    background: white;
+}
+.tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #0b3d91;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.back-btn:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

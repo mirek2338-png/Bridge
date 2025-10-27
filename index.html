@@ -5,6 +5,22 @@
     <title>Turnieje Ustka</title>
     
 <style>
+.naglowek-kontener {
+    display: flex;
+    align-items: center;  /* wyrównanie w pionie */
+    gap: 60px;  /* odstęp między h1 a tekstem */
+}
+
+.tekst-obok {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.2;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    height: 100%;  /* dopasuje się do wysokości h1 */
+}
 .turniej-blok {
     background: #ffffff;
     padding: 15px;
@@ -32,6 +48,11 @@
     flex: 1 1 calc(50% - 8px); /* two per row on mobile */
     text-align: center;
 }
+.btn-odstep {
+    margin-left: 40px !important;  /* większy odstęp od innych przycisków */
+}
+
+
 @media (min-width: 600px) {
     .przyciski .btn {
         flex: none; /* inline on desktop */
@@ -46,7 +67,13 @@
 </head>
 <body>
     
-<h1>📅 Turnieje Ustka</h1>
+<div class="naglowek-kontener">
+    <h1>📅 Nasz brydż Ustka</h1>
+    <div class="tekst-obok">
+        <div>Prezes: Leszek Dunia kom.602 478 116 mail: leszek.dunia@onet.eu </div>
+        <div>Admin:  Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
+    </div>
+</div>
 
 <div class="turniej-blok">
     <div class="data-turnieju">📆 Turniej 2025-10-28</div>
@@ -55,6 +82,7 @@
         <a href="1028UH.html" class="btn">Historia</a>
         <a href="1028UF.html" class="btn">Długa Fala</a>
         <a href="1028UP.html" class="btn">Protokóły</a>
+        <a href="1028Uinfo.txt" class="btn btn-odstep">Info</a>
     </div>
 </div>
         

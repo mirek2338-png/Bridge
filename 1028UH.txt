@@ -398,46 +398,7 @@ PRZECIWNICY                                 ROZD. LINIA   ZAPIS      %
                                                                    ------
                                                          RAZEM    143.00
                                                                 %= 66.20
-6 jesienne GP ustki
-28 pazdziernika 2025
-
-WYNIKI PARY NR 1  I Skotnicki-W Sypiański           PM   
-
-PRZECIWNICY                                 ROZD. LINIA   ZAPIS      %
--------------------------------------------------------__ns___ew__-------
-   4 J Lange-W Rudnicki            8.0 PM       1  NS         -90   0.00
-                                                2  NS   +110        2.00
-                                                3  NS   +170        5.00
-   3 S Pawlęty-R Jaruga            5.0 PM       4  EW   -600        5.00
-                                                5  EW   -140        2.00
-                                                6  EW   -480        3.00
-  10 M Tomczewska-W Król          11.0 PM       7  EW   -110        2.00
-                                                8  EW   -430        4.00
-                                                9  EW   -800        0.00
-   6 B Dyk-O Jackiewicz           15.0 PM      10  EW        +140   6.00
-                                               11  EW   -110        4.00
-                                               12  EW    -50        4.00
-   9 L Chybowski-J Dymnicki        1.5 PM      13  EW   -100        6.00
-                                               14  EW         +50   6.00
-                                               15  EW    -50        2.00
-   2 E Kanigowska-L Kanigowski     2.0 PM      16  NS   +140        5.00
-                                               17  NS        -140   0.00
-                                               18  NS        -450   4.00
-   7 Ł Gackowski-M Baj             4.0 PM      19  EW   -590        0.00
-                                               20  EW   -630        2.00
-                                               21  EW        +130   5.00
-   5 A Rychły-Lipińska-Z Rychły    2.5 PM      22  NS   +200        7.00
-                                               23  NS        -630   0.00
-                                               24  NS        -420   7.00
-   8 K Drobiniak-Całka-M Całka     8.0 PM      25  NS   +460        5.00
-                                               26  NS   +100        8.00
-                                               27  NS    +50        8.00
-                                                                   ------
-                                                         WYNIK    102.00
-                                                           +/-      0.00
-                                                                   ------
-                                                         RAZEM    102.00
-                                                                %= 47.22
+
 
 
 

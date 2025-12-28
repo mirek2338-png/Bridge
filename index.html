@@ -3,175 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Turnieje Ustka</title>
-    
-<style>
-.naglowek-kontener {
-    display: flex;
-    align-items: center;  /* wyrównanie w pionie */
-    gap: 60px;  /* odstęp między h1 a tekstem */
-}
+    <link rel="stylesheet" href="css/style.css">
 
-.tekst-obok {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 1.2;
-    border-left: 2px solid #ccc;
-    padding-left: 20px;
-    height: 100%;  /* dopasuje się do wysokości h1 */
-}
-.turniej-blok {
-    background: #ffffff;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.data-turnieju {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-.przyciski {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-.przyciski .btn {
-    padding: 10px 14px;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: #f5f5f5;
-    flex: 1 1 calc(50% - 8px); /* two per row on mobile */
-    text-align: center;
-}
-.btn-odstep {
-    margin-left: 40px !important;  /* większy odstęp od innych przycisków */
-}
-
-
-@media (min-width: 600px) {
-    .przyciski .btn {
-        flex: none; /* inline on desktop */
-    }
-}
-.powrot {
-    margin-bottom: 15px;
-    display: inline-block;
-}
-</style>
 
 </head>
 <body>
     
 <div class="naglowek-kontener">
+	<!--
+   <div class="naglowek-lewy">
+   -->
     <h1>📅 Nasz brydż Ustka</h1>
+    <!--
+    <div class="qr-kontener">
+            <img src="asset/image/QR.png" alt="QR Code do strony" class="qr-code">
+            <div class="qr-tekst">Zeskanuj kod QR<br>aby zapisać stronę</div>
+        
+        </div>
+    </div>
+-->
     <div class="tekst-obok">
-        <div>Prezes: Leszek Dunia kom.602 478 116 mail: leszek.dunia@onet.eu </div>
-        <div>Admin:  Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
+        <div>Prezes:   Leszek Dunia    kom.602 478 116 mail: leszek.dunia@onet.eu </div>
+        <div>Skarbnik: Jarek Dymnicki  kom.607 884 489 mail: jard1212@wp.pl </div>
+        <div>Admin:    Mirek Całka     kom.797 802 411 mail: mirek2338@gmail.com</div>
+        <div>Admin:    Olga Jackiewicz kom.797 802 411 mail: olga.jackiewicz@gmail.com</div>
+
+    </div>
+</div>
+       <div class="turniej-blok">
+    <div class="data-turnieju">📆 Turniej 2026-01-13</div>
+    <div class="przyciski">
+        <a href="turnieje/0114UW.txt" class="btn">Wyniki</a>
+        <a href="turnieje/0113UH.txt" class="btn">Historia</a>
+        <a href="turnieje/0113UF.html" class="btn">Długa Fala</a>
+        <a href="turnieje/0114UP.txt" class="btn">Protokóły</a>
+        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
+        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
+        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
     </div>
 </div>
         <div class="turniej-blok">
     <div class="data-turnieju">📆 Turniej 2025-12-16</div>
     <div class="przyciski">
-        <a href="1216UW.txt" class="btn">Wyniki</a>
-        <a href="1216UH.txt" class="btn">Historia</a>
-        <a href="1209UF.html" class="btn">Długa Fala</a>
-        <a href="1216UP.txt" class="btn">Protokóły</a>
-        <a href="InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>   
+        <a href="turnieje/1216UW.txt" class="btn">Wyniki</a>
+        <a href="turnieje/1216UH.txt" class="btn">Historia</a>
+        <a href="turnieje/1209UF.html" class="btn">Długa Fala</a>
+        <a href="turnieje/1216UP.txt" class="btn">Protokóły</a>
+        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
+        <a href="shared/Reg6je.txt" class="btn">Regulamin</a>
+        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
     </div>
 </div>
-        <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-12-09</div>
-    <div class="przyciski">
-        <a href="1209UW.txt" class="btn">Wyniki</a>
-        <a href="1209UH.txt" class="btn">Historia</a>
-        <a href="1209UF.html" class="btn">Długa Fala</a>
-        <a href="1209UP.txt" class="btn">Protokóły</a>
-        <a href="InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>      
-    </div>
-</div>
-
-        <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-12-02</div>
-    <div class="przyciski">
-        <a href="1202UW.txt" class="btn">Wyniki</a>
-        <a href="1202UH.txt" class="btn">Historia</a>
-        <a href="1202UF.html" class="btn">Długa Fala</a>
-        <a href="1202UP.txt" class="btn">Protokóły</a>
-        <a href="InU1030.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>      
-    </div>
-</div>
-
-    <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-11-25</div>
-    <div class="przyciski">
-        <a href="1125UW.txt" class="btn">Wyniki</a>
-        <a href="1125UH.txt" class="btn">Historia</a>
-        <a href="1125UF.html" class="btn">Długa Fala</a>
-        <a href="1125UP.txt" class="btn">Protokóły</a>
-        <a href="InU1030.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>      
-    </div>
-</div>
-    
-<div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-11-18</div>
-    <div class="przyciski">
-        <a href="1118UW.txt" class="btn">Wyniki</a>
-        <a href="1118UH.txt" class="btn">Historia</a>
-        <a href="1118UF.html" class="btn">Długa Fala</a>
-        <a href="1118UP.txt" class="btn">Protokóły</a>
-        <a href="InU1030.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>      
-    </div>
-</div>
-    
-<div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-11-04</div>
-    <div class="przyciski">
-        <a href="1104UW.txt" class="btn">Wyniki</a>
-        <a href="1104UH.txt" class="btn">Historia</a>
-        <a href="1104UF.html" class="btn">Długa Fala</a>
-        <a href="1104UP.txt" class="btn">Protokóły</a>
-        <a href="InU1030.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-        <a href="Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
-    </div>
-</div>
-
-<div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-10-28</div>
-    <div class="przyciski">
-        <a href="1028UW.txt" class="btn">Wyniki</a>
-        <a href="1028UH.txt" class="btn">Historia</a>
-        <a href="1028UF.html" class="btn">Długa Fala</a>
-        <a href="1028UP.txt" class="btn">Protokóły</a>
-        <a href="InU1030.txt" class="btn btn-odstep">Info</a>
-        <a href="Reg6je.txt" class="btn">Regulamin</a>
-    </div>
-</div>
-        
-<div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-10-21</div>
-    <div class="przyciski">
-        <a href="1021UW.html" class="btn">Wyniki</a>
-        <a href="1021UH.html" class="btn">Historia</a>
-        <a href="1021UF.html" class="btn">Długa Fala</a>
-        <a href="1021UP.html" class="btn">Protokóły</a>
-    </div>
-</div>    
+ 
 
 </body>
 </html>

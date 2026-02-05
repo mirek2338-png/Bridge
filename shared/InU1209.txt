@@ -1,0 +1,57 @@
+	Oto historia jednego rozdania z turnieju 3.02 w Ustce , w turnieju uczestniczy³o 9 par , a w zasadzie mo¿na powiedzieæ ,¿e gra³a jedna para Isia z Krzysiem , a pozostali  asystowali.
+Zajmiemy siê jednym rozdaniem:
+
+    1.   O		 S		 B		 Z
+	Pas		pas		2K!		3K
+	3C!		pas		3P		pas
+	pas		pas
+  Wist As karo, król karo     10  lew  w piki 170 dla EW
+
+    2.   J		 Z		 W		£
+	pas		pas		2K!		x
+	2P!		pas		pas		3K
+	3P		pas		pas		4K
+	pas		pas		pas
+  Wist  As pik 10 lew w kara 130 dla NS (£Z)
+    
+    3.   L		 I		 E		K
+	1C		pas		1P		x
+	1BA		pas		2P		3K
+	3P		4K		4P		5K
+	Pas		pas		pas
+
+  Wist Apik   bez jednej  100 dla EW(LE)
+
+    4.  Pas		pas		2P		x lub 3Karo
+	3P		pas		pas		pas
+
+  Wist As karo 8 lew   50 dla NS
+
+
+4 ró¿ne wyniki i 4 ró¿ne licytacje, oto ca³e rozdanie:
+
+			P-AWx
+			C –KWxxx
+			K-Wx
+			T-9xx
+	P-x		    E	        P-xxx
+	C-ADx				C-xx
+	K-AKD10xx      N	S	K-xxxx
+	T-D10x		    W	        T-A9xx
+
+			P-KD10xxx
+			C-xxx
+			K-x
+			T-KWx
+
+
+
+Wydaje mi siê , ¿e licytacja powinna wygl¹daæ  do pewnego momentu nastêpuj¹co:
+
+	 E				 S			 W			N
+	Pas(za ma³o na otwarcie)	pas			2K!multi		x*
+	2C	          		pas			2P			3K**
+	3P				4K			pas		        ? raczej pas...
+
+3Pik nale¿y wygraæ, 4pik mo¿na ob³o¿yæ po wiœcie as karo , blotka trefl do asa i odwrót trefl (bardzo trudna obrona), ale jest jeszcze jeden sposób aby ob³o¿yæ 4 pik nawet po zagraniu as karo i król karo( mamy samodzielnie poszukaæ rozwi¹zania) , natomiast 5 karo nie mo¿na wygraæ chocia¿ mo¿na zalicytowaæ po 4 pikach przeciwnika.
+Wyjaœnienie 3K** - rêka za mocna na bezpoœrednie 3 karo , solidny kolor i 17PC , najpierw dajemy kontrê ,a potem licytujemy 3karo, a jak trzeba 4 karo.

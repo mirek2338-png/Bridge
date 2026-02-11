@@ -1,4 +1,153 @@
-﻿	Oto historia jednego rozdania z turnieju 3.02 w Ustce , w turnieju uczestniczyło 9 par , a w zasadzie można powiedzieć ,że grała jedna para Isia z Krzysiem , a pozostali  asystowali.
+﻿ROZDANIA Z TURNIEJU NA MAKSY Z DNIA 10.02.2026r.:
+
+Turniej 10.02.2026 – Miłej lektury
+Dzisiejszy turniej obfitował w wiele ciekawych i trudnych rozdań.
+Poziom w porównaniu z poprzednim turniejem się wyrównał, choć zdecydowanie wygrała para Jasiu – Wiesiu.
+Brawo również dla Prezesa i Stefana za drugie miejsce.
+
+Rozdanie 1:
+
+Rozdawał N
+Początek licytacji wszędzie był taki sam:
+
+N     E     S     W
+pas   pas   1BA   ?
+
+Karty:
+        	 N
+             ♠ 8
+             ♥ 9 7 6 5 3
+             ♦ 5
+             ♣ 10 8 5 4 3 2
+		
+		  N                           
+♠ A 10 4 2                     ♠ D 9 7 6 5
+♥ A 8        W          E      ♥ 10 4 2
+♦ A D 10 3                     ♦ W 7 4 2
+♣ K W 9           S            ♣ D
+     
+             ♠ K W 3
+             ♥ K D W
+             ♦ K 9 8 6
+             ♣ A 7 6
+
+Stół 1
+N     E     S     W
+pas   pas   1BA   x
+2♦*   pas   2♥    pas
+pas   pas
+* transfer
+
+Wist: ♠2
+9 lew, 140 dla NS.
+
+Stół 2
+N     E     S     W
+pas   pas   1BA   pas
+pas   pas
+Wist: ♠2
+Bez jednej, 50 dla EW.
+
+Stół 3
+N     E     S     W
+pas   pas   1BA   pas
+2♦    pas   2♥    x
+pas   2♠    x     pas
+3♣    pas   3BA   pas
+4♣    pas   4♥    pas
+pas   pas
+Nie wiem, jaki był wist, ale uważam, że zawodnik W podszedł do rozdania zbyt pesymistycznie – brak kontry na końcowe 4♥ wydaje się wątpliwy.
+
+Problem pierwszego wistu
+Większość graczy na W miała problem z pierwszym wyjściem.
+Moim zdaniem najlepszy wist to A♥. Wist 9♣ byłbybardzo dziwny.
+
+Czy można wygrać 4♠ na EW?
+
+Wygląda, że tak. Licytacja mogłaby wyglądać np.:
+
+N     E     S     W
+pas   pas   1BA   pas
+2♦*   pas   2♥    x
+pas   2♠    3♣/pas
+3♠    pas   ?
+Alternatywa po 1BA
+N     E     S     W
+pas   pas   1BA   pas/x
+2♠*   (transfer na ♣)
+Transfer 2♠ na trefle wydaje się bezpieczniejszy niż 2♦ – mamy co najmniej 8 trefli, a siły brak, więc gramy jak najniżej.
+
+
+Rozdanie 2:
+
+N otwiera 1♠
+
+Karty:
+  
+            	 ♠ A K W 10 8 6
+            	 ♥ D
+            	 ♦ D 10 5
+            	 ♣ K 5 4
+		   N                             
+♠ —                               ♠ D 9 7 5 4 3 2
+♥ 10 9 8 4 3                      ♥ A 2
+♦ W 7 4 3      W        E         ♦ A K
+♣ A D 10 6                        ♣ 8 7
+
+                   S
+             	♠ —
+            	♥ K W 7 6 5
+                ♦ 9 8 6 5
+            	♣ W 9 3 2
+
+Moim zdaniem z kartą E należy spasować.
+2♠ najczęściej pokazuje 5+♣ i 5+ młody – tu nie ma takiej ręki.
+
+Proponowana licytacja:
+N     E     S     W
+1♠    pas   pas   pas
+Ewentualnie:
+
+N     E     S     W
+1♠    pas   1BA   pas
+2♠    pas   pas   pas
+Rozdanie 3
+Podaję tylko ręce N i S oraz najbardziej dopuszczalną licytację.
+
+			
+		♠ A W
+		♥ 9
+		♦ K 6 5
+		♣ K W 9 6 5 4 3
+			N
+
+			S
+		♠ D 8 7 6
+		♥ 10 8 7 6 5 3
+		♦ A D 3
+		♣ —
+
+Licytacja (Precision)
+	N        			S
+	2♣       		2♥*   (5+ kierów, do pasa)
+	3♣       		3♥     (100% 6+ kierów)
+	pas
+2♣ – Precision
+3♣ – 6+ trefli i singleton kier
+3♥ – 6+ kierów, ręka do gry jak najniżej
+
+Przy misficie gramy jak najniżej.
+
+Dwie pary zagrały 3BA – bez dwóch i bez czterech.
+
+
+
+
+
+
+ROZDANIE Z TURNIEJU NA IMPY Z DNIA 03.02.2026r.:
+
+	Oto historia jednego rozdania z turnieju 3.02 w Ustce , w turnieju uczestniczyło 9 par , a w zasadzie można powiedzieć ,że grała jedna para Isia z Krzysiem , a pozostali  asystowali.
 Zajmiemy się jednym rozdaniem:
 
     1.   O		 S		 B		 Z

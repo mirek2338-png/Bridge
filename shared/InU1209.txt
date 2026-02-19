@@ -1,4 +1,59 @@
-﻿ROZDANIA Z TURNIEJU NA MAKSY Z DNIA 10.02.2026r.:
+﻿ROZDANIA Z TURNIEJU NA IMPY Z DNIA 17.02.2026r.
+
+Jak zalicytować szlemika?
+           
+        ♠ AK109               ♠ DW76
+        ♥ KD2     W      E    ♥ A9
+        ♦ A3                  ♦ W87
+        ♣ KW76                ♣ AD83
+
+Najpierw jak poradzili sobie Ania i Zbyszek:
+
+	W (Ania)     N        E (Zbyszek)     S
+ 	–          pas         1♣           pas
+	1♠         pas         3♠*           pas
+ 	4BA        pas         5♣            pas
+ 	6♠         pas         pas           pas
+
+Zbyszek zdecydował się na inwit 3♠ wskazując nadwyżkę, zatem Ania nie miała problemu z zalicytowaniem szlemika.
+
+
+Jak licytować w takiej sekwencji:
+
+W            N            E            S
+ –           pas          1♣           pas
+ 1♠          pas          2♠           pas
+ ?
+
+E może nie mieć damy ♣ i też ma otwarcie i wówczas po wiście w ♦ szlemik zależy od położenia damy ♣, 
+ale przeciwnicy też nie muszą mieć oczywistego wistu w ♦, więc mimo słabego otwarcia uważam ,że należy licytować szlemika pikowego.
+
+Dwie pary nie znalazły pików i zagrały 3BA, oczywiście E może mieć też taką kartę:
+
+	♠ DW76
+    E	♥ A97   
+	♦ KD3
+	♣ 853      
+	
+i wtedy szlemik jest dość kiepskim kontraktem , prawie beznadziejnym , więc proponuje takie rozwiązanie:
+
+	W                E
+	–               1♣
+	1♠              2♠
+ 	3♣*             3♠**  lub  4♠***
+
+Wyjaśnienie:
+3♣* – kolor lukowy (wiadomo, że gramy w ♠)
+
+
+3♠** – odpowiedź najsłabsza, w zasadzie trzy blotki ♣
+
+
+4♠*** – mam coś w ♣; po takiej licytacji na 100% figura ♣
+
+
+
+ROZDANIA Z TURNIEJU NA MAKSY Z DNIA 10.02.2026r.:
 
 Turniej 10.02.2026 – Miłej lektury
 Dzisiejszy turniej obfitował w wiele ciekawych i trudnych rozdań.
@@ -150,57 +205,69 @@ ROZDANIE Z TURNIEJU NA IMPY Z DNIA 03.02.2026r.:
 	Oto historia jednego rozdania z turnieju 3.02 w Ustce , w turnieju uczestniczyło 9 par , a w zasadzie można powiedzieć ,że grała jedna para Isia z Krzysiem , a pozostali  asystowali.
 Zajmiemy się jednym rozdaniem:
 
-    1.   O		 S		 B		 Z
-	Pas		pas		2K!		3K
-	3C!		pas		3P		pas
-	pas		pas
-  Wist As karo, król karo     10  lew  w piki 170 dla EW
+    1.      O        S        B       Z
+            pas      pas      2♦      3♦
+            3♥       pas      3♠      pas
+            pas      pas
+  Wist As♦ Król♦ 10 lew w piki 170 dla EW
 
-    2.   J		 Z		 W		Ł
-	pas		pas		2K!		x
-	2P!		pas		pas		3K
-	3P		pas		pas		4K
-	pas		pas		pas
-  Wist  As pik 10 lew w kara 130 dla NS (ŁZ)
+    2.      J        Z        W        Ł
+            pas      pas      2♦       X
+            2♠       pas      pas      3♦
+            3♠       pas      pas      4♦
+            pas      pas      pas
+  Wist As♠ 10 lew w kara 130 dla NS (ŁZ)
     
-    3.   L		 I		 E		K
-	1C		pas		1P		x
-	1BA		pas		2P		3K
-	3P		4K		4P		5K
-	Pas		pas		pas
+    3.      L        I        E        K
+            1♣       pas      1♠       X
+            1BA      pas      2♠       3♦
+            3♠       4♦       4♠       5♦
+            pas      pas      pas
 
-  Wist Apik   bez jednej  100 dla EW(LE)
+  Wist As♠ bez jednej 100 dla EW(LE)
 
-    4.  Pas		pas		2P		x lub 3Karo
-	3P		pas		pas		pas
+    4.      N        E        S        W
+            pas      pas      2♠       X
+            3♠       pas      pas      pas
 
-  Wist As karo 8 lew   50 dla NS
+  Wist As ♦8 lew 50 dla NS
 
 
 4 różne wyniki i 4 różne licytacje, oto całe rozdanie:
 
-			P-AWx
-			C –KWxxx
-			K-Wx
-			T-9xx
-	P-x		    E	        P-xxx
-	C-ADx				C-xx
-	K-AKD10xx      N	S	K-xxxx
-	T-D10x		    W	        T-A9xx
+       
+                ♠ AWx
+                ♥ KWxxx
+                ♦ Wx
+                ♣ 9xx
+                              
+♠ x                N            ♠ xxx
+♥ ADx                           ♥ xx
+♦ AKD10xx      W       E        ♦ xxxx
+♣ D10x                          ♣ A9xx
+                   S
 
-			P-KD10xxx
-			C-xxx
-			K-x
-			T-KWx
+                ♠ KD10xxx
+                ♥ xxx
+                ♦ x
+                ♣ KWx
 
 
+Wydaje mi się, że licytacja powinna wyglądać  do pewnego momentu następująco:
 
-Wydaje mi się , że licytacja powinna wyglądać  do pewnego momentu następująco:
+	    E        			S         W           N
+            pas (za mało na otwarcie)   pas       2♦*(multi)  X**
+            2♥      			pas       2♠          3♦***
+            3♠       			4♦        pas         ? raczej pas..
+            
 
-	 E				 S			 W			N
-	Pas(za mało na otwarcie)	pas			2K!multi		x*
-	2C	          		pas			2P			3K**
-	3P				4K			pas		        ? raczej pas...
+Wyjaśnienie:
+2♦*   –  multi (słabe 2♥ lub 2♠)
+ X**   –  kontra wywoławcza / siłowa (zależnie od ustaleń pary)
 
-3Pik należy wygrać, 4pik można obłożyć po wiście as karo , blotka trefl do asa i odwrót trefl (bardzo trudna obrona), ale jest jeszcze jeden sposób aby obłożyć 4 pik nawet po zagraniu as karo i król karo( mamy samodzielnie poszukać rozwiązania) , natomiast 5 karo nie można wygrać chociaż można zalicytować po 4 pikach przeciwnika.
-Wyjaśnienie 3K** - ręka za mocna na bezpośrednie 3 karo , solidny kolor i 17PC , najpierw dajemy kontrę ,a potem licytujemy 3karo, a jak trzeba 4 karo.
+
+3♦* – naturalne / konstruktywne (wg ustaleń) 3♦*** -  ręka za mocna na bezpośrednie 3 ♦, solidny kolor i 17PC , najpierw dajemy kontrę ,a potem licytujemy 3♦, a jak trzeba 4♦.
+
+
+3♠ należy wygrać, 4♠ można obłożyć po wiście As♦, blotka ♣ do Asa i odwrót ♣ (bardzo trudna obrona), ale jest jeszcze jeden sposób aby obłożyć 4♠ nawet po zagraniu As♦ i Król♦( mamy samodzielnie poszukać rozwiązania), natomiast kontraktu 5♦ nie można wygrać chociaż można zalicytować po 4♠ przeciwnika.
+

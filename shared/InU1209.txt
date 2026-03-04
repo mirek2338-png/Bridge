@@ -1,0 +1,273 @@
+﻿ROZDANIA Z TURNIEJU NA IMPY Z DNIA 17.02.2026r.
+
+Jak zalicytować szlemika?
+           
+        ♠ AK109               ♠ DW76
+        ♥ KD2     W      E    ♥ A9
+        ♦ A3                  ♦ W87
+        ♣ KW76                ♣ AD83
+
+Najpierw jak poradzili sobie Ania i Zbyszek:
+
+	W (Ania)     N        E (Zbyszek)     S
+ 	–          pas         1♣           pas
+	1♠         pas         3♠*           pas
+ 	4BA        pas         5♣            pas
+ 	6♠         pas         pas           pas
+
+Zbyszek zdecydował się na inwit 3♠ wskazując nadwyżkę, zatem Ania nie miała problemu z zalicytowaniem szlemika.
+
+
+Jak licytować w takiej sekwencji:
+
+W            N            E            S
+ –           pas          1♣           pas
+ 1♠          pas          2♠           pas
+ ?
+
+E może nie mieć damy ♣ i też ma otwarcie i wówczas po wiście w ♦ szlemik zależy od położenia damy ♣, 
+ale przeciwnicy też nie muszą mieć oczywistego wistu w ♦, więc mimo słabego otwarcia uważam ,że należy licytować szlemika pikowego.
+
+Dwie pary nie znalazły pików i zagrały 3BA, oczywiście E może mieć też taką kartę:
+
+	♠ DW76
+    E	♥ A97   
+	♦ KD3
+	♣ 853      
+	
+i wtedy szlemik jest dość kiepskim kontraktem , prawie beznadziejnym , więc proponuje takie rozwiązanie:
+
+	W                E
+	–               1♣
+	1♠              2♠
+ 	3♣*             3♠**  lub  4♠***
+
+Wyjaśnienie:
+3♣* – kolor lukowy (wiadomo, że gramy w ♠)
+
+
+3♠** – odpowiedź najsłabsza, w zasadzie trzy blotki ♣
+
+
+4♠*** – mam coś w ♣; po takiej licytacji na 100% figura ♣
+
+
+
+ROZDANIA Z TURNIEJU NA MAKSY Z DNIA 10.02.2026r.:
+
+Turniej 10.02.2026 – Miłej lektury
+Dzisiejszy turniej obfitował w wiele ciekawych i trudnych rozdań.
+Poziom w porównaniu z poprzednim turniejem się wyrównał, choć zdecydowanie wygrała para Jasiu – Wiesiu.
+Brawo również dla Prezesa i Stefana za drugie miejsce.
+
+Rozdanie 1:
+
+Rozdawał N
+Początek licytacji wszędzie był taki sam:
+
+N     E     S     W
+pas   pas   1BA   ?
+
+Karty:
+        	 N
+             ♠ 8
+             ♥ 9 7 6 5 3
+             ♦ 5
+             ♣ 10 8 5 4 3 2
+		
+		  N                           
+♠ A 10 4 2                     ♠ D 9 7 6 5
+♥ A 8        W          E      ♥ 10 4 2
+♦ A D 10 3                     ♦ W 7 4 2
+♣ K W 9           S            ♣ D
+     
+             ♠ K W 3
+             ♥ K D W
+             ♦ K 9 8 6
+             ♣ A 7 6
+
+Stół 1
+N     E     S     W
+pas   pas   1BA   x
+2♦*   pas   2♥    pas
+pas   pas
+* transfer
+
+Wist: ♠2
+9 lew, 140 dla NS.
+
+Stół 2
+N     E     S     W
+pas   pas   1BA   pas
+pas   pas
+Wist: ♠2
+Bez jednej, 50 dla EW.
+
+Stół 3
+N     E     S     W
+pas   pas   1BA   pas
+2♦    pas   2♥    x
+pas   2♠    x     pas
+3♣    pas   3BA   pas
+4♣    pas   4♥    pas
+pas   pas
+Nie wiem, jaki był wist, ale uważam, że zawodnik W podszedł do rozdania zbyt pesymistycznie – brak kontry na końcowe 4♥ wydaje się wątpliwy.
+
+Problem pierwszego wistu
+Większość graczy na W miała problem z pierwszym wyjściem.
+Moim zdaniem najlepszy wist to A♥. Wist 9♣ byłbybardzo dziwny.
+
+Czy można wygrać 4♠ na EW?
+
+Wygląda, że tak. Licytacja mogłaby wyglądać np.:
+
+N     E     S     W
+pas   pas   1BA   pas
+2♦*   pas   2♥    x
+pas   2♠    3♣/pas
+3♠    pas   ?
+Alternatywa po 1BA
+N     E     S     W
+pas   pas   1BA   pas/x
+2♠*   (transfer na ♣)
+Transfer 2♠ na trefle wydaje się bezpieczniejszy niż 2♦ – mamy co najmniej 8 trefli, a siły brak, więc gramy jak najniżej.
+
+
+Rozdanie 2:
+
+N otwiera 1♠
+
+Karty:
+  
+            	 ♠ A K W 10 8 6
+            	 ♥ D
+            	 ♦ D 10 5
+            	 ♣ K 5 4
+		   N                             
+♠ —                               ♠ D 9 7 5 4 3 2
+♥ 10 9 8 4 3                      ♥ A 2
+♦ W 7 4 3      W        E         ♦ A K
+♣ A D 10 6                        ♣ 8 7
+
+                   S
+             	♠ —
+            	♥ K W 7 6 5
+                ♦ 9 8 6 5
+            	♣ W 9 3 2
+
+Moim zdaniem z kartą E należy spasować.
+2♠ najczęściej pokazuje 5+♣ i 5+ młody – tu nie ma takiej ręki.
+
+Proponowana licytacja:
+N     E     S     W
+1♠    pas   pas   pas
+Ewentualnie:
+
+N     E     S     W
+1♠    pas   1BA   pas
+2♠    pas   pas   pas
+Rozdanie 3
+Podaję tylko ręce N i S oraz najbardziej dopuszczalną licytację.
+
+			
+		♠ A W
+		♥ 9
+		♦ K 6 5
+		♣ K W 9 6 5 4 3
+			N
+
+			S
+		♠ D 8 7 6
+		♥ 10 8 7 6 5 3
+		♦ A D 3
+		♣ —
+
+Licytacja (Precision)
+	N        			S
+	2♣       		2♥*   (5+ kierów, do pasa)
+	3♣       		3♥     (100% 6+ kierów)
+	pas
+2♣ – Precision
+3♣ – 6+ trefli i singleton kier
+3♥ – 6+ kierów, ręka do gry jak najniżej
+
+Przy misficie gramy jak najniżej.
+
+Dwie pary zagrały 3BA – bez dwóch i bez czterech.
+
+
+
+
+
+
+ROZDANIE Z TURNIEJU NA IMPY Z DNIA 03.02.2026r.:
+
+	Oto historia jednego rozdania z turnieju 3.02 w Ustce , w turnieju uczestniczyło 9 par , a w zasadzie można powiedzieć ,że grała jedna para Isia z Krzysiem , a pozostali  asystowali.
+Zajmiemy się jednym rozdaniem:
+
+    1.      O        S        B       Z
+            pas      pas      2♦      3♦
+            3♥       pas      3♠      pas
+            pas      pas
+  Wist As♦ Król♦ 10 lew w piki 170 dla EW
+
+    2.      J        Z        W        Ł
+            pas      pas      2♦       X
+            2♠       pas      pas      3♦
+            3♠       pas      pas      4♦
+            pas      pas      pas
+  Wist As♠ 10 lew w kara 130 dla NS (ŁZ)
+    
+    3.      L        I        E        K
+            1♣       pas      1♠       X
+            1BA      pas      2♠       3♦
+            3♠       4♦       4♠       5♦
+            pas      pas      pas
+
+  Wist As♠ bez jednej 100 dla EW(LE)
+
+    4.      N        E        S        W
+            pas      pas      2♠       X
+            3♠       pas      pas      pas
+
+  Wist As ♦8 lew 50 dla NS
+
+
+4 różne wyniki i 4 różne licytacje, oto całe rozdanie:
+
+       
+                ♠ AWx
+                ♥ KWxxx
+                ♦ Wx
+                ♣ 9xx
+                              
+♠ x                N            ♠ xxx
+♥ ADx                           ♥ xx
+♦ AKD10xx      W       E        ♦ xxxx
+♣ D10x                          ♣ A9xx
+                   S
+
+                ♠ KD10xxx
+                ♥ xxx
+                ♦ x
+                ♣ KWx
+
+
+Wydaje mi się, że licytacja powinna wyglądać  do pewnego momentu następująco:
+
+	    E        			S         W           N
+            pas (za mało na otwarcie)   pas       2♦*(multi)  X**
+            2♥      			pas       2♠          3♦***
+            3♠       			4♦        pas         ? raczej pas..
+            
+
+Wyjaśnienie:
+2♦*   –  multi (słabe 2♥ lub 2♠)
+X**   –  kontra wywoławcza / siłowa (zależnie od ustaleń pary)
+
+
+3♦*** -  ręka za mocna na bezpośrednie 3 ♦, solidny kolor i 17PC , najpierw dajemy kontrę ,a potem licytujemy 3♦, a jak trzeba 4♦.
+
+
+3♠ należy wygrać, 4♠ można obłożyć po wiście As♦, blotka ♣ do Asa i odwrót ♣ (bardzo trudna obrona), ale jest jeszcze jeden sposób aby obłożyć 4♠ nawet po zagraniu As♦ i Król♦( mamy samodzielnie poszukać rozwiązania), natomiast kontraktu 5♦ nie można wygrać chociaż można zalicytować po 4♠ przeciwnika.
+

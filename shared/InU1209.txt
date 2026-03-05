@@ -1,4 +1,113 @@
-﻿ROZDANIA Z TURNIEJU NA IMPY Z DNIA 17.02.2026r.
+﻿JEŻELI CHESZ OMÓWIĆ SZCZEGÓŁOWO ROZDANIE ZAPRASZAMY DO KONTAKTU Z BOGUSIEM DYKIEM 
+tel. 507 725 287
+e-mail: bdyk@op.pl
+
+
+
+
+ROZDANIA Z TURNIEJU NA MAKSY Z DNIA 03.03.2026r.:
+
+
+Szlem ,szlemik , a może tylko końcówka...
+
+	Rozdanie 21 sprawiło wiele problemów wszystkim zawodnikom , oto rozkład:
+
+		♠ DWxx
+ 
+		♥ Axx
+
+ 		♦ xx
+ 
+		♣ KWxx
+
+ 
+
+		  N
+ 
+
+		  S
+
+
+ 
+		♠ A
+ 
+		♥ xx
+ 
+		♦ AKxxxxx
+ 
+		♣ ADx 
+
+ 1stół:
+
+	N     	E     	S     	W
+
+	pas   	pas     1♣     pas
+	1♠      2♥      5♦     pas
+	pas?  Mamy As♥ i króla z waletem ♣, są to karty które są chyba przydatne i
+ uważam, że należy dołożyć 6 ♦
+
+
+2 stół:
+
+	N    	 E    	 S     	W
+
+	pas   	pas   	 1♦    pas
+	1♠      2♥       4♦    pas
+	5♦  ? jak wyżej ,ładna karta jesteśmy po pasie ,nie ma się co bać tylko zalicytować 4 ♥– as na 100% , króla w takiej sytuacji nie ma sensu pokazywać i wówczas 
+                licytacja będzie wyglądać tak:
+
+	N     	 E     	 S     	W
+
+	pas     pas     1♦     pas
+	1♠      2♥      4♦     pas
+	4♥-As   pas     5♣-As  pas
+	6♦      pas     pas    pas
+	
+3 stół:
+
+	N     	 E     	 S     	W
+
+	1♣      pas      2♦    pas
+	2BA     pas      4♦    pas
+	5♦      pas      6♦    pas     
+	pas     pas
+
+	
+Otwarcie 1♣ słabe, ale dopuszczalne ze względu na fity w kolorach starszych, lepiej jak by było przy takim otwarciu 4-4 w kierach i pikach, po otwarciu przez N Isia słusznie już nie mogła odpuścić i dorzuciła jako jedyna szlemika
+
+4 stół (coś mogę pokręcić):
+ 
+	N     	 E     	 S     	W
+
+	pas	pas	 1♣    pas
+	1♠      pas      2♦    pas
+	2♠      pas      4♣    pas     
+	4♥      pas	 5♦    pas
+	5BA?	pas	 pas   pas
+
+	
+2♦? najczęściej jest odwrotką, licytacja  S wskazywała na trzy piki (chyba, że jest inne ustalenie ) i silną rękę na 6+♦, zalicytowanie przez N 5BA było bardzo szczęśliwe bo kara dzieliły się 2:2 ( 40 %)
+
+5  stół:
+
+	N     	 E     	   S      W
+
+	pas   	2♦!multi   3♦?   pas
+	pas? 	pas
+
+		
+3♦? jest za słabym wejściem , należy dać kontrę , a potem licytować ♦ tzw. objaśniak na karach , ale pas N też jest strasznie pesymistyczny , mamy 11 PC , a partner licytuje odpowiedzialnie 3♦, należy po prostu powiedzieć 3BA. 
+ 
+ROZGRYWKA
+Jak należy rozgrywać 6 ♦,czyli taki prawidłowy kontrakt przy podziale kar 3:1 i wiście w kiera? 
+Pierwszy sposób to  bijemy asem kier gramy dwa razy kara i trzy razy trefle utrzymując się na stole i gramy czwartego trefla i wyrzucamy kiera i wygramy , jeżeli obrońca posiadający trzy kara ma co najmniej trzy trefle , ale jest jeszcze drugi sposób , jaki ?
+
+
+
+
+
+
+ROZDANIA Z TURNIEJU NA IMPY Z DNIA 17.02.2026r.
 
 Jak zalicytować szlemika?
            
@@ -10,7 +119,7 @@ Jak zalicytować szlemika?
 Najpierw jak poradzili sobie Ania i Zbyszek:
 
 	W (Ania)     N        E (Zbyszek)     S
- 	–          pas         1♣           pas
+ 	–          pas         1♣            pas
 	1♠         pas         3♠*           pas
  	4BA        pas         5♣            pas
  	6♠         pas         pas           pas
@@ -35,7 +144,7 @@ Dwie pary nie znalazły pików i zagrały 3BA, oczywiście E może mieć też ta
 	♦ KD3
 	♣ 853      
 	
-i wtedy szlemik jest dość kiepskim kontraktem , prawie beznadziejnym , więc proponuje takie rozwiązanie:
+i wtedy szlemik jest dość kiepskim kontraktem, prawie beznadziejnym, więc proponuje takie rozwiązanie:
 
 	W                E
 	–               1♣

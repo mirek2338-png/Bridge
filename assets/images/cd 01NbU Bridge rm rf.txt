@@ -1,0 +1,49 @@
+cd ~/01NbU/Bridge
+rm -rf .git
+git init
+git config user.email "236839665+mirek2338-png@users.noreply.github.com"
+git config user.name "mirek2338-png"
+git add .
+git commit -m "Initial commit - clean repository"
+git remote add origin https://github.com/mirek2338-png/Bridge.git
+git branch -M main
+git push -u origin main --force
+
+# Zobacz jakie pliki są w katalogu
+ls -la
+
+# Lub bardziej czytelnie
+tree -L 2
+git status
+git log --oneline
+
+# Sprawdź ustawiony email i nazwę użytkownika
+git config user.email
+git config user.name
+
+# Sprawdź zdalne repozytorium
+git remote -v
+cd ~/01NbU/Bridge
+
+echo "=== Pliki w katalogu ==="
+ls -la
+
+echo -e "\n=== Stan repozytorium ==="
+git status
+
+echo -e "\n=== Historia commitów ==="
+git log --oneline
+
+echo -e "\n=== Konfiguracja Git ==="
+git config user.email
+git config user.name
+
+echo -e "\n=== Zdalne repozytoria ==="
+git remote -v
+
+# Czy pliki istnieją?
+ls -la
+
+# Jeśli nie ma plików, dodaj je
+git add .
+git commit -m "Add all files"

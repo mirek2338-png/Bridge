@@ -1,0 +1,95 @@
+Pozegnalny 
+6 jesienne GP Ustki
+16 grudnia 2025
+
+ROZDANIE NR  1                 ROZDANIE NR  2                 ROZDANIE NR  3
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   3   7  130       6.0   2.0     3   7   50       6.0   2.0     3   7  średnia   4.0   4.0  
+   2   9  100       2.0   6.0     2   9     -170   2.0   6.0     2   9  średnia   4.0   4.0  
+   5   6  130       6.0   2.0     5   6   50       6.0   2.0     5   6  średnia   4.0   4.0  
+  10   8  130       6.0   2.0    10   8   50       6.0   2.0    10   8  średnia   4.0   4.0  
+   1   4  4 pasy    0.0   8.0     1   4     -400   0.0   8.0     1   4  średnia   4.0   4.0  
+
+ROZDANIE NR  4                 ROZDANIE NR  5                 ROZDANIE NR  6
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   2   5     -130   4.0   4.0     2   5     -100   0.0   8.0     2   5  średnia   4.0   4.0  
+   4   8  110       8.0   0.0     4   8  170       2.0   6.0     4   8  średnia   4.0   4.0  
+   3   1     -110   6.0   2.0     3   1  620       5.0   3.0     3   1  średnia   4.0   4.0  
+   6   7     -790   0.0   8.0     6   7  650       8.0   0.0     6   7  średnia   4.0   4.0  
+  10   9     -500   2.0   6.0    10   9  620       5.0   3.0    10   9  średnia   4.0   4.0  
+
+ROZDANIE NR  7                 ROZDANIE NR  8                 ROZDANIE NR  9
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+  10   1      -90   7.0   1.0    10   1      -50   2.0   6.0    10   1  średnia   4.0   4.0  
+   3   6     -120   2.0   6.0     3   6     -130   0.0   8.0     3   6  średnia   4.0   4.0  
+   5   9     -120   2.0   6.0     5   9  100       6.0   2.0     5   9  średnia   4.0   4.0  
+   4   2      -90   7.0   1.0     4   2   50       4.0   4.0     4   2  średnia   4.0   4.0  
+   7   8     -120   2.0   6.0     7   8  300       8.0   0.0     7   8  średnia   4.0   4.0  
+
+ROZDANIE NR 10                 ROZDANIE NR 11                 ROZDANIE NR 12
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   8   9  200       5.0   3.0     8   9   50       4.0   4.0     8   9  średnia   4.0   4.0  
+  10   2  200       5.0   3.0    10   2  100       6.0   2.0    10   2  średnia   4.0   4.0  
+   4   7     -100   2.0   6.0     4   7      -50   2.0   6.0     4   7  średnia   4.0   4.0  
+   6   1  800       8.0   0.0     6   1  300       8.0   0.0     6   1  średnia   4.0   4.0  
+   5   3     -200   0.0   8.0     5   3     -100   0.0   8.0     5   3  średnia   4.0   4.0  
+
+ROZDANIE NR 13                 ROZDANIE NR 14                 ROZDANIE NR 15
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   6   4  200       8.0   0.0     6   4     -510   3.0   5.0     6   4  średnia   4.0   4.0  
+   9   1     -120   4.0   4.0     9   1     -490   8.0   0.0     9   1  średnia   4.0   4.0  
+  10   3     -200   2.0   6.0    10   3     -510   3.0   5.0    10   3  średnia   4.0   4.0  
+   5   8     -110   6.0   2.0     5   8     -510   3.0   5.0     5   8  średnia   4.0   4.0  
+   7   2     -500   0.0   8.0     7   2     -510   3.0   5.0     7   2  średnia   4.0   4.0  
+
+ROZDANIE NR 16                 ROZDANIE NR 17                 ROZDANIE NR 18
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   7   5     -760   0.0   8.0     7   5   50       8.0   0.0     7   5  średnia   4.0   4.0  
+   1   2     -150   2.0   6.0     1   2     -170   4.0   4.0     1   2  średnia   4.0   4.0  
+  10   4  500       8.0   0.0    10   4     -130   6.0   2.0    10   4  średnia   4.0   4.0  
+   6   9  450       6.0   2.0     6   9     -430   2.0   6.0     6   9  średnia   4.0   4.0  
+   8   3  200       4.0   4.0     8   3     -920   0.0   8.0     8   3  średnia   4.0   4.0  
+
+ROZDANIE NR 19                 ROZDANIE NR 20                 ROZDANIE NR 21
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   8   6  170       0.0   8.0     8   6  170       2.0   6.0     8   6  średnia   4.0   4.0  
+   2   3  420       3.0   5.0     2   3     -100   0.0   8.0     2   3  średnia   4.0   4.0  
+  10   5  420       3.0   5.0    10   5  620       5.0   3.0    10   5  średnia   4.0   4.0  
+   7   1  450       7.0   1.0     7   1  660       8.0   0.0     7   1  średnia   4.0   4.0  
+   9   4  450       7.0   1.0     9   4  620       5.0   3.0     9   4  średnia   4.0   4.0  
+
+ROZDANIE NR 22                 ROZDANIE NR 23                 ROZDANIE NR 24
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   9   7     -140   8.0   0.0     9   7  100       8.0   0.0     9   7  średnia   4.0   4.0  
+   3   4     -600   3.0   5.0     3   4     -200   4.0   4.0     3   4  średnia   4.0   4.0  
+  10   6     -630   0.0   8.0    10   6     -690   0.0   8.0    10   6  średnia   4.0   4.0  
+   8   2     -150   6.0   2.0     8   2     -650   2.0   6.0     8   2  średnia   4.0   4.0  
+   1   5     -600   3.0   5.0     1   5     -130   6.0   2.0     1   5  średnia   4.0   4.0  
+
+ROZDANIE NR 25                 ROZDANIE NR 26                 ROZDANIE NR 27
+            ZAPIS    PUNKTY                ZAPIS    PUNKTY                ZAPIS    PUNKTY  
+  NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW     NS  EW   NS  EW    NS   EW 
+-----------------------------  -----------------------------  -----------------------------
+   1   8     -100   4.0   4.0     1   8  130       5.0   3.0     1   8  średnia   4.0   4.0  
+   4   5     -120   2.0   6.0     4   5  130       5.0   3.0     4   5  średnia   4.0   4.0  
+  10   7      -50   6.0   2.0    10   7     -100   0.0   8.0    10   7  średnia   4.0   4.0  
+   9   3  530       8.0   0.0     9   3  180       8.0   0.0     9   3  średnia   4.0   4.0  
+   2   6     -180   0.0   8.0     2   6  100       2.0   6.0     2   6  średnia   4.0   4.0  
+
+

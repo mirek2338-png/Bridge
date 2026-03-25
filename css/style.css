@@ -1,0 +1,214 @@
+/* Reset i podstawy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nagłówek */
+.naglowek-kontener {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.naglowek-kontener h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tekst-obok {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.6;
+    border-left: 3px solid #3498db;
+    padding-left: 25px;
+    height: 100%;
+    color: #34495e;
+}
+
+.tekst-obok div {
+    margin-bottom: 5px;
+}
+
+.tekst-obok div:last-child {
+    margin-bottom: 0;
+}
+
+/* Bloki turniejów */
+.turniej-blok {
+    background: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.turniej-blok:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.data-turnieju {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Przyciski */
+.przyciski {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.przyciski .btn {
+    padding: 12px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%);
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    min-height: 44px;
+    flex: 1 1 calc(50% - 12px);
+}
+
+.przyciski .btn:hover {
+    background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
+    border-color: #64b5f6;
+    color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(25, 118, 210, 0.2);
+}
+
+.przyciski .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(25, 118, 210, 0.3);
+}
+
+.przyciski .btn:visited {
+    color: #7b1fa2;
+    border-color: #7b1fa2;
+}
+
+/* Specjalny przycisk z większym odstępem */
+.btn-odstep {
+    margin-left: 40px !important;
+}
+
+/* Efekt dla aktywnych/klikniętych linków */
+.przyciski .btn:focus {
+    outline: 2px solid #2196f3;
+    outline-offset: 2px;
+}
+
+/* Linki które zostały już odwiedzone */
+a:visited.btn {
+    color: #7b1fa2;
+    border-color: #ab47bc;
+    background: linear-gradient(to bottom, #f3e5f5 0%, #e1bee7 100%);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .naglowek-kontener {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .tekst-obok {
+        border-left: none;
+        border-top: 3px solid #3498db;
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .przyciski .btn {
+        flex: 1 1 100%;
+    }
+    
+    .btn-odstep {
+        margin-left: 0 !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .przyciski .btn {
+        flex: none;
+        min-width: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 40px;
+    }
+    
+    .naglowek-kontener {
+        padding: 30px;
+    }
+    
+    .naglowek-kontener h1 {
+        font-size: 32px;
+    }
+    
+    .tekst-obok {
+        font-size: 15px;
+    }
+}
+
+/* Dodatkowe style dla czytelności */
+.turniej-blok:nth-child(even) {
+    background: #fdfdfd;
+}
+
+.turniej-blok:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* Opcjonalnie: styl dla brakujących linków */
+.przyciski .btn[href*="#"] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: #f5f5f5;
+}
+
+.przyciski .btn[href*="#"]:hover {
+    background: #f5f5f5;
+    border-color: #ddd;
+    transform: none;
+    box-shadow: none;
+}

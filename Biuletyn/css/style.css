@@ -272,6 +272,9 @@
             padding: 20px 30px;
             text-align: center;
             font-size: 0.9em;
+            border-bottom-left-radius: 10px;   /* DODANE */
+            border-bottom-right-radius: 10px;  /* DODANE */
+            
         }
 
         .footer p {

@@ -269,14 +269,15 @@
 
         /* ---------- STOPKA (bardziej zwarta) ---------- */
         .footer {
-            background: #1e3c72;
-            color: white;
-            padding: 20px 30px;
-            text-align: center;
-            font-size: 0.9em;
-            width: 100%;                      /* DODANE - pełna szerokość */
-            border-bottom-left-radius: 10px;   /* DODANE */
-            border-bottom-right-radius: 10px;  /* DODANE */
+    background: #1e3c72;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 3px solid #f1c40f;     /* ZAMIAST border-radius */
+    /* BRAK width: 100% (niepotrzebne) */
+    /* BRAK border-radius (kontener już je ma) */
+}
             
         }
 

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuletyn Brydżowy - Turniej [Nazwa]</title>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <style>
+        /* ---------- STYLE GŁÓWNE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+            line-height: 1.4;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* ---------- NAGŁÓWEK (zmniejszony) ---------- */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            border-bottom: 3px solid #f1c40f;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+
+        .header h1 small {
+            font-size: 0.45em;
+        }
+
+        .tournament-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding-top: 10px;
+            font-size: 0.95em;
+        }
+
+        .tournament-info span {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        /* ---------- STOPKA (taka sama forma jak nagłówek) ---------- */
+        .footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 3px solid #f1c40f;
+            font-size: 0.95em;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .sponsors {
+            margin-top: 8px;
+            font-weight: bold;
+            color: #f1c40f;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* ---------- SPIS TREŚCI (zmniejszony) ---------- */
+        .toc {
+            background-color: #f8f9fa;
+            padding: 15px 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .toc h2 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+        }
+
+        .toc-item {
+            background: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #f1c40f;
+            font-size: 0.9em;
+        }
+        
+        .toc-item a {
+            text-decoration: none;
+            color: #1e3c72;
+        }
+        
+        .toc-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- ROZDANIA ---------- */
+        .deal {
+            padding: 20px 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .deal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .deal-title {
+            font-size: 1.5em;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+
+        .deal-number {
+            background: #f1c40f;
+            color: #1e3c72;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        /* ---------- KOMPAKTOWY DIAGRAM BRYDŻOWY ---------- */
+        .compact-board {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .compact-north, .compact-south {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .compact-middle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .compact-hand {
+            background: white;
+            border-radius: 6px;
+            padding: 8px 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.3;
+            min-width: 120px;
+        }
+
+        .compact-hand.north { border-left: 4px solid #e74c3c; }
+        .compact-hand.south { border-left: 4px solid #3498db; }
+        .compact-hand.east { border-left: 4px solid #2ecc71; }
+        .compact-hand.west { border-left: 4px solid #f39c12; }
+
+        .compact-position {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3px;
+            font-size: 0.9em;
+            color: #2c3e50;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 2px;
+        }
+
+        .compact-cards {
+            white-space: nowrap;
+        }
+
+        .compact-spade { color: #2c3e50; font-weight: bold; margin-right: 3px; }
+        .compact-heart { color: #e74c3c; font-weight: bold; margin-right: 3px; }
+        .compact-diamond { color: #e74c3c; font-weight: bold; margin-right: 3px; }
+        .compact-club { color: #2c3e50; font-weight: bold; margin-right: 3px; }
+
+        /* ---------- BOX Z INFORMACJAMI (bardziej zwarty) ---------- */
+        .deal-info-compact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .info-box-small {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #f1c40f;
+            font-size: 0.9em;
+        }
+
+        .info-box-small h4 {
+            color: #1e3c72;
+            margin-bottom: 8px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bidding-compact {
+            font-family: 'Courier New', monospace;
+            background: white;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+            font-size: 0.9em;
+        }
+
+        .bidding-table-compact {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bidding-table-compact td {
+            padding: 3px 6px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .commentary-compact {
+            background: #fff9e6;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #f1c40f;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .commentary-compact p {
+            margin: 5px 0;
+        }
+
+        /* ---------- RESPONSYWNOŚĆ ---------- */
+        @media (max-width: 650px) {
+            .compact-middle {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .compact-hand {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .deal-info-compact {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+    
+    
+    
+    
+</head>
+<body>
+    <div class="container">
+        <!-- ========== NAGŁÓWEK ========== -->
+        <div class="header">
+            <h1>
+                Biuletyn Brydżowy
+                <small>44 GP o Puchar Burmistrza Ustki</small>
+            </h1>
+            <div class="tournament-info">
+                <span>📅 14 kwietnia 2026</span>
+                <span>Omawia: arcymistrz Boguś Dyk wk=12</span>
+                <span>kom. 507 725 287</span>
+                <span>mail to: bdyk@op.pl</span>
+            </div>
+        </div>
+
+        <!-- ========== SPIS TREŚCI ========== -->
+        <div class="toc">
+            <h2>W tym numerze</h2>
+            <div class="toc-grid">
+                <div class="toc-item"><a href="#rozdanie1">Rozdanie 1: Szlemik z pomocą </a></div>
+                <div class="toc-item"><a href="#rozdanie2">Rozdanie 2: Kosmiczna obrona</a></div>     
+           </div>
+       
+        
+              <!-- ZWARTY KOMENTARZ -->
+                                                 
+           <!-- <div class="commentary-compact">
+                <strong>📝 Wylosowana  :</strong> <p>  </p>
+           </div>-->
+       </div>
+
+                 <!-- ========== ROZDANIE 1 ========== -->
+        <div id="rozdanie1" class="deal">
+            <div class="deal-header">
+                <div class="deal-title">Rozdanie 1: Czy można bez pomocy przeciwnika wylicytować szlemika? </div>
+                <div class="deal-number">nr 1</div>
+            </div>
+         <!-- KOMPAKTOWY DIAGRAM -->
+            <div class="compact-board">
+                <div class="compact-north">
+                    <div class="compact-hand north">
+                        <div class="compact-position">N</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>10 9 6 4 3 2  <br>
+                            <span class="compact-heart">♥</span>K 3 <br>
+                            <span class="compact-diamond">♦</span>10 4 3 2 <br>
+                            <span class="compact-club">♣</span>6
+                        </div>
+                    </div>
+                </div>  
+                
+                 <div class="compact-middle">
+                    <div class="compact-hand west">
+                        <div class="compact-position">W</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>- <br>
+                            <span class="compact-heart">♥</span>A D 10 9 6 5  2 <br>
+                            <span class="compact-diamond">♦</span>K W 6 <br>
+                            <span class="compact-club">♣</span>K 10 9
+                        </div>
+                    </div>
+                    
+                    <div class="compact-hand east">
+                        <div class="compact-position">E</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>K W <br>
+                            <span class="compact-heart">♥</span>W 8 7 4 <br>
+                            <span class="compact-diamond">♦</span>A <br>
+                            <span class="compact-club">♣</span>A W 8 7 5 2
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="compact-south">
+                    <div class="compact-hand south">
+                        <div class="compact-position">S</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>A D 8 7 5 <br>
+                            <span class="compact-heart">♥</span>- <br>
+                            <span class="compact-diamond">♦</span>D 9 8 7 5  <br>
+                            <span class="compact-club">♣</span>D 4 3
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+                <!-- ZWARTE INFORMACJE  1-->
+            <div class="deal-info-compact">
+                <div class="info-box-small">
+                    <h4>📊 Licytacja 1 bez pomocy przeciwnika</h4>
+                    <div class="bidding-compact">
+                        <table class="bidding-table-compact">
+                            <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">E</td><td style="background:#f0f0f0">S</td></tr>
+                            <tr><td>1<span class="compact-heart">♥</span></td><td>pas</td><td>2<span class="compact-club">♣</span>*</td><td>pas</td></tr>
+                            <tr><td>3<span class="compact-heart">♥</span></td><td>pas</td><td>3<span class="compact-spade">♠</span>*</td><td>pas*</td></tr>
+                            <tr><td>4<span class="compact-club">♣</span>*</td><td>pas</td><td>4<span class="compact-diamond">♦</span>*</td><td>pas</td></tr>
+                            <tr><td>4<span class="compact-heart">♥</span></td><td>pas</td><td>4BA\n</span></td><td>pas\n</span></td></tr>
+                            <tr><td>5<span class="compact-club">♣</span>*</span></td><td>pas</span></td><td>5<span class="compact-heart">♥</span></span></td><td>pas</span></td></tr>
+                            <tr><td>pas</span></td><td>pas</span></td><td></span></td><td></span></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                                                         <!-- ZWARTY KOMENTARZ -->
+            <div class="commentary-compact">
+                <strong>📝 Komentarz:</strong><br>2<span class="compact-club">♣</span>* forsing co najmniej do końcówki<br>
+3<span class="compact-spade">♠</span>*, 4<span class="compact-club">♣</span>*, 4<span class="compact-diamond">♦</span>* cue-bidy<br>
+5<span class="compact-club">♣</span>* jedna wartość z pięciu<br>
+Nie widzę jak można poprowadzić licytację, żeby wylicytować szlemika.
+A teraz z pomocą przeciwnika 
+            </div>
+       </div>
+
+              <!-- ZWARTE INFORMACJE  2-->
+            <div class="deal-info-compact">
+                <div class="info-box-small">
+                    <h4>📊 Licytacja 2 z pomocą przeciwnika</h4>
+                    <div class="bidding-compact">
+                        <table class="bidding-table-compact">
+                            <tr><td style="background:#f0f0f0">W</span></td><td style="background:#f0f0f0">N</span></td><td style="background:#f0f0f0">E</span></td><td style="background:#f0f0f0">S</span></tr>
+                            <tr><td>1<span class="compact-heart">♥</span></span></td><td>pas</span></td><td>2<span class="compact-club">♣</span>*</span></td><td>pas</span></tr>
+                            <tr><td>3<span class="compact-heart">♥</span></span></td><td>pas</span></td><td>3<span class="compact-spade">♠</span>*</span></td><td>x karna</span></tr>
+                            <tr><td>xx*</span></td><td>pas</span></td><td>4<span class="compact-club">♣</span>*</span></td><td>pas</span></tr>
+                            <tr><td>4<span class="compact-diamond">♦</span>*</span></td><td>pas</span></td><td>4BA</span></td><td>pas</span></tr>
+                            <tr><td>5<span class="compact-club">♣</span>*</span></td><td>pas</span></td><td>6<span class="compact-heart">♥</span></span></td><td>pas</span></tr>
+                            <tr><td>pas</span></td><td>pas</span></td><td></span></td><td></span></tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                                         <!-- ZWARTY KOMENTARZ -->
+            <div class="commentary-compact">
+                <strong>📝 Komentarz:</strong><br>xx* rekontra oznacza asa lub renons, ponieważ padła kontra karna więc na 100% jest to renons<br>
+5<span class="compact-club">♣</span>* oznacza asa lub króla kier, mamy co najmniej 10 kierów i W sprzedał nadwyżki, zatem 6<span class="compact-heart">♥</span> jest normalną licytacją.<br>
+Rozgrywka<br>
+Rozgrywka jest prosta po wiście 9<span class="compact-spade">♠</span> kładziemy waleta, damę S przebijamy przechodzimy asem karo na stół i gramy 8<span class="compact-heart">♥</span> i po ukazaniu się blotki karo od S kładziemy asa i dalej kontrakt jest 100% bez trafiania damy trefl ( eliminacja + wpustka N na króla kier). 
+            </div>
+       </div> 
+       
+                                                          <!-- ZWARTY KOMENTARZ PODSUMOWANIE -->
+            <div class="commentary-compact">
+                <strong>📝 Podsumowanie rozdania 1:</strong> 
+                </div>
+              </div>
+          
+         <!-- ========== ROZDANIE 2 (DODANE) ========== -->
+        <div id="rozdanie2" class="deal">
+            <div class="deal-header">
+                <div class="deal-title">Rozdanie 2: Kosmiczna obrona </div> 
+                <div class="deal-number">nr 2</div>
+            </div>
+        
+            
+                <!-- ZWARTE INFORMACJE  1 dla rozdania 2-->
+            <div class="deal-info-compact">
+                <div class="info-box-small">
+                    <h4>📊 Licytacja 1 </h4>
+                    <div class="bidding-compact">
+                        <table class="bidding-table-compact">
+                            <tr><td style="background:#f0f0f0">W Boguś</span></td><td style="background:#f0f0f0">N Jasiu</span></td><td style="background:#f0f0f0">E Olga</span></td><td style="background:#f0f0f0">S Wiesiu</span></tr>
+                            <tr><td>-</span></td><td>-</span></td><td>-</span><td>1<span class="compact-diamond">♦</span></span></tr>
+                            <tr><td>pas</span></td><td>1<span class="compact-heart">♥</span></span></td><td>1<span class="compact-spade">♠</span></span></td><td>2<span class="compact-club">♣</span></span></tr>
+                            <tr><td>pas</span></td><td>3BA</span></td><td>pas</span></td><td>pas</span></tr>
+                            <tr><td>pas</span></td><td></span></td><td></span></td><td></span></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                                                         <!-- ZWARTY KOMENTARZ -->
+            <div class="commentary-compact">
+                <strong>📝 Komentarz:</strong> Po takiej licytacji wistowała Olga  mając następujące karty<br>
+                Do asa <span class="compact-club">♣</span> dołożyłem 3<span class="compact-club">♣</span>, Olga zagrała jeszcze K<span class="compact-club">♣</span>, dołożyłem 8<span class="compact-club">♣</span> i wówczas   zagrała 8<span class="compact-heart">♥</span>, którą pobiłem K<span class="compact-heart">♥</span> i zagrałem W<span class="compact-heart">♥</span> impasując D<span class="compact-heart">♥</span> u Jasia i kontrakt obłożyliśmy bez jednej.
+            </div>
+       </div>
+       
+        <!-- KOMPAKTOWY DIAGRAM ROZDANIA 2 -->
+            <div class="compact-board">
+                <div class="compact-north">
+                    <div class="compact-hand north">
+                        <div class="compact-position">N</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>A D 6 4 <br>
+                            <span class="compact-heart">♥</span>D 7 6 5 2  <br>
+                            <span class="compact-diamond">♦</span>D 6 <br>
+                            <span class="compact-club">♣</span>4 2
+                        </div>
+                    </div>
+                </div>  
+                
+                 <div class="compact-middle">
+                    <div class="compact-hand west">
+                        <div class="compact-position">W</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>5 2  <br>
+                            <span class="compact-heart">♥</span>K W 10 4 3 <br>
+                            <span class="compact-diamond">♦</span>W 4 <br>
+                            <span class="compact-club">♣</span>W 10 8 3
+                        </div>
+                    </div>  
+                    
+                    <div class="compact-hand east">
+                        <div class="compact-position">E</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>W 10 8 7 3 <br>
+                            <span class="compact-heart">♥</span>A 9 8 <br>
+                            <span class="compact-diamond">♦</span>10 8 5 <br>
+                            <span class="compact-club">♣</span>A K
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="compact-south">
+                    <div class="compact-hand south">
+                        <div class="compact-position">S</div>
+                        <div class="compact-cards">
+                            <span class="compact-spade">♠</span>K 7 <br>
+                            <span class="compact-heart">♥</span>- <br>
+                            <span class="compact-diamond">♦</span>A K 9 7 3 2 <br>
+                            <span class="compact-club">♣</span>D 9 7 6 5
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+          
+              
+                                                          <!-- ZWARTY KOMENTARZ PODSUMOWANIE ROZDANIA 2-->
+            <div class="commentary-compact">
+                <strong>📝 Podsumowanie rozdania 2:</strong><br> Przepraszam, ale to był żart, Jasiu wygrał 3 BA po normalnym wiście W<span class="compact-spade">♠</span>, ale może ktoś ma jakiś sensowny pomysł jak tak zagrać w obronie?<br>
+Uwaga: Z konfiguracji W108xx wistujemy waletem(ważna jest 8), a nie czwartą najlepszą.
+                </div>
+              </div>
+          
+         
+      
+        
+        
+        <!-- ========== STOPKA (TAKA SAMA FORMA JAK NAGŁÓWEK) ========== -->
+        <div class="footer">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px; margin-bottom: 10px;">
+                <span>📧 mirek2338-png.github.io/Bridge</span>
+                <span>📞 797 802 411</span>
+            </div>
+            <p>Redaguje: Olga Jackiewicz</p>
+            <div class="sponsors">Sponsorzy: Miasto Ustka</div>
+        </div>
+    </div>
+</body>
+</html>

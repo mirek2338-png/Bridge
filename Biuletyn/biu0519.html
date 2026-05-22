@@ -161,7 +161,7 @@
             border-radius: 6px;
             padding: 8px 12px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            font-family: 'Courier New', monospace;
+            font-family: 'Noto Sans Mono', monospace;
             font-size: 0.9em;
             line-height: 1.3;
             min-width: 120px;
@@ -276,26 +276,79 @@
             color: #f1c40f;
         }
 
-        /* ---------- RESPONSYWNOŚĆ ---------- */
-        @media (max-width: 650px) {
-            .compact-middle {
-                flex-direction: column;
-                gap: 8px;
-            }
-            
-            .compact-hand {
-                width: 100%;
-                max-width: 250px;
-            }
-            
-            .deal-info-compact {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 1.8em;
-            }
-        }
+/* ---------- RESPONSYWNOŚĆ ---------- */
+@media (max-width: 650px) {
+    .compact-middle {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .compact-hand {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .deal-info-compact {
+        grid-template-columns: 1fr; /* WASZE: zmienia na jedną kolumnę */
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    /* ---------- DODAJ TO ---------- */
+    body {
+        padding: 5px;
+        overflow-x: hidden; /* zapobiega poziomemu przewijaniu */
+    }
+    
+    .container {
+        width: 100%;
+        overflow-x: hidden; /* ukrywa wystające elementy */
+    }
+    
+    .deal {
+        padding: 10px;
+    }
+    
+    /* To jest KLUCZOWE - twoje bloki z licytacją i komentarzem */
+    .deal-info-compact {
+        display: flex;
+        flex-direction: column; /* układamy w KOLUMNIE, nie w wierszu */
+        gap: 12px;
+    }
+    
+    .info-box-small {
+        width: 100%; /* pełna szerokość */
+    }
+    
+    .commentary-compact {
+        width: 100%; /* pełna szerokość */
+        margin-top: 0; /* wyrównanie */
+    }
+    
+    /* Tabela licytacji - przewijalna */
+    .bidding-compact {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .bidding-table-compact td {
+        padding: 3px 5px;
+        font-size: 0.75em;
+        width: 55px;
+    }
+    
+    /* Zmniejszenie paddingu w komentarzach */
+    .commentary-compact {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+    
+    .info-box-small {
+        padding: 8px 10px;
+    }
+}
     </style>
     
     
@@ -382,8 +435,8 @@ Obie strony przed partią, rozdawał E.  </div>
                         </div>
                     </div>
                 </div>
-            </div> 
-            
+           </div> 
+         </div>   
                 <!-- ZWARTE INFORMACJE  1-->
             <div class="deal-info-compact">
                 <div class="info-box-small">
@@ -391,7 +444,7 @@ Obie strony przed partią, rozdawał E.  </div>
                     <div class="bidding-compact">
                         <table class="bidding-table-compact">
                             <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">E</td><td style="background:#f0f0f0">S</td></tr>
-			    <tr><td>Irek</td><td>Ania</td><td>Wojtek</td><td>Zbyszek</td></tr>
+                            <tr><td>Irek</td><td>Ania</td><td>Wojtek</td><td>Zbyszek</td></tr>
                             <tr><td>-</td><td>-</td><td>pas</td><td>3<span class="compact-heart">♥</span></td></tr>
                             <tr><td>4<span class="compact-club">♣</span></td><td>4<span class="compact-heart">♥</span></td><td>pas</td><td>pas</td></tr>
                             <tr><td>pas</td><td></td><td></td><td></td></tr>
@@ -486,7 +539,7 @@ W zalicytował nieforsujące 4<span class="compact-club">♣</span> a przy niewi
                     <h4>📊 Licytacja 5 </h4>
                     <div class="bidding-compact">
                         <table class="bidding-table-compact">
-                            <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">E</td><td style="background:#f0f0f0">S</td></tr>			    <tr><td>-</td><td>-</td><td>pas</td><td>3<span class="compact-heart">♥</span></td></tr>
+                            <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">S</td></tr>			    <tr><td>-</td><td>-</td><td>pas</td><td>3<span class="compact-heart">♥</span></td></tr>
                             <tr><td>x</td><td>pas</td><td>4<span class="compact-diamond">♦</span></td><td>pas</td></tr>
 			    <tr><td>5<span class="compact-diamond">♦</span></td><td>pas</td><td>pas</td><td>5<span class="compact-heart">♥</span></td></tr>
                             <tr><td>x</td><td>pas</td><td>pas</td><td>pas</td></tr>
@@ -504,7 +557,7 @@ Zgodnie z zasadą - jeżeli wszystkie twoje kontry wychodzą, to znaczy, że kon
       	 </div>
      
        </div>
-       </div>
+       <!--</div>-->
     
 
          

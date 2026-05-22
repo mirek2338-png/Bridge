@@ -217,7 +217,7 @@
         }
 
         .bidding-compact {
-            font-family: 'Courier New', monospace;
+            font-family: 'Noto Sans Mono', monospace;
             background: white;
             padding: 6px;
             border-radius: 4px;
@@ -225,15 +225,18 @@
             font-size: 0.9em;
         }
 
+             /* ---------- STAŁE SZEROKOŚCI KOLUMN W LICYTACJI ---------- */
         .bidding-table-compact {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed; /* Kluczowe - wymusza stałe szerokości */
         }
 
         .bidding-table-compact td {
-            padding: 3px 6px;
+            padding: 5px 8px;
             text-align: center;
             border: 1px solid #dee2e6;
+            width: 70px; /* Stała szerokość każdej kolumny */
         }
 
         .commentary-compact {
@@ -243,11 +246,15 @@
             border-left: 3px solid #f1c40f;
             margin-top: 10px;
             font-size: 0.9em;
+            text-align: justify;
+            text-justify: inter-word; /* lepsze odstępy między wyrazami */
+            hyphens: auto; /* dzielenie wyrazów przy długich słowach */
         }
 
         .commentary-compact p {
             margin: 5px 0;
         }
+
 
         /* ---------- STOPKA (bardziej zwarta) ---------- */
         .footer {
@@ -383,7 +390,8 @@ Obie strony przed partią, rozdawał E.  </div>
                     <h4>📊 Licytacja 1 </h4>
                     <div class="bidding-compact">
                         <table class="bidding-table-compact">
-                            <tr><td style="background:#f0f0f0">W-Ireneusz</td><td style="background:#f0f0f0">N-Ania</td><td style="background:#f0f0f0">E-Wojtek</td><td style="background:#f0f0f0">S-Zbyszek</td></tr>
+                            <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">E</td><td style="background:#f0f0f0">S</td></tr>
+			    <tr><td>Irek</td><td>Ania</td><td>Wojtek</td><td>Zbyszek</td></tr>
                             <tr><td>-</td><td>-</td><td>pas</td><td>3<span class="compact-heart">♥</span></td></tr>
                             <tr><td>4<span class="compact-club">♣</span></td><td>4<span class="compact-heart">♥</span></td><td>pas</td><td>pas</td></tr>
                             <tr><td>pas</td><td></td><td></td><td></td></tr>
@@ -450,7 +458,8 @@ W zalicytował nieforsujące 4<span class="compact-club">♣</span> a przy niewi
                     <h4>📊 Licytacja 4 </h4>
                     <div class="bidding-compact">
                         <table class="bidding-table-compact">
-                            <tr><td style="background:#f0f0f0">W-Olga</td><td style="background:#f0f0f0">N-Krzyś B.</td><td style="background:#f0f0f0">E-Waldek</td><td style="background:#f0f0f0">S-Krzyś M.</td></tr>
+                            <tr><td style="background:#f0f0f0">W</td><td style="background:#f0f0f0">N</td><td style="background:#f0f0f0">E</td><td style="background:#f0f0f0">S</td></tr>
+                            <tr><td>Olga</td><td>Krzyś B.</td><td>Waldek</td><td>Krzyś M.</td></tr>
                             <tr><td>-</td><td>-</td><td>pas</td><td>3<span class="compact-heart">♥</span></td></tr>
                             <tr><td>x</td><td>4<span class="compact-heart">♥</span></td><td>pas</td><td>pas</td></tr>
                             <tr><td>x</td><td>pas</td><td>5<span class="compact-diamond">♦</span></td><td>pas</td></tr>

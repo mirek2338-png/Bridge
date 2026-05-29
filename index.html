@@ -2,33 +2,441 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Turnieje Ustka</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Turnieje Ustka | Nasz brydż</title>
+    <style>
+    /* ========== RESET I PODSTAWY ========== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
 
+    /* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
+    .naglowek-kontener {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex-wrap: nowrap;
+    }
+
+    .naglowek-logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .logo-ustka, .logo-sponsor-naglowek {
+        height: 70px;
+        width: auto;
+        display: block;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .logo-ustka:hover, .logo-sponsor-naglowek:hover {
+        transform: scale(1.05);
+    }
+
+    .naglowek-tytul h1 {
+        font-size: 28px;
+        color: #2c3e50;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .naglowek-dane {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.6;
+    border-left: 3px solid #3498db;
+    padding-left: 25px;
+    color: #34495e;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 12px 20px;
+    border-radius: 10px;
+    gap: 8px;
+}
+
+.naglowek-dane div {
+    white-space: nowrap;
+    text-align: left;
+}
+
+    /* ========== STOPKA ========== */
+    .stopka-kontener {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 20px 30px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        color: #2c3e50;
+    }
+
+    .stopka-lewa {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .stopka-prawa {
+        flex-shrink: 0;
+    }
+    
+    .qr-box {
+        background: white;
+        padding: 8px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: inline-block;
+        line-height: 0;
+    }
+    
+    .qr-box img {
+        width: 90px;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+    }
+    
+    .info-text {
+        font-size: 14px;
+        color: #2c3e50;
+        line-height: 1.4;
+    }
+    
+    .info-text p {
+        margin: 5px 0;
+    }
+    
+    .info-text .copyright {
+        font-size: 13px;
+        margin-top: 8px;
+        color: #2c3e50;
+        font-weight: 500;
+    }
+    
+    .info-text .miejsce {
+        font-size: 13px;
+    }
+
+    /* ========== BLOKI TURNIEJÓW ========== */
+    .turniej-blok {
+        background: #ffffff;
+        margin: 15px 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .turniej-blok.z-logo {
+        display: flex;
+        align-items: stretch;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+
+    .turniej-blok.z-logo .turniej-tresc {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .data-turnieju {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #2c3e50;
+        display: block;
+        white-space: nowrap;
+    }
+    
+    .zloty-tekst {
+        color: #C5A028;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+        font-weight: bold;
+        display: inline-block;
+        padding-left: 40px;
+        white-space: nowrap;
+    }
+
+    .przyciski {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .przyciski .btn {
+        padding: 10px 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%);
+        color: #2c3e50;
+        font-weight: 500;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+        min-height: 40px;
+        white-space: nowrap;
+        flex: 0 1 auto;
+    }
+
+    .przyciski .btn:hover {
+        background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
+        border-color: #64b5f6;
+        color: #1565c0;
+    }
+
+    .btn-odstep {
+        margin-left: 40px !important;
+    }
+
+    .logo-sponsora-kontener {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        width: auto;
+        min-width: 100px;
+        padding: 0;
+        border-left: 2px solid #e0e0e0;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .logo-sponsora {
+        width: 100%;
+        height: 100%;
+        max-width: 140px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        display: block;
+        padding: 15px;
+        flex-shrink: 0;
+    }
+
+    @media (min-width: 992px) {
+        .logo-sponsora {
+            max-width: 160px;
+            padding: 20px;
+        }
+        body {
+            padding: 40px;
+        }
+    }
+
+    /* ========== RESPONSYWNOŚC – SKALOWANIE CALEGO BODY ========== */
+    @media (max-width: 800px) {
+        body {
+            transform: scale(0.6);
+            transform-origin: top left;
+            width: 166.667%;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 700px) {
+        body {
+            transform: scale(0.55);
+            transform-origin: top left;
+            width: 181.818%;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body {
+            transform: scale(0.5);
+            transform-origin: top left;
+            width: 200%;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 500px) {
+        body {
+            transform: scale(0.45);
+            transform-origin: top left;
+            width: 222.222%;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 450px) {
+        body {
+            transform: scale(0.4);
+            transform-origin: top left;
+            width: 250%;
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 380px) {
+        body {
+            transform: scale(0.35);
+            transform-origin: top left;
+            width: 285.714%;
+            padding: 0;
+        }
+    }
+
+    /* ========== DODATKOWE ZMNIEJSZENIE ELEMENTÓW NAGŁÓWKA W PORTRECIE ========== */
+    @media (max-width: 500px) and (orientation: portrait) {
+        .naglowek-kontener {
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .logo-ustka, .logo-sponsor-naglowek {
+            height: 40px;
+        }
+        
+        .naglowek-tytul h1 {
+            font-size: 16px;
+        }
+        
+        .naglowek-dane {
+            padding: 5px 10px;
+            gap: 8px;
+        }
+        
+        .naglowek-dane div {
+            font-size: 8px;
+        }
+    }
+
+    @media (max-width: 400px) and (orientation: portrait) {
+        .naglowek-kontener {
+            gap: 10px;
+            padding: 8px;
+        }
+        
+        .logo-ustka, .logo-sponsor-naglowek {
+            height: 32px;
+        }
+        
+        .naglowek-tytul h1 {
+            font-size: 14px;
+        }
+        
+        .naglowek-dane {
+            padding: 3px 8px;
+            gap: 6px;
+        }
+        
+        .naglowek-dane div {
+            font-size: 7px;
+        }
+        
+        .naglowek-logo {
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 350px) and (orientation: portrait) {
+        .naglowek-kontener {
+            gap: 8px;
+            padding: 5px;
+        }
+        
+        .logo-ustka, .logo-sponsor-naglowek {
+            height: 28px;
+        }
+        
+        .naglowek-tytul h1 {
+            font-size: 12px;
+        }
+        
+        .naglowek-dane div {
+            font-size: 6.5px;
+        }
+        
+        .naglowek-dane {
+            padding: 2px 6px;
+            gap: 5px;
+        }
+    }
+
+    /* Landscape – pozostaje bez dodatkowych zmian (jest OK) */
+    </style>
 </head>
 <body>
     
+<!-- NAGŁÓWEK Z DWOMA LOGO I DANYMI KONTAKTOWYMI -->
 <div class="naglowek-kontener">
-	<!--
-   <div class="naglowek-lewy">
-   -->
-    <h1>📅 Nasz brydż Ustka</h1>
-    <!--
-    <div class="qr-kontener">
-            <img src="asset/image/QR.png" alt="QR Code do strony" class="qr-code">
-            <div class="qr-tekst">Zeskanuj kod QR<br>aby zapisać stronę</div>
-        
-        </div>
+    <div class="naglowek-logo">
+        <img src="Bridge/image/herb_ustka.svg" alt="Herb Ustki" class="logo-ustka">
+        <img src="Bridge/image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsor-naglowek">
     </div>
--->
-    <div class="tekst-obok">
+    <div class="naglowek-tytul">
+        <h1>Nasz brydż Ustka</h1>
+    </div>
+    <div class="naglowek-dane">
         <div>Prezes:   Leszek Dunia    kom.602 478 116 mail: leszek.dunia@onet.eu </div>
         <div>Skarbnik: Jarek Dymnicki  kom.607 884 489 mail: jard1212@wp.pl </div>
         <div>Admin:    Mirek Całka     kom.797 802 411 mail: mirek2338@gmail.com</div>
         <div>Admin:    Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
     </div>
-    
+</div>
+
+<!-- BLOK TURNIEJU 2026-06-02 Z LOGO SPONSORA -->
+<div class="turniej-blok z-logo">
+    <div class="turniej-tresc">
+        <div class="data-turnieju">
+            📆 Turniej 2026-06-02 
+            <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz „Uzdrowisko Ustka”</span>
+        </div>
+        <div class="przyciski">
+            <a href="#" class="btn">Wyniki</a>
+            <a href="#" class="btn">Historia</a>
+            <a href="#" class="btn">Długa Fala</a>
+            <a href="#" class="btn">Protokóły</a>
+            <a href="#" class="btn btn-odstep">Boguś omawia</a>
+            <a href="#" class="btn">Regulamin</a>
+            <a href="#" class="btn">Ikona na telefonie</a>
+        </div>
+    </div>
+    <div class="logo-sponsora-kontener">
+        <img src="Bridge/image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
+    </div>
+</div>
+
            </div>
        <div class="turniej-blok">
     <div class="data-turnieju">📆 Turniej 2026-05-26</div>
@@ -55,245 +463,21 @@
         <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
     </div>
 
-            </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-05-12</div>
-    <div class="przyciski">
-        <a href="turnieje/0512UW.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_12_historia_51.txt" class="btn">Historia</a>
-        <a href="turnieje/0512UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_12_protokoly_51.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0512.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
+<!-- STOPKA -->
+<div class="stopka-kontener">
+    <div class="stopka-lewa">
+        <div class="info-text">
+            <p>© 2025 Nasz brydż Ustka | Wszystkie prawa zastrzeżone</p>
+            <p class="miejsce">📍 Ustka, Polska</p>
+            <p class="copyright">⚡ Brydż to pasja i precyzja</p>
+        </div>
     </div>
-
-            </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-05-05</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_05_wyniki_50.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_05_historia_50.txt" class="btn">Historia</a>
-        <a href="turnieje/0505UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_05_protokoly_50.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0505.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
-    </div>
-
-            </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-04-28</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_28_wyniki_43.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_28_historia_43.txt" class="btn">Historia</a>
-        <a href="turnieje/0428UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_28_protokoly_43.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0428.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
-    </div>
-
-            </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-04-21</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_21_wyniki_42.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_21_historia_42.txt" class="btn">Historia</a>
-        <a href="turnieje/0421UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_21_protokoly_42.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0421.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
-    </div>
-
-     </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-04-14</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_14_wyniki_41.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_14_historia_41.txt" class="btn">Historia</a>
-        <a href="turnieje/0414UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_14_protokoly_41.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biu0414.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
-    </div>
-
-            </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-04-07</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_07_wyniki_49.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_07_historia_49.txt" class="btn">Historia</a>
-        <a href="turnieje/0407UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_04_07_protokoly_49.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0407.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
-    </div>
-    
-               </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-03-31</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_31_wyniki_33.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_31_historia_33.txt" class="btn">Historia</a>
-        <a href="turnieje/0331UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_31_protokoly_33.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0331.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>
-    
-           </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-03-24</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_24_wyniki_32.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_24_historia_32.txt" class="btn">Historia</a>
-        <a href="turnieje/0324UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_24_protokoly_32.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0324.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div> 
-    
-    
-     </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-03-17</div>
-    <div class="przyciski">
-        <a href="turnieje/0317UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0317UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0317UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0317UP.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0317.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>    
-
-         </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-03-10</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_10_wyniki_30.txt" class="btn">Wyniki</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_10_historia_30.txt" class="btn">Historia</a>
-        <a href="turnieje/0310UF.html" class="btn">Długa Fala</a>
-        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_03_10_protokoly_30.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biuletyn0310.html" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div> 
-
-	     </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-03-03</div>
-    <div class="przyciski">
-        <a href="https://brydzslupski.pl/wyniki/260303/" class="btn">Wyniki</a>
-        <!-- <a href="turnieje/0303UH.txt" class="btn">Historia</a> -->
-        <a href="turnieje/0303UF.html" class="btn">Długa Fala</a>
-        <!-- <a href="turnieje/0303UP.txt" class="btn">Protokóły</a> -->
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div> 
-		   
-     </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-02-17</div>
-    <div class="przyciski">
-        <a href="turnieje/0217UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0217UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0217UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0217UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>   
-  
-    
-   </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-02-10</div>
-    <div class="przyciski">
-        <a href="turnieje/0210UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0210UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0210UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0210UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>    
-    
-  </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-02-03</div>
-    <div class="przyciski">
-        <a href="turnieje/0203UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0203UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0203UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0203UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Bogu&#347 omawia</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>   
-    
-  
-  </div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-01-27</div>
-    <div class="przyciski">
-        <a href="turnieje/0127UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0127UF.html" class="btn">Długa Fala</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>    
-</div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-01-20</div>
-    <div class="przyciski">
-        <a href="turnieje/0120UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0120UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0120UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0120UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>    
-    
-</div>
-       <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2026-01-13</div>
-    <div class="przyciski">
-        <a href="turnieje/0113UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/0113UH.txt" class="btn">Historia</a>
-        <a href="turnieje/0113UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/0113UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
+    <div class="stopka-prawa">
+        <div class="qr-box">
+            <img src="Bridge/image/qr-kod.jpg" alt="Kod QR">
+        </div>
     </div>
 </div>
-        <div class="turniej-blok">
-    <div class="data-turnieju">📆 Turniej 2025-12-16</div>
-    <div class="przyciski">
-        <a href="turnieje/1216UW.txt" class="btn">Wyniki</a>
-        <a href="turnieje/1216UH.txt" class="btn">Historia</a>
-        <a href="turnieje/1209UF.html" class="btn">Długa Fala</a>
-        <a href="turnieje/1216UP.txt" class="btn">Protokóły</a>
-        <a href="shared/InU1209.txt" class="btn btn-odstep">Info</a>
-        <a href="shared/Reg6je.txt" class="btn">Regulamin</a>
-        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>  
-    </div>
-</div>
- 
 
 </body>
 </html>
-
-
-
-
-

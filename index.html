@@ -13,14 +13,16 @@
     }
 
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow-x: hidden;
-    }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    width: 1200px;              /* ✅ STAŁA SZEROKOŚĆ */
+    min-width: 1200px;          /* ✅ NIE MOŻE BYĆ MNIEJSZE */
+    margin: 0 auto;             /* ✅ WYŚRODKOWANIE */
+    overflow: auto;             /* ✅ PRZEWIJANIE W OBU KIERUNKACH */
+    /* lub overflow: scroll;    daje zawsze paski przewijania */
+}
 
     /* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
     .naglowek-kontener {

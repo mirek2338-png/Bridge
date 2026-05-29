@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Regulamin 19. Letniego GRAND PRIX Ustki 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9f0f5;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', 'Georgia', serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+            color: #1a2c3e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* header z akcentem */
+        .prix-header {
+            background: linear-gradient(135deg, #0b3b4f 0%, #1b5e6e 100%);
+            padding: 2rem 2rem 1.5rem 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 6px solid #f5c542;
+        }
+
+        .prix-header h1 {
+            font-size: 2rem;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+        }
+
+        .prix-header h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .prix-header .date-place {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            background: rgba(255,255,240,0.15);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* treść */
+        .content {
+            padding: 2rem 2rem 2rem 2rem;
+        }
+
+        /* grid dla punktacji/akcentów */
+        .highlight-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            background: #fef9e6;
+            border-radius: 24px;
+            padding: 1.2rem 1.5rem;
+            border-left: 8px solid #f5c542;
+        }
+
+        .highlight-card {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .highlight-card h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1b5e6e;
+            border-bottom: 2px dotted #f5c542;
+            display: inline-block;
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-card p, .highlight-card ul {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .reg-section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.2rem;
+        }
+
+        .reg-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f4c5f;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .badge {
+            background: #f5c542;
+            color: #1a2c3e;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
+
+        .rule-list {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+
+        .rule-list li {
+            margin-bottom: 0.85rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .rule-list li strong {
+            color: #1b5e6e;
+        }
+
+        .rule-list li:before {
+            content: "▹";
+            color: #f5b841;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .points-table {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid #cbd5e1;
+        }
+
+        .points-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .points-table th, .points-table td {
+            padding: 0.6rem 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .points-table th {
+            background-color: #eef2f5;
+            font-weight: 700;
+            color: #0f4c5f;
+        }
+
+        .bonus-note {
+            background: #eef2ff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer-signature {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px dashed #cbd5e6;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #2c5a6e;
+        }
+
+        @media (max-width: 680px) {
+            .content {
+                padding: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+            .prix-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="prix-header">
+        <h1>19. Letnie GRAND PRIX Ustki</h1>
+        <h2>o Puchary Grand Lubicz „Uzdrowisko Ustka” na rok 2026</h2>
+        <div class="date-place">🏆 Cykl turniejów brydża sportowego • 2 czerwca – 15 września 2026</div>
+    </div>
+    <div class="content">
+        <!-- podsumowanie kluczowych informacji -->
+        <div class="highlight-grid">
+            <div class="highlight-card">
+                <h3>📅 Terminy i miejsce</h3>
+                <p><strong>wtorki, godz. 17:00</strong><br>Klub Garnizonowy Ustka-Lędowo<br>Turnieje dodatkowe w Hotelu Grand Lubicz (możliwa zmiana z 14-dniowym wyprzedzeniem)</p>
+            </div>
+            <div class="highlight-card">
+                <h3>🏅 System punktacji</h3>
+                <p>12 najlepszych wyników • Punkty PDF: ostatnie miejsce w parach = 2 pkt (+2 pkt za wyższe), indywidualne = 1 pkt (+1 pkt) + premie za czołowe miejsca (+3, +2, +1 zależne od liczby par).</p>
+            </div>
+            <div class="highlight-card">
+                <h3>💰 Wpisowe & nagrody</h3>
+                <p>👩 panie: 8 zł &nbsp;|&nbsp; 👨 panowie: 10 zł<br>🎓 młodzież/studenci dzienni: 0 zł<br>🏆 nagrody w każdym turnieju: I m. 30 zł, II m. 20 zł</p>
+            </div>
+        </div>
+
+        <!-- treść regulaminu podzielona na punkty (1-11)-->
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§1</span> Organizacja i terminy</div>
+            <ul class="rule-list">
+                <li>Cykl turniejów brydża sportowego <strong>parami</strong> w ramach 19. Letniego GRAND PRIX Ustki odbędzie się w terminie <strong>2.06.2026 r. – 15.09.2026 r.</strong> w Klubie Garnizonowym Ustka-Lędowo, w każdy wtorek. Rozpoczęcie o godz. <strong>17:00</strong>.</li>
+                <li>Dopuszcza się przeprowadzenie 2 turniejów w <strong>hotelu „Grand Lubicz”</strong>, także w innym terminie niż wtorek. Powiadomienie o zmianie terminu i miejsca ukaże się na stronie Klubu i stronie STB Słupsk z wyprzedzeniem <strong>14 dni</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§2</span> Turnieje wchodzące w skład cyklu</div>
+            <ul class="rule-list">
+                <li>W skład 19. Letniego GRAND PRIX Ustki wchodzi <strong>15 turniejów par</strong> (przemiennie obliczane: pierwszy na maxy, kolejny jako cav-śr) oraz <strong>jeden turniej indywidualny na maxy</strong> (08.09).</li>
+                <li>Gdyby z przyczyn technicznych któryś z planowanych turniejów nie odbył się, kolejność <em>„maxy – impy”</em> pozostaje bez zmian.</li>
+            </ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§3</span> Mniejsza liczba uczestników</div>
+            <ul class="rule-list"><li>W przypadku udziału mniejszej liczby par (od 6 w dół) organizator może podjąć decyzję o innym sposobie przeprowadzenia zawodów i podliczenia wyników w inny sposób niż pierwotnie planowany.</li></ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§4–6</span> Punktacja długofalowa (PDF)</div>
+            <ul class="rule-list">
+                <li>Każdemu uczestnikowi zalicza się <strong>12 najlepszych wyników</strong>.</li>
+                <li><strong>Zasady podstawowe:</strong>
+                    <ul style="margin-top: 8px; margin-left: 1.8rem; list-style: circle;">
+                        <li>Turniej par: ostatnie miejsce = <strong>2 punkty (PDF)</strong>, za każde miejsce wyżej = <strong>+2 punkty</strong>.</li>
+                        <li>Turniej indywidualny: ostatnie miejsce = <strong>1 punkt (PDF)</strong>, za każde miejsce wyżej = <strong>+1 punkt</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Premie za czołowe miejsca:</strong> 
+                    <div class="points-table">
+                        <table>
+                            <thead>
+                                <tr><th>Liczba par</th><th>Premia (dodatkowe PDF)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>11+ par</td><td>+3 pkt (I m.), +2 pkt (II m.), +1 pkt (III m.)</td></tr>
+                                <tr><td>7–10 par</td><td>+2 pkt (I m.), +1 pkt (II m.)</td></tr>
+                                <tr><td>6 i mniej par</td><td>+1 pkt (I miejsce)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>W przypadku uzyskania w turnieju przez dwie lub więcej par (osób) identycznego rezultatu, parom/osobom przyznaje się <strong>największą wartość PDF</strong> przypadającą na te miejsca w punktacji długofalowej.</li>
+            </ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§7</span> Wpisowe</div>
+            <ul class="rule-list">
+                <li>panie: <strong>8,00 zł</strong> &nbsp;&nbsp;|&nbsp; panowie: <strong>10,00 zł</strong> &nbsp;&nbsp;|&nbsp; młodzież szkolna i studenci studiów dziennych: <strong>0,00 zł</strong></li>
+            </ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§8–9</span> Nagrody turniejowe i klasyfikacja generalna</div>
+            <ul class="rule-list">
+                <li><strong>Nagrody finansowe w każdym turnieju (dla pary lub osoby w turnieju indywidualnym):</strong><br>🏅 I miejsce – 30,00 zł &nbsp;|&nbsp; 🥈 II miejsce – 20,00 zł.</li>
+                <li><strong>Nagrody główne w punktacji długofalowej 19. Letniego GRAND PRIX Ustki:</strong><br>
+                I–III miejsce – <strong>puchary i nagrody</strong> ufundowane przez Prezesa „Uzdrowiska Ustka” sp. z o.o.<br>
+                IV–VI miejsce – <strong>statuetki</strong> ufundowane przez Prezesa „Uzdrowiska Ustka” sp. z o.o.</li>
+            </ul>
+        </div>
+
+        <div class="reg-section">
+            <div class="section-title"><span class="badge">§10–11</span> Przepisy gry i zakończenie cyklu</div>
+            <ul class="rule-list">
+                <li>W czasie turniejów obowiązuje <strong>Międzynarodowe Prawo Brydżowe 2017</strong> i Regulamin Zawodów Brydża Sportowego Polskiego Związku Brydża Sportowego.</li>
+                <li>Zakończenie cyklu połączone z wręczeniem nagród odbędzie się na <strong>turnieju dodatkowym</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- dodatkowa informacja przypominająca o zmianach -->
+        <div class="bonus-note">
+            ⚡ Organizator zastrzega możliwość zmian w organizacji zgodnie z pkt 1 i 3. O ewentualnej zmianie terminu/miejsca (Hotel Grand Lubicz) organizator powiadomi z 14-dniowym wyprzedzeniem na stronie Klubu oraz STB Słupsk.
+        </div>
+
+        <div class="footer-signature">
+            <div><strong>Klub Brydża Sportowego „USTKA”</strong><br>Prezes: Leszek Dunia</div>
+            <div>Ustka, dnia 26 maja 2026 roku</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

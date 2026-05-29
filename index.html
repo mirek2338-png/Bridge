@@ -12,69 +12,68 @@
         box-sizing: border-box;
     }
 
-    body {
+   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
     color: #333;
     padding: 20px;
-    width: 1200px;              /* ✅ STAŁA SZEROKOŚĆ */
-    min-width: 1200px;          /* ✅ NIE MOŻE BYĆ MNIEJSZE */
-    margin: 0 auto;             /* ✅ WYŚRODKOWANIE */
-    overflow: auto;             /* ✅ PRZEWIJANIE W OBU KIERUNKACH */
-    /* lub overflow: scroll;    daje zawsze paski przewijania */
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
 }
 
-    /* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
-    .naglowek-kontener {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        margin-bottom: 20px;
-        padding: 20px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        flex-wrap: wrap;
-    }
+/* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
+.naglowek-kontener {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* flex-wrap: wrap - USUNIĘTE */
+}
 
-    .naglowek-logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.naglowek-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* flex-wrap: wrap - USUNIĘTE */
+    /* justify-content: center - USUNIĘTE */
+}
 
-    .logo-ustka, .logo-sponsor-naglowek {
+.logo-ustka, .logo-sponsor-naglowek {
     height: 120px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
-    flex-shrink: 1;  /* ✅ ZMIANA: pozwala na kurczenie się (1 zamiast 0) */
-    max-width: 100%;  /* ✅ DODANE: nie wyjdzie poza kontener */
+    /* flex-shrink: 1 - USUNIĘTE */
+    /* max-width: 100% - USUNIĘTE */
 }
 
-    .logo-ustka:hover, .logo-sponsor-naglowek:hover {
-        transform: scale(1.05);
-    }
+.logo-ustka:hover, .logo-sponsor-naglowek:hover {
+    transform: scale(1.05);
+}
 
-   .naglowek-tytul h1 {
+.naglowek-tytul h1 {
     font-size: 32px;
     color: #2c3e50;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     margin: 0;
-    white-space: normal;  /* ✅ ZMIANA: pozwala na zawijanie tekstu */
-    text-align: center;   /* ✅ DODANE: wyśrodkowanie przy zawijaniu */
-    word-break: keep-all; /* ✅ opcjonalnie: nie dzieli wyrazów */
+    white-space: nowrap;  /* ← ZMIENIONE z normal */
+    /* text-align: center - USUNIĘTE (lub zostaw jeśli chcesz) */
+    /* word-break: keep-all - USUNIĘTE */
 }
 
 .naglowek-dane {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;  /* ✅ ZMIANA: pozwala na zawijanie */
-    justify-content: center;
-    align-items: center;  /* ✅ ZMIANA: wyśrodkowanie przy zawijaniu */
+    /* flex-wrap: wrap - USUNIĘTE */
+    /* justify-content: center - USUNIĘTE */
+    /* align-items: center - USUNIĘTE */
     font-size: 13px;
     line-height: 1.6;
     border-left: 3px solid #3498db;
@@ -83,12 +82,12 @@
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     gap: 8px;
-    min-width: 150px;  /* ✅ DODANE: minimalna szerokość */
+    /* min-width: 150px - USUNIĘTE */
 }
 
 .naglowek-dane div {
-    white-space: normal;  /* ✅ ZMIANA: pozwala na zawijanie tekstu */
-    text-align: center;   /* ✅ ZMIANA: wyśrodkowanie */
+    white-space: nowrap;  /* ← ZMIENIONE z normal */
+    text-align: left;     /* ← ZMIENIONE z center */
 }
 
     /* ========== STOPKA ========== */

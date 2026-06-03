@@ -320,84 +320,6 @@
             padding: 0;
         }
     }
-    /* ========== ARCHIWUM - STYLE DRZEWA ========== */
-.archiwum-content {
-    margin-top: 15px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 3px solid #007bff;
-}
-
-.folder-tree {
-    font-family: 'Segoe UI', monospace;
-    font-size: 14px;
-}
-
-.folder-toggle {
-    background: #e9ecef;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    padding: 6px 12px;
-    margin: 5px 0;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
-    color: #495057;
-    transition: all 0.2s ease;
-}
-
-.folder-toggle:hover {
-    background: #dee2e6;
-    border-color: #adb5bd;
-}
-
-.folder-content {
-    margin-left: 25px;
-    padding-left: 15px;
-    border-left: 2px dashed #ced4da;
-}
-
-.file-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 8px 0;
-}
-
-.file-list li {
-    margin: 4px 0;
-    padding: 2px 0 2px 20px;
-    position: relative;
-}
-
-.file-list li::before {
-    content: "📄";
-    position: absolute;
-    left: 0;
-    opacity: 0.7;
-}
-
-.file-list a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 13px;
-    transition: color 0.2s;
-}
-
-.file-list a:hover {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-/* Dostosowanie przycisków w archiwum do stylu .btn */
-.toggle-archiwum {
-    background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%) !important;
-}
-
-.toggle-archiwum:hover {
-    background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%) !important;
-    border-color: #64b5f6 !important;
-}
 
    
     </style>
@@ -443,69 +365,19 @@
     </div>
 </div>
 
-
-    <!-- BLOK ARCHIWUM -->
-<div class="turniej-blok">
-    <div class="data-turnieju">📦 Archiwum turniejów</div>
+           </div>
+       <div class="turniej-blok">
+    <div class="data-turnieju">📆 Turniej 2026-05-26</div>
     <div class="przyciski">
-        <button class="btn toggle-archiwum" data-target="bogus-archiwum">📖 Boguś omawia</button>
-        <button class="btn toggle-archiwum" data-target="dluga-archiwum">🌊 Długa fala</button>
+        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_wyniki_53.txt" class="btn">Wyniki</a>
+        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_historia_53.txt" class="btn">Historia</a>
+        <a href="turnieje/0519UF.html" class="btn">Długa Fala</a>
+        <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_protokoly_53.txt" class="btn">Protokóły</a>
+        <a href="Biuletyn/biu0526.html" class="btn btn-odstep">Bogu&#347 omawia</a>
+        <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
+        <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
     </div>
-    
-    <!-- Zawartość Boguś omawia -->
-    <div id="bogus-archiwum" class="archiwum-content" style="display: none; margin-top: 15px;">
-        <div class="folder-tree">
-            <button class="folder-toggle" data-target="bogus-2026-folder">📂 2026</button>
-            <div id="bogus-2026-folder" class="folder-content" style="display: none; margin-left: 20px;">
-                <ul class="file-list">
-                    <li><a href="Archiwa/Bogus_omawia/2026/0310UB.html">0310UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0317UB.html">0317UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0324UB.html">0324UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0331UB.html">0331UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0414UB.html">0407UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0414UB.html">0414UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0421UB.html">0421UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0428UB.html">0428UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0505UB.html">0505UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0512UB.html">0512UB.html</a></li>
-                    <li><a href="Archiwa/Bogus_omawia/2026/0519UB.html">0519UB.html</a></li>
-                </ul>
-                <!--<button class="folder-toggle" data-target="bogus-css-folder">📂 css</button>
-                <div id="bogus-css-folder" class="folder-content" style="display: none; margin-left: 20px;">
-                    <ul class="file-list">
-                        <li><a href="css/style.css">style.css</a></li>
-                    </ul>
-                </div>
-                <button class="folder-toggle" data-target="bogus-symbole-folder">📂 symbole</button>
-                <div id="bogus-symbole-folder" class="folder-content" style="display: none; margin-left: 20px;">
-                    <ul class="file-list">
-                        <li><a href="symbole/Symbole.txt">Symbole.txt</a></li>
-                    </ul>-->
-                </div>
-            </div>
-        </div>
     </div>
-    
-    <!-- Zawartość Długa fala -->
-    <div id="dluga-archiwum" class="archiwum-content" style="display: none; margin-top: 15px;">
-        <div class="folder-tree">
-            <button class="folder-toggle" data-target="dluga-2025-folder">📂 2025</button>
-            <div id="dluga-2025-folder" class="folder-content" style="display: none; margin-left: 20px;">
-                <ul class="file-list">
-                    <li><a href="turnieje/1209UF.html">1209UF.html</a></li>
-                </ul>
-            </div>
-            <button class="folder-toggle" data-target="dluga-2026-folder">📂 2026</button>
-            <div id="dluga-2026-folder" class="folder-content" style="display: none; margin-left: 20px;">
-                <ul class="file-list">
-                 
-                    <li><a href="Archiwa/Dluga_fala/2026/0519UF.html">0519UF.html</a></li>
-                    <li><a href="Archiwa/Dluga_fala/2026/0602UF.html">0602UF.html</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- STOPKA -->
 <div class="stopka-kontener">
@@ -522,59 +394,6 @@
         </div>
     </div>
 </div>
-<script>
-
-// Obsługa przycisków głównych w archiwum (Boguś omawia / Długa fala)
-document.querySelectorAll('.toggle-archiwum').forEach(button => {
-    button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const targetDiv = document.getElementById(targetId);
-        
-        // Zamknij inne otwarte sekcje archiwum
-        document.querySelectorAll('.archiwum-content').forEach(content => {
-            if (content.id !== targetId) {
-                content.style.display = 'none';
-            }
-        });
-        
-        // Przełącz klikniętą sekcję
-        if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
-            targetDiv.style.display = 'block';
-        } else {
-            targetDiv.style.display = 'none';
-        }
-    });
-});
-
-// Obsługa przycisków folderów (2025, 2026, css, symbole)
-document.querySelectorAll('.folder-toggle').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const targetId = this.getAttribute('data-target');
-        const targetDiv = document.getElementById(targetId);
-        
-        if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
-            targetDiv.style.display = 'block';
-        } else {
-            targetDiv.style.display = 'none';
-        }
-    });
-});
-
-// Dodajemy też obsługę dla przycisku "Boguś omawia" w górnym bloku (ten bez archiwum)
-document.querySelectorAll('.btn-odstep').forEach(btn => {
-    if(btn.textContent.includes('Boguś')) {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const archiwumBtn = document.querySelector('.toggle-archiwum[data-target="bogus-archiwum"]');
-            if(archiwumBtn) {
-                archiwumBtn.click();
-                document.querySelector('.turniej-blok:last-child').scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    }
-});
-</script>
 
 </body>
 </html>

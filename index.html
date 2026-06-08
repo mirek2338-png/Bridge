@@ -12,72 +12,73 @@
         box-sizing: border-box;
     }
 
-   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    padding: 20px;
-    width: 1200px;
-    min-width: 1200px;
-    margin: 0 auto;
-    overflow: auto;
-}
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 20px;
+        width: 1200px;
+        min-width: 1200px;
+        margin: 0 auto;
+        overflow: auto;
+    }
 
-/* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
-.naglowek-kontener {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    /* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
+    .naglowek-kontener {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-.naglowek-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+    .naglowek-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
 
-.logo-ustka, .logo-sponsor-naglowek {
-    height: 120px;
-    width: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
+    .logo-ustka, .logo-sponsor-naglowek {
+        height: 120px;
+        width: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
 
-.logo-ustka:hover, .logo-sponsor-naglowek:hover {
-    transform: scale(1.05);
-}
+    .logo-ustka:hover, .logo-sponsor-naglowek:hover {
+        transform: scale(1.05);
+    }
 
-.naglowek-tytul h1 {
-    font-size: 32px;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    white-space: nowrap;
-}
+    .naglowek-tytul h1 {
+        font-size: 32px;
+        color: #2c3e50;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        margin: 0;
+        white-space: nowrap;
+        text-align: center;
+    }
 
-.naglowek-dane {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    line-height: 1.6;
-    border-left: 3px solid #3498db;
-    padding: 12px 20px;
-    color: #34495e;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    gap: 8px;
-}
+    .naglowek-dane {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        line-height: 1.6;
+        border-left: 3px solid #3498db;
+        padding: 12px 20px;
+        color: #34495e;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        gap: 8px;
+    }
 
-.naglowek-dane div {
-    white-space: nowrap;
-    text-align: left;
-}
+    .naglowek-dane div {
+        white-space: nowrap;
+        text-align: left;
+    }
 
     /* ========== STOPKA ========== */
     .stopka-kontener {
@@ -245,30 +246,94 @@
         flex-shrink: 0;
     }
 
-    /* nowy styl dla bloku archiwów – wyróżnienie */
-    .blok-archiwa {
-        background: #fef9e6;
-        border-left: 6px solid #e6b422;
-        margin: 25px 0 15px 0;
-    }
-    
-    .blok-archiwa .data-turnieju {
-        color: #b87333;
-        font-size: 1.2rem;
-        letter-spacing: 0.5px;
-    }
-
     @media (min-width: 992px) {
         .logo-sponsora {
             max-width: 160px;
             padding: 20px;
         }
-        body {
-            padding: 40px;
-        }
     }
 
-    /* ========== RESPONSYWNOŚC – SKALOWANIE CALEGO BODY ========== */
+    /* ========== ARCHIWUM - STYLE DRZEWA ========== */
+    .archiwum-content {
+        margin-top: 15px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 3px solid #007bff;
+    }
+
+    .folder-tree {
+        font-family: 'Segoe UI', monospace;
+        font-size: 14px;
+    }
+
+    .folder-toggle {
+        background: #e9ecef;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 6px 12px;
+        margin: 5px 0;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        color: #495057;
+        transition: all 0.2s ease;
+        width: auto;
+        display: inline-block;
+    }
+
+    .folder-toggle:hover {
+        background: #dee2e6;
+        border-color: #adb5bd;
+    }
+
+    .folder-content {
+        margin-left: 25px;
+        padding-left: 15px;
+        border-left: 2px dashed #ced4da;
+    }
+
+    .file-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 8px 0;
+    }
+
+    .file-list li {
+        margin: 4px 0;
+        padding: 2px 0 2px 20px;
+        position: relative;
+    }
+
+    .file-list li::before {
+        content: "📄";
+        position: absolute;
+        left: 0;
+        opacity: 0.7;
+    }
+
+    .file-list a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-size: 13px;
+        transition: color 0.2s;
+    }
+
+    .file-list a:hover {
+        color: #007bff;
+        text-decoration: underline;
+    }
+
+    .toggle-archiwum {
+        background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%) !important;
+    }
+
+    .toggle-archiwum:hover {
+        background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%) !important;
+        border-color: #64b5f6 !important;
+    }
+
+    /* ========== RESPONSYWNOŚĆ ========== */
     @media (max-width: 800px) {
         body {
             transform: scale(0.6);
@@ -295,51 +360,24 @@
             padding: 0;
         }
     }
-
-    @media (max-width: 500px) {
-        body {
-            transform: scale(0.45);
-            transform-origin: top left;
-            width: 222.222%;
-            padding: 0;
-        }
-    }
-
-    @media (max-width: 450px) {
-        body {
-            transform: scale(0.4);
-            transform-origin: top left;
-            width: 250%;
-            padding: 0;
-        }
-    }
-
-    @media (max-width: 380px) {
-        body {
-            transform: scale(0.35);
-            transform-origin: top left;
-            width: 285.714%;
-            padding: 0;
-        }
-    }
     </style>
 </head>
 <body>
     
-<!-- NAGŁÓWEK Z DWOMA LOGO I DANYMI KONTAKTOWYMI -->
+<!-- NAGŁÓWEK -->
 <div class="naglowek-kontener">
     <div class="naglowek-logo">
         <img src="./image/herb_ustka.svg" alt="Herb Ustki" class="logo-ustka">
         <img src="./image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsor-naglowek">
     </div>
     <div class="naglowek-tytul">
-        <h1 style="text-align: center;">📆 Nasz brydż<br>&nbsp;Ustka</h1>
+        <h1>📆 Nasz brydż<br>&nbsp;Ustka</h1>
     </div>
     <div class="naglowek-dane">
-        <div>Prezes:   Leszek Dunia    kom.602 478 116 mail: leszek.dunia@onet.eu </div>
-        <div>Skarbnik: Jarek Dymnicki  kom.607 884 489 mail: jard1212@wp.pl </div>
-        <div>Admin:    Mirek Całka     kom.797 802 411 mail: mirek2338@gmail.com</div>
-        <div>Admin:    Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
+        <div>Prezes: Leszek Dunia kom.602 478 116 mail: leszek.dunia@onet.eu</div>
+        <div>Skarbnik: Jarek Dymnicki kom.607 884 489 mail: jard1212@wp.pl</div>
+        <div>Admin: Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
+        <div>Admin: Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
     </div>
 </div>
 
@@ -348,14 +386,15 @@
     <div class="turniej-tresc">
         <div class="data-turnieju">
             📆 Turniej 2026-06-02 
-            <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz „Uzdrowisko Ustka”</span>
+            <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
         </div>
         <div class="przyciski">
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_02_wyniki_64.txt" class="btn">Wyniki</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_02_historia_64.txt" class="btn">Historia</a>
             <a href="turnieje/0602UF.html" class="btn">Długa Fala</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_02_protokoly_64.txt" class="btn">Protokóły</a>
-            <a href="Biuletyn/0602UB.html" class="btn btn-odstep">Boguś omawia</a>
+            <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-06-02 -->
+            <a href="Archiwa/Biuletyn/2026/0602UB.html" class="btn btn-bogus">Boguś omawia</a>
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
         </div>
@@ -365,7 +404,7 @@
     </div>
 </div>
 
-<!-- ISTNIEJĄCY BLOK: Turnieje (poprzedni blok z przyciskami) -->
+<!-- BLOK TURNIEJU 2026-05-26 -->
 <div class="turniej-blok">
     <div class="data-turnieju">📆 Turniej 2026-05-26</div>
     <div class="przyciski">
@@ -373,32 +412,89 @@
         <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_historia_53.txt" class="btn">Historia</a>
         <a href="turnieje/0519UF.html" class="btn">Długa Fala</a>
         <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_protokoly_53.txt" class="btn">Protokóły</a>
-        <a href="Biuletyn/biu0526.html" class="btn btn-odstep">Boguś omawia</a>
+        <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-05-26 -->
+        <a href="Archiwa/Biuletyn/2026/0526UB.html" class="btn btn-bogus">Boguś omawia</a>
         <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
         <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
     </div>
 </div>
 
-<!-- NOWY BLOK: ARCHIWA (z czterema przyciskami: Biuletyn, Długa Fala, Historia, Wyniki) -->
-<div class="turniej-blok blok-archiwa">
-    <div class="data-turnieju">📚 Blok archiwa | Materiały historyczne i dodatkowe</div>
+<!-- BLOK ARCHIWUM - tu są starsze pliki do wyboru -->
+<div class="turniej-blok">
+    <div class="data-turnieju">📦 Archiwum turniejów</div>
     <div class="przyciski">
-        <!-- Biuletyn - prowadzi do strony biuletynu (przykładowy link zachowujący konwencję) -->
-        <a href="#" class="btn">📰 Biuletyn</a>
-        <!-- Długa Fala - prowadzi do strony z archiwalnymi "Długimi Falami" (ogólny link archiwum) -->
-        <a href="#" class="btn">🌊 Długa Fala</a>
-        <!-- Historia - pokazuje archiwalne historie turniejów -->
-        <a href="#" class="btn">📜 Historia</a>
-        <!-- Wyniki - archiwalne zestawienia wyników -->
-        <a href="#" class="btn">🏆 Wyniki</a>
+        <button class="btn toggle-archiwum" data-target="biuletyn-archiwum">📖 Biuletyn (archiwum)</button>
+        <button class="btn toggle-archiwum" data-target="dluga-archiwum">🌊 Długa Fala (archiwum)</button>
     </div>
-    <!-- krótki opis w ramach archiwum – eleganckie wyjaśnienie -->
-    <div style="font-size: 12px; color: #5a4a2e; margin-top: 15px; border-top: 1px dashed #e6cba0; padding-top: 12px;">
-        ⚡ Archiwum biuletynów, długiej fali i zwycięzców poszczególnuch edycji . Kliknij, aby przeglądać zasoby.
+    
+    <!-- Archiwum Biuletynu - starsze pliki Bogusia -->
+    <div id="biuletyn-archiwum" class="archiwum-content" style="display: none;">
+        <div class="folder-tree">
+            <button class="folder-toggle" data-target="bogus-2025-folder">📂 2025</button>
+            <div id="bogus-2025-folder" class="folder-content" style="display: none;">
+                <ul class="file-list">
+                    <li><a href="Archiwa/Biuletyn/2025/1102UB.html">1102UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1109UB.html">1109UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1116UB.html">1116UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1123UB.html">1123UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1130UB.html">1130UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1207UB.html">1207UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1214UB.html">1214UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1221UB.html">1221UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2025/1228UB.html">1228UB.html</a></li>
+                </ul>
+            </div>
+            <button class="folder-toggle" data-target="bogus-2026-folder">📂 2026</button>
+            <div id="bogus-2026-folder" class="folder-content" style="display: none;">
+                <ul class="file-list">
+                    <li><a href="Archiwa/Biuletyn/2026/0104UB.html">0104UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0111UB.html">0111UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0118UB.html">0118UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0125UB.html">0125UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0201UB.html">0201UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0208UB.html">0208UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0215UB.html">0215UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0222UB.html">0222UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0301UB.html">0301UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0310UB.html">0310UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0317UB.html">0317UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0324UB.html">0324UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0331UB.html">0331UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0414UB.html">0414UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0421UB.html">0421UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0428UB.html">0428UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0526UB.html">0526UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0505UB.html">0505UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0512UB.html">0512UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0519UB.html">0519UB.html</a></li>
+                    <li><a href="Archiwa/Biuletyn/2026/0602UB.html">0602UB.html</a></li>
+                    <!-- Uwaga: 0526UB.html i 0602UB.html to już są w blokach turniejów -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Archiwum Długiej Fali - starsze pliki -->
+    <div id="dluga-archiwum" class="archiwum-content" style="display: none;">
+        <div class="folder-tree">
+            <button class="folder-toggle" data-target="dluga-2025-folder">📂 2025</button>
+            <div id="dluga-2025-folder" class="folder-content" style="display: none;">
+                <ul class="file-list">
+                    <li><a href="turnieje/1209UF.html">1209UF.html</a></li>
+                    <li><a href="turnieje/1111UF.html">1111UF.html</a></li>
+                    <li><a href="turnieje/1014UF.html">1014UF.html</a></li>
+                </ul>
+            </div>
+            <button class="folder-toggle" data-target="dluga-2026-folder">📂 2026</button>
+            <div id="dluga-2026-folder" class="folder-content" style="display: none;">
+                <ul class="file-list">
+                    <li><a href="Archiwa/Dluga_fala/2026/0519UF.html">0519UF.html</a></li>
+                    <!-- Uwaga: 0602UF.html jest już w bloku turnieju -->
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-
-
 
 <!-- STOPKA -->
 <div class="stopka-kontener">
@@ -415,6 +511,52 @@
         </div>
     </div>
 </div>
+
+<script>
+// Obsługa przycisków głównych w archiwum (Biuletyn / Długa fala)
+document.querySelectorAll('.toggle-archiwum').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetDiv = document.getElementById(targetId);
+        
+        if (targetDiv) {
+            // Zamknij inne otwarte sekcje archiwum
+            document.querySelectorAll('.archiwum-content').forEach(content => {
+                if (content.id !== targetId) {
+                    content.style.display = 'none';
+                }
+            });
+            
+            // Przełącz klikniętą sekcję
+            if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+                targetDiv.style.display = 'block';
+            } else {
+                targetDiv.style.display = 'none';
+            }
+        }
+    });
+});
+
+// Obsługa przycisków folderów w archiwum
+document.querySelectorAll('.folder-toggle').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const targetId = this.getAttribute('data-target');
+        const targetDiv = document.getElementById(targetId);
+        
+        if (targetDiv) {
+            if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+                targetDiv.style.display = 'block';
+            } else {
+                targetDiv.style.display = 'none';
+            }
+        }
+    });
+});
+
+// Przyciski "Boguś omawia" w blokach turniejów działają normalnie jako linki
+// (mają href do konkretnych plików - nie potrzebują dodatkowej obsługi JS)
+</script>
 
 </body>
 </html>

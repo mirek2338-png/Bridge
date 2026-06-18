@@ -192,7 +192,8 @@
         align-items: center;
     }
 
-    .przyciski .btn {
+    .przyciski .btn,
+    .przyciski .btn-gps {
         padding: 10px 14px;
         display: inline-flex;
         align-items: center;
@@ -212,7 +213,35 @@
         flex: 0 1 auto;
     }
 
-    .przyciski .btn:hover {
+    .przyciski .btn:hover,
+    .przyciski .btn-gps:hover {
+        background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
+        border-color: #64b5f6;
+        color: #1565c0;
+    }
+
+    /* Styl dla linku GPS w stopce - taki sam jak przyciski */
+    .btn-gps-stopka {
+        padding: 10px 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, #f9f9f9 0%, #f0f0f0 100%);
+        color: #2c3e50;
+        font-weight: 500;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align: center;
+        min-height: 40px;
+        white-space: nowrap;
+        gap: 8px;
+    }
+
+    .btn-gps-stopka:hover {
         background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
         border-color: #64b5f6;
         color: #1565c0;
@@ -379,9 +408,9 @@
         <div>Admin: Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
         <div>Admin: Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
     </div>
-   </div>
+</div>
    
-   <!-- BLOK TURNIEJU 2026-06-16 Z LOGO SPONSORA -->
+<!-- BLOK TURNIEJU 2026-06-16 Z LOGO SPONSORA -->
 <div class="turniej-blok z-logo">
     <div class="turniej-tresc">
         <div class="data-turnieju">
@@ -393,7 +422,6 @@
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_16_historia_66.txt" class="btn">Historia</a>
             <a href="turnieje/0616UF.html" class="btn">Długa Fala</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_16_protokoly_66.txt" class="btn">Protokóły</a>
-            <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-06-09 -->
             <a href="Archiwa/Biuletyn/2026/0616UB.html" class="btn btn-bogus" style="margin-left: 40px;">Boguś omawia</a>
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
@@ -416,7 +444,6 @@
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_09_historia_65.txt" class="btn">Historia</a>
             <a href="turnieje/0609UF.html" class="btn">Długa Fala</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_09_protokoly_65.txt" class="btn">Protokóły</a>
-            <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-06-09 -->
             <a href="Archiwa/Biuletyn/2026/0609UB.html" class="btn btn-bogus" style="margin-left: 40px;">Boguś omawia</a>
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
@@ -426,8 +453,6 @@
         <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
     </div>
 </div>
-
-
 
 <!-- BLOK TURNIEJU 2026-06-02 Z LOGO SPONSORA -->
 <div class="turniej-blok z-logo">
@@ -441,7 +466,6 @@
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_02_historia_64.txt" class="btn">Historia</a>
             <a href="turnieje/0602UF.html" class="btn">Długa Fala</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_06_02_protokoly_64.txt" class="btn">Protokóły</a>
-            <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-06-02 -->
             <a href="Archiwa/Biuletyn/2026/0602UB.html" class="btn btn-bogus" style="margin-left: 40px;">Boguś omawia</a>
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
@@ -460,7 +484,6 @@
         <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_historia_53.txt" class="btn">Historia</a>
         <a href="turnieje/0519UF.html" class="btn">Długa Fala</a>
         <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_05_26_protokoly_53.txt" class="btn">Protokóły</a>
-        <!-- Ten przycisk otwiera konkretny plik dla turnieju 2026-05-26 -->
         <a href="Archiwa/Biuletyn/2026/0602UB.html" class="btn btn-bogus" style="margin-left: 40px;">Boguś omawia</a>
         <a href="shared/Reg44GP.html" class="btn">Regulamin</a>
         <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a> 
@@ -481,14 +504,12 @@
             <button class="folder-toggle" data-target="bogus-2025-folder">📂 2025</button>
             <div id="bogus-2025-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
-                   
                     <li><a href="#">1228UB.html</a></li>
                 </ul>
             </div>
             <button class="folder-toggle" data-target="bogus-2026-folder">📂 2026</button>
             <div id="bogus-2026-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
-                    
                     <li><a href="Archiwa/Biuletyn/2026/0310UB.html">0310UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026/0317UB.html">0317UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026/0324UB.html">0324UB.html</a></li>
@@ -503,7 +524,6 @@
                     <li><a href="Archiwa/Biuletyn/2026/0602UB.html">0602UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026/0609UB.html">0609UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026/0609UB.html">0616UB.html</a></li>
-                    <!-- Uwaga: 0526UB.html i 0602UB.html to już są w blokach turniejów -->
                 </ul>
             </div>
         </div>
@@ -516,14 +536,12 @@
             <div id="dluga-2025-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="turnieje/1209UF.html">1209UF.html</a></li>
-                    
                 </ul>
             </div>
             <button class="folder-toggle" data-target="dluga-2026-folder">📂 2026</button>
             <div id="dluga-2026-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="Archiwa/Dluga_fala/2026/0519UF.html">0519UF.html</a></li>
-                    <!-- Uwaga: 0602UF.html jest już w bloku turnieju -->
                 </ul>
             </div>
         </div>
@@ -536,11 +554,9 @@
         <div class="info-text">
             <p>© 2025 Nasz brydż Ustka | Wszystkie prawa zastrzeżone</p>
             <p class="miejsce">
-                 <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830" 
+                <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830" 
                    target="_blank" 
-                   style="text-decoration: none; color: #2c3e50; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 6px; transition: all 0.3s ease; font-weight: 500;"
-                   onmouseover="this.style.background='#e3f2fd'; this.style.color='#1565c0';"
-                   onmouseout="this.style.background='transparent'; this.style.color='#2c3e50';">
+                   class="btn-gps-stopka">
                     📍 Ustka, Polska | GPS 54.573088, 16.817830
                     <span style="font-size: 16px;">🗺️</span>
                 </a>
@@ -596,9 +612,6 @@ document.querySelectorAll('.folder-toggle').forEach(button => {
         }
     });
 });
-
-// Przyciski "Boguś omawia" w blokach turniejów działają normalnie jako linki
-// (mają href do konkretnych plików - nie potrzebują dodatkowej obsługi JS)
 </script>
 
 </body>

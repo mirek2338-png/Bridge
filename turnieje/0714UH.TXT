@@ -222,10 +222,10 @@ PRZECIWNICY                                 ROZD. LINIA   ZAPIS      %
                                                26  NS   +630        9.00
                                                                    ------
                                                          WYNIK    188.40
-                                                           +/-      1.30
+                                                           +/-      0.00
                                                                    ------
-                                                         RAZEM    189.70
-                                                                %= 60.80
+                                                         RAZEM    188.40
+                                                                %= 60.38
 0714UW
 
 WYNIKI PARY NR 7  A Szranc-I Blazejow           2.5 PM   

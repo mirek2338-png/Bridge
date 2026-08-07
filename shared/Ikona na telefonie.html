@@ -1,127 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 7.4.7.2 (Linux)"/>
-	<meta name="created" content="2025-11-06T09:07:02.170538601"/>
-	<meta name="changed" content="2025-11-06T09:11:26.565751085"/>
-	<style type="text/css">
-		@page { size: 21cm 29.7cm; margin: 2cm }
-		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
-		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
-		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
-		h3.cjk { font-family: "DejaVu Sans"; font-size: 14pt; font-weight: bold }
-		h3.ctl { font-family: "DejaVu Sans"; font-size: 14pt; font-weight: bold }
-		h4 { margin-top: 0.21cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
-		h4.western { font-family: "Liberation Serif", serif; font-size: 12pt; font-weight: bold }
-		h4.cjk { font-family: "DejaVu Sans"; font-size: 12pt; font-weight: bold }
-		h4.ctl { font-family: "DejaVu Sans"; font-size: 12pt; font-weight: bold }
-		strong { font-weight: bold }
-		code { font-family: "Liberation Mono", monospace }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz brydż Ustka – dodaj ikonę na smartfonie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f2f5f9;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            padding: 2rem 2rem 2.5rem;
+            transition: 0.2s;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b2b4a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #3d5a73;
+            margin-bottom: 1.75rem;
+            border-left: 4px solid #2d7a4b;
+            padding-left: 1rem;
+            background: #f0f6f2;
+            border-radius: 0 12px 12px 0;
+            line-height: 1.4;
+        }
+
+        .qr-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e2e9f0;
+        }
+
+        .qr-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 16px;
+            background: white;
+            padding: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+
+        .qr-text {
+            flex: 1;
+        }
+
+        .qr-text .label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b2b4a;
+        }
+
+        .qr-text .url {
+            font-size: 0.9rem;
+            color: #1f6e43;
+            word-break: break-all;
+            background: #eef4f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 6px;
+            font-family: monospace;
+        }
+
+        .instructions {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .method {
+            background: #ffffff;
+            border: 1px solid #e9edf4;
+            border-radius: 20px;
+            padding: 1.5rem 1.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .method h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0b2b4a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .method h2 .badge {
+            background: #2d7a4b;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+
+        .method ol {
+            padding-left: 1.4rem;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .method li {
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+            color: #1e2f3d;
+        }
+
+        .method li strong {
+            color: #0b2b4a;
+        }
+
+        .method .note {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            background: #f6f9fe;
+            padding: 0.6rem 1rem;
+            border-radius: 16px;
+            color: #1d3b5a;
+            border-left: 3px solid #2d7a4b;
+        }
+
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #4a5f73;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #1f6e43;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+            .card { padding: 1.5rem; }
+            .qr-section { flex-direction: column; text-align: center; padding: 1.5rem 1rem; }
+            .qr-section img { width: 140px; height: 140px; }
+            .method { padding: 1.2rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
 </head>
-<body lang="pl-PL" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
-<br/>
+<body>
+    <div class="card">
+        <h1>♠️ Nasz brydż Ustka</h1>
+        <div class="subhead">
+            Dodaj ikonę strony do ekranu głównego – szybki dostęp jak do aplikacji
+        </div>
 
-</p>
-<h3 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="4" style="font-size: 15pt"><b>Jak
-dodać ikonę strony Nasz Brydż Ustka na ekran smartfona?</b></font></font></font></h3>
-<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2; margin-top: 0.42cm; margin-bottom: 0.42cm">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt">Dodanie
-ikony strony na ekran główny pozwala na szybki dostęp, tak jak do
-zwykłej aplikacji. Poniżej znajdziesz prostą instrukcję.</font></font></font></p>
-<h4 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 0.74cm; orphans: 2; widows: 2; margin-top: 0.42cm">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><b>Metoda
-1: Przez link w e-mailu</b></font></font></font></h4>
-<ol>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Otwórz
-	stronę:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Na
-	swoim smartfonie znajdź e-mail z 25-11-05 o tytule &quot;Nasz brydż
-	Ustka&quot; i kliknij w link do naszej strony.</span></span></span></font></font></font></span></p>
-	<li><p style="line-height: 0.58cm; orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Otwórz
-	menu:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Gdy
-	strona się załaduje, w pasku adresu przeglądarki (zwykle na górze
-	lub na dole ekranu) znajdź ikonę&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>trzech
-	kropek</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;</span></span></span></font></font></font></span><span style="display: inline-block; border: none; padding: 0cm"><span style="font-variant: normal"><font color="#0f1115"><font face="Menlo, Monaco, Consolas, Cascadia Mono, Ubuntu Mono, DejaVu Sans Mono, Liberation Mono, JetBrains Mono, Fira Code, Cousine, Roboto Mono, Courier New, Courier, sans-serif, system-ui"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="background: #ebeef2"><code>...</span></span></span></span></span></font></font></font></span></code><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;i
-	ją stuknij.</span></span></span></font></font></font></span></p>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Dodaj
-	do ekranu:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Z
-	rozwijanego menu wybierz opcję&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>&quot;Dodaj
-	do ekranu głównego&quot;</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">.</span></span></span></font></font></font></span></p>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Potwierdź:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Pojawi
-	się okienko, w którym możesz zostawić domyślną nazwę (np.
-	&quot;Nasz Brydż&quot;) lub zmienić ją na swoją. Na koniec
-	stuknij przycisk&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>&quot;Dodaj&quot;</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">.</span></span></span></font></font></font></span></p>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Gotowe!</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Ikona
-	strony pojawi się na Twoim ekranie głównym. Możesz ją
-	przeciągnąć w dowolne, wygodne dla Ciebie miejsce.</span></span></span></font></font></font></span></p>
-</ol>
-<hr/>
+        <!-- Kod QR + link -->
+        <div class="qr-section">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://mirek2338-png.github.io/Bridge/"
+                 alt="Kod QR do strony Nasz brydż Ustka"
+                 loading="lazy">
+            <div class="qr-text">
+                <div class="label">📱 Zeskanuj kod QR</div>
+                <div class="url">https://mirek2338-png.github.io/Bridge/</div>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #2d4a5e;">
+                    Kod prowadzi bezpośrednio do strony z wynikami, protokołami i biuletynami Bogusia.
+                </p>
+            </div>
+        </div>
 
-<h4 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 0.74cm; orphans: 2; widows: 2; margin-top: 0.42cm; margin-bottom: 0.42cm">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><b>Metoda
-2: Przez kod QR (dla osób, które go obsługują)</b></font></font></font></h4>
-<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2; margin-top: 0.42cm; margin-bottom: 0.42cm">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt">Jeśli
-kod QR wyświetlany jest na ekranie innego urządzenia (komputera lub
-drugiego telefonu):</font></font></font></p>
-<ol>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Zeskanuj
-	kod:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Uruchom
-	aplikację do skanowania kodów QR na swoim smartfonie i skieruj ją
-	na kod.</span></span></span></font></font></font></span></p>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Kliknij
-	w link:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Po
-	zeskanowaniu kodu, na Twoim telefonie pojawi się adres URL
-	strony.&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Stuknij
-	w ten link</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">,
-	aby otworzyć stronę w przeglądarce.</span></span></span></font></font></font></span></p>
-	<li><p style="orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>Dokończ
-	jak w metodzie 1:</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;Teraz
-	postępuj dokładnie tak, jak opisano w krokach 2-5 powyżej (trzy
-	kropki → &quot;Dodaj do ekranu głównego&quot; → potwierdź).</span></span></span></font></font></font></span></p>
-</ol>
-<hr/>
+        <!-- Instrukcje -->
+        <div class="instructions">
+            <!-- Metoda 1 -->
+            <div class="method">
+                <h2>
+                    <span>📨 Metoda 1</span>
+                    <span class="badge">przez link w e‑mailu</span>
+                </h2>
+                <ol>
+                    <li><strong>Otwórz stronę:</strong> Na smartfonie znajdź e-mail z dnia <strong>2026-08-07</strong> o tytule <em>„Nasz brydż Ustka”</em> i kliknij w link do naszej strony.</li>
+                    <li><strong>Otwórz menu:</strong> Gdy strona się załaduje, w pasku adresu przeglądarki (zwykle na górze lub na dole ekranu) znajdź ikonę <strong>trzech kropek ⋮</strong> i ją stuknij.</li>
+                    <li><strong>Dodaj do ekranu:</strong> Z rozwijanego menu wybierz opcję <strong>„Dodaj do ekranu głównego”</strong>.</li>
+                    <li><strong>Potwierdź:</strong> Pojawi się okienko, w którym możesz zostawić domyślną nazwę (np. „Nasz Brydż”) lub zmienić ją na swoją. Następnie stuknij przycisk <strong>„Dodaj”</strong>.</li>
+                    <li><strong>Gotowe!</strong> Ikona strony pojawi się na Twoim ekranie głównym. Możesz ją przeciągnąć w dowolne, wygodne dla Ciebie miejsce.</li>
+                </ol>
+                <div class="note">
+                    💡 <strong>Wskazówka:</strong> Jeśli nie widzisz trzech kropek, poszukaj ikony <strong>udostępnij</strong> (strzałka z prostokątem) – często tam też znajduje się opcja „Dodaj do ekranu głównego”.
+                </div>
+            </div>
 
-<h3 class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 0.79cm; orphans: 2; widows: 2; margin-top: 0.85cm; margin-bottom: 0.42cm">
-<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="4" style="font-size: 15pt"><b>Chcesz
-też mieć ikonę strony STB?</b></font></font></font></h3>
-<p style="orphans: 2; widows: 2; margin-top: 0.42cm; margin-bottom: 0.42cm">
-<span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Wystarczy,
-że wykonasz&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>dokładnie
-tę samą procedurę</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">:</span></span></span></font></font></font></span></p>
-<ol>
-	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt">Otwórz
-	stronę STB w przeglądarce swojego smartfona.</font></font></font></p>
-	<li><p style="line-height: 0.58cm; orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Użyj
-	opcji&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>trzech
-	kropek</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;</span></span></span></font></font></font></span><span style="display: inline-block; border: none; padding: 0cm"><span style="font-variant: normal"><font color="#0f1115"><font face="Menlo, Monaco, Consolas, Cascadia Mono, Ubuntu Mono, DejaVu Sans Mono, Liberation Mono, JetBrains Mono, Fira Code, Cousine, Roboto Mono, Courier New, Courier, sans-serif, system-ui"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="background: #ebeef2"><code>...</span></span></span></span></span></font></font></font></span></code><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;i
-	wybierz&nbsp;</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>&quot;Dodaj
-	do ekranu głównego&quot;</b></span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">.</span></span></span></font></font></font></span></p>
-	<li><p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2; margin-bottom: 0cm; border: none; padding: 0cm">
-	<font color="#0f1115"><font face="quote-cjk-patch, Inter, system-ui, apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"><font size="3" style="font-size: 12pt">Potwierdź
-	nazwę, a ikona zostanie utworzona.</font></font></font></p>
-</ol>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+            <!-- Metoda 2 -->
+            <div class="method">
+                <h2>
+                    <span>📷 Metoda 2</span>
+                    <span class="badge">przez kod QR</span>
+                </h2>
+                <ol>
+                    <li><strong>Zeskanuj kod:</strong> Uruchom aplikację do skanowania kodów QR na swoim smartfonie i skieruj ją na kod wyświetlony powyżej (lub na innym urządzeniu).</li>
+                    <li><strong>Kliknij w link:</strong> Po zeskanowaniu kodu na telefonie pojawi się adres URL strony. Stuknij w ten link, aby otworzyć stronę w przeglądarce.</li>
+                    <li><strong>Dokończ jak w metodzie 1:</strong> Teraz postępuj dokładnie tak, jak opisano w krokach 2–5 powyżej (trzy kropki → „Dodaj do ekranu głównego” → potwierdź).</li>
+                </ol>
+                <div class="note">
+                    📌 Kod QR jest również widoczny na komputerze – możesz go zeskanować bezpośrednio z ekranu, używając drugiego telefonu.
+                </div>
+            </div>
+        </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
-
-</p>
+        <div class="footer">
+            <a href="https://mirek2338-png.github.io/Bridge/" target="_blank">🌐 Otwórz stronę Nasz brydż Ustka</a>
+            &nbsp;·&nbsp; <span style="color:#5a6f7e;">wyniki · protokoły · biuletyny</span>
+        </div>
+    </div>
 </body>
 </html>

@@ -154,7 +154,7 @@
         overflow: hidden;
         padding: 20px;
     }
-
+    
     .turniej-blok.z-logo {
         display: flex;
         align-items: stretch;
@@ -165,7 +165,7 @@
     .turniej-blok.z-logo .turniej-tresc {
         flex: 1;
         padding: 20px;
-    }
+    } 
 
     .data-turnieju {
         font-weight: bold;
@@ -259,8 +259,23 @@
     .btn-odstep {
         margin-left: 40px !important;
     }
-
+    
     .logo-sponsora-kontener {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    width: auto;
+    min-width: 100px;
+    padding: 0;
+    border-left: 2px solid #e0e0e0;
+    border-radius: 8px;              /* zaokrąglenie szarego pola */
+    margin: 12px 12px 12px 0;        /* góra | prawa | dół | lewa (lewa=0, bo łączy się z treścią) */
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+    /*.logo-sponsora-kontener {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -271,7 +286,7 @@
         border-left: 2px solid #e0e0e0;
         transition: all 0.3s ease;
         flex-shrink: 0;
-    }
+    } */
 
     .logo-sponsora {
         width: 100%;

@@ -286,41 +286,19 @@
         } */
         
 /* ========== ZDJĘCIA ZWYCIĘZCÓW – UKŁAD PODIUM ========== */
-/* NOWE – zewnętrzny blok turnieju */
-.blok-turnieju {
-    display: flex;
-    align-items: center;         /* pion: wszystko na środku */
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Pola tekstowe po bokach – zajmują wolną przestrzeń */
-.pole-tekstowe {
-    flex: 1;                     /* równo dzielą wolną przestrzeń */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 20px;
-}
-.pole-lewe  { text-align: right; }
-.pole-prawe { text-align: left;  }
-
-/* TWOJE – bez zmian, tylko dodane margin, żeby ładnie siedziało w środku */
 .zdjecia-zwyciezcow-kontener {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end;      /* zdjęcia "stoją" na wspólnej linii */
     justify-content: center;
     gap: 12px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 15px 18px;
     border-left: 2px solid #e0e0e0;
     border-radius: 8px;
-    margin: 12px 0;              /* ← zmiana: bez przesunięcia w prawo */
+    margin: 12px 12px 12px 0;
     flex-shrink: 0;
     transition: all 0.3s ease;
-}}  
+}
 
 .zdjecie-zwyciezcy {
     width: auto;
@@ -499,47 +477,16 @@
             <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
         </div>       
     </div>    
-</div>  
+</div>
 
+    <!-- Zdjęcia zwycięzców – układ podium -->
 <div class="zdjecia-zwyciezcow-kontener">
-    
-    <!-- LEWE POLE TEKSTOWE -->
-    <div class="pole-tekstowe pole-lewe">
-        <h3>Grand Lubicz</h3>
-        <p>19 GP 2026 </p>
-    </div>
+    <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
+    <img src="Podium/Olga.png"   alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
+    <img src="Podium/Jan.png"  alt="III miejsce – Jan" class="zdjecie-zwyciezcy braz">
+</div>
 
-<!-- KONTENER ZEWNĘTRZNY – trzy strefy -->
-<div class="blok-turnieju">
 
-    <!-- LEWE POLE -->
-    <div class="pole-tekstowe pole-lewe">
-        <h3>Podium</h3>
-        <p>1 miejsce Boguś</br>2 miejsce Olga</br>3 miejsce Jan</p>
-    </div>
-
-    <!-- ŚRODEK – Twoja obecna oprawa ze zdjęciami -->
-    <div class="zdjecia-zwyciezcow-kontener">
-        <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
-        <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
-        <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
-    </div>
-
-    <!-- PRAWE POLE -->
-    <div class="pole-tekstowe pole-prawe">
-        <h3>Suma pdf z 12 turniejów</h3>
-        <p>....287</br>....269</br>....247</p>
-    </div>
-
-</div>    </div>
-
-    <!-- PRAWE POLE TEKSTOWE 
-    <div class="pole-tekstowe pole-prawe">
-        <h3>Nagłówek prawy</h3>
-        <p>Tutaj wpisz dowolny tekst, podziękowania, informacje itp.</p>
-    </div>
-
-</div> -->
 
 <!-- BLOK TURNIEJU 2026-09-15 Z LOGO SPONSORA -->
 <div class="turniej-blok z-logo">

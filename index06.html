@@ -18,11 +18,12 @@
         color: #333;
         padding: 20px;
         width: 1200px;
+        min-width: 1200px;
         margin: 0 auto;
         overflow: auto;
     }
 
-    /* ========== NAGŁÓWEK ========== */
+    /* ========== NAGŁÓWEK Z DWOMA LOGO I DANYMI ========== */
     .naglowek-kontener {
         display: flex;
         align-items: center;
@@ -41,16 +42,14 @@
         gap: 15px;
     }
 
-    .logo-ustka,
-    .logo-sponsor-naglowek {
+    .logo-ustka, .logo-sponsor-naglowek {
         height: 120px;
         width: auto;
         display: block;
         transition: transform 0.3s ease;
     }
 
-    .logo-ustka:hover,
-    .logo-sponsor-naglowek:hover {
+    .logo-ustka:hover, .logo-sponsor-naglowek:hover {
         transform: scale(1.05);
     }
 
@@ -58,6 +57,7 @@
         font-size: 32px;
         color: #2c3e50;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        margin: 0;
         white-space: nowrap;
         text-align: center;
     }
@@ -73,17 +73,22 @@
         background: rgba(255, 255, 255, 0.3);
         border-radius: 10px;
         gap: 8px;
+    }
+
+    .naglowek-dane {
         white-space: nowrap;
         text-align: left;
     }
 
     /* ========== STOPKA ========== */
+
     .stopka-kontener {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
         margin-top: 20px;
+        margin-bottom: 0;
         padding: 20px 30px;
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         border-radius: 12px;
@@ -97,55 +102,58 @@
         gap: 20px;
         flex-wrap: wrap;
     }
-
+    
     .stopka-prawa {
         flex-shrink: 0;
     }
-
+    
     .qr-box {
         background: white;
         padding: 8px;
         border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         display: inline-block;
         line-height: 0;
     }
-
+    
     .qr-box img {
         width: 90px;
         height: auto;
         display: block;
         border-radius: 6px;
     }
-
+    
     .info-text {
         font-size: 14px;
         color: #2c3e50;
         line-height: 1.4;
     }
-
+    
     .info-text p {
         margin: 5px 0;
     }
-
+    
     .info-text .copyright {
         font-size: 13px;
         margin-top: 8px;
         color: #2c3e50;
         font-weight: 500;
     }
-
+    
     .info-text .miejsce {
         font-size: 13px;
     }
 
     /* ========== BLOKI TURNIEJÓW ========== */
+
+
     .turniej-blok {
         background: #ffffff;
         margin: 15px 0;
         border: 1px solid #e0e0e0;
         border-radius: 10px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
         overflow: hidden;
         padding: 20px;
     }
@@ -167,9 +175,10 @@
         margin-bottom: 15px;
         font-size: 18px;
         color: #2c3e50;
+        display: block;
         white-space: nowrap;
     }
-
+    
     .zloty-tekst {
         color: #C5A028;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
@@ -177,6 +186,10 @@
         display: inline-block;
         padding-left: 40px;
         white-space: nowrap;
+    }
+    
+    .przyciski .wj {
+    margin-left: 50px; /* lub użyj padding-left */
     }
 
     .przyciski {
@@ -186,7 +199,8 @@
         align-items: center;
     }
 
-    .przyciski .btn {
+    .przyciski .btn,
+    .przyciski .btn-gps {
         padding: 10px 14px;
         display: inline-flex;
         align-items: center;
@@ -206,16 +220,14 @@
         flex: 0 1 auto;
     }
 
-    .przyciski .btn:hover {
+    .przyciski .btn:hover,
+    .przyciski .btn-gps:hover {
         background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
         border-color: #64b5f6;
         color: #1565c0;
     }
 
-    .btn-przesuniety {
-        margin-left: 40px;
-    }
-
+    /* Styl dla linku GPS w stopce - taki sam jak przyciski */
     .btn-gps-stopka {
         padding: 10px 14px;
         display: inline-flex;
@@ -242,143 +254,156 @@
         color: #1565c0;
     }
 
+    .btn-odstep {
+        margin-left: 40px !important;
+    }
+    
     .logo-sponsora-kontener {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        width: auto;
-        padding: 12px 15px;
-        border-left: 2px solid #e0e0e0;
-        border-radius: 8px;
-        margin: 12px 12px 12px 0;
-        flex-shrink: 0;
-        transition: all 0.3s ease;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    width: auto;                  /* KLUCZ: dopasowuje się do logo */
+    padding: 12px 15px;           /* odstęp wewnątrz szarego pola */
+    border-left: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 12px 12px 12px 0;     /* odstęp od krawędzi bloku turnieju */
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
 
-    .logo-sponsora {
-        height: 80px;
-        width: auto;
-        object-fit: contain;
-        display: block;
-        transition: transform 0.3s ease;
-    }
+.logo-sponsora {
+    height: 80px;                 /* KLUCZ: zmieniasz TYLKO tę wartość */
+    width: auto;                  /* szerokość proporcjonalna */
+    max-width: none;              /* zdejmujemy ograniczenie szerokości */
+    object-fit: contain;
+    display: block;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
 
-    /* ========== ZDJĘCIA ZWYCIĘZCÓW – PODIUM ========== */
-    .blok-turnieju {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        box-sizing: border-box;
-        background: #8c9aa9;
-        border-radius: 10px;
-        padding: 10px;
-    }
+   /* @media (min-width: 992px) {
+        .logo-sponsora {
+            max-width: 160px;
+            padding: 20px;
+        } */
+        
+/* ========== ZDJĘCIA ZWYCIĘZCÓW – UKŁAD PODIUM ========== */
 
-    .pole-tekstowe {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: #755188;
-        color: #F5F5DC;
-        border: 1px solid #1E293B;
-        border-radius: 8px;
-        padding: 18px 22px;
-        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
-        transition: all 0.3s ease;
-    }
 
-    .pole-tekstowe h3 {
-        color: #FFD700;
-        margin: 0 0 8px 0;
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
+/* Zewnętrzny blok turnieju – trzy strefy */
+.blok-turnieju {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #8c9aa9;/*#d2c8d5;/*#8c9aa9;/*#0F172A; /* ciemny granat */
+    border-radius: 10px;
+    padding: 10px 10px;
+}
 
-    .pole-tekstowe p {
-        margin: 0;
-        line-height: 1.5;
-        font-size: 0.95rem;
-    }
+/* Pola tekstowe po bokach – elegancki styl */
+.pole-tekstowe {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .pole-lewe  { text-align: right; }
-    .pole-prawe { text-align: left;  }
+    background: #755188;              /* granatowa czerń #0F172A */
+    color: #F5F5DC;                   /* kremowy tekst */
+    border: 1px solid #1E293B;        /* delikatna ramka */
+    border-radius: 8px;
+    padding: 18px 22px;
 
-    .pole-tekstowe.pole-klikalne {
-        cursor: pointer;
-        user-select: none;
-    }
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+    transition: all 0.3s ease;
+}
 
-    .pole-tekstowe.pole-klikalne:hover {
-        border-color: #FFD700;
-        box-shadow: 0 4px 14px rgba(255, 215, 0, 0.35);
-        transform: translateY(-2px);
-    }
+/* Nagłówek w polu tekstowym – złoty akcent */
+.pole-tekstowe h3 {
+    color: #FFD700;                   /* złoto */
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
 
-    .pole-tekstowe.pole-klikalne:active {
-        transform: translateY(0) scale(0.99);
-    }
+/* Paragraf */
+.pole-tekstowe p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
 
-    .pole-tekstowe.pole-klikalne:focus-visible {
-        outline: 2px solid #FFD700;
-        outline-offset: 3px;
-    }
+/* Wyrównanie tekstu */
+.pole-lewe  { text-align: right; }
+.pole-prawe { text-align: left;  }
 
-    .zdjecia-zwyciezcow-kontener {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 12px;
-        background: #f3edf6;
-        padding: 15px 18px;
-        border-left: 2px solid #e0e0e0;
-        border-radius: 8px;
-        margin: 12px 0;
-        flex-shrink: 0;
-        transition: all 0.3s ease;
-    }
+/* Hover – delikatne podświetlenie (opcjonalne) */
+.pole-tekstowe:hover {
+    border-color: #FFD700;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.15);
+}
 
-    .zdjecie-zwyciezcy {
-        width: auto;
-        object-fit: cover;
-        display: block;
-        border-radius: 8px;
-        border: 3px solid #ccc;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    }
+/* TWOJE – bez zmian, tylko dodane margin, żeby ładnie siedziało w środku */
+.zdjecia-zwyciezcow-kontener {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    background: #f3edf6;/*linear-gradient(135deg, #f8f9fa 0%, #85d6f0 100%); /* było (135deg, #f8f9fa 0%, #e9ecef 100%); */
+    padding: 15px 18px;
+    border-left: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 12px 0;              /* ← zmiana: bez przesunięcia w prawo */
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}  
 
-    .zdjecie-zwyciezcy:hover {
-        transform: scale(1.08) translateY(-4px);
-    }
+.zdjecie-zwyciezcy {
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
 
-    .zdjecie-zwyciezcy.zloto {
-        height: 115px;
-        border-color: #FFD700;
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.7),
-                    0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+.zdjecie-zwyciezcy:hover {
+    transform: scale(1.08) translateY(-4px);
+}
 
-    .zdjecie-zwyciezcy.srebro {
-        height: 95px;
-        border-color: #C0C0C0;
-        box-shadow: 0 0 12px rgba(192, 192, 192, 0.7),
-                    0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+/* 🥇 ZŁOTO – najwyżej */
+.zdjecie-zwyciezcy.zloto {
+    height: 115px;
+    border-color: #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .zdjecie-zwyciezcy.braz {
-        height: 75px;
-        border-color: #CD7F32;
-        box-shadow: 0 0 10px rgba(205, 127, 50, 0.7),
-                    0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+/* 🥈 SREBRO – trochę niżej */
+.zdjecie-zwyciezcy.srebro {
+    height: 95px;
+    border-color: #C0C0C0;
+    box-shadow: 0 0 12px rgba(192, 192, 192, 0.7),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    /* ========== ARCHIWUM ========== */
+/* 🥉 BRĄZ – najniżej */
+.zdjecie-zwyciezcy.braz {
+    height: 75px;
+    border-color: #CD7F32;
+    box-shadow: 0 0 10px rgba(205, 127, 50, 0.7),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+}
+    
+
+    /* ========== ARCHIWUM - STYLE DRZEWA ========== */
     .archiwum-content {
         margin-top: 15px;
         padding: 15px;
@@ -488,7 +513,7 @@
     </style>
 </head>
 <body>
-
+    
 <!-- NAGŁÓWEK -->
 <div class="naglowek-kontener">
     <div class="naglowek-logo">
@@ -506,39 +531,55 @@
     </div>
 </div>
 
-<!-- INFORMACJA O ZAKOŃCZENIU CYKLU -->
-<div class="turniej-blok">
-    <div class="data-turnieju">
-        <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
-    </div>
-</div>
+<!-- Informacja o turnieju w lubiczu bez LOGO SPONSORA --> 
+<div class="turniej-blok z-logo">
+    <div class="turniej-tresc">
+        <div class="data-turnieju">
+           <!-- 📆 Turniej 2026-09-22 -->
+            <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
+        </div>       
+    </div>    
+</div>  
 
-<!-- PODIUM – TRZY STREFY -->
+  
+   <!-- LEWE POLE TEKSTOWE 
+    <div class="pole-tekstowe pole-lewe">
+        <h3>Grand Lubicz</h3>
+        <p>19 GP 2026 </p>
+    </div>  -->
+
+<!-- KONTENER ZEWNĘTRZNY – trzy strefy -->
 <div class="blok-turnieju">
-    <div class="pole-tekstowe pole-lewe pole-klikalne"
-         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
-         tabindex="0"
-         role="button"
-         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+
+    <!-- LEWE POLE -->
+    <div class="pole-tekstowe pole-lewe">
         <h3>Podium 19 Grand Lubicz</h3>
-        <p>1 miejsce Boguś<br>2 miejsce Olga<br>3 miejsce Jan</p>
+        <p>1 miejsce Boguś</br>2 miejsce Olga</br>3 miejsce Jan</p>
     </div>
 
+    <!-- ŚRODEK – Twoja obecna oprawa ze zdjęciami -->
+    
     <div class="zdjecia-zwyciezcow-kontener">
         <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
         <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
         <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
     </div>
 
-    <div class="pole-tekstowe pole-prawe pole-klikalne"
-         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
-         tabindex="0"
-         role="button"
-         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+    <!-- PRAWE POLE -->
+    <div class="pole-tekstowe pole-prawe">
         <h3>Suma pdf z 12 turniejów</h3>
-        <p>....287<br>....269<br>....247</p>
+        <p>....287</br>....269</br>....247</p>
     </div>
-</div>
+
+</div>    </div>
+
+    <!-- PRAWE POLE TEKSTOWE 
+    <div class="pole-tekstowe pole-prawe">
+        <h3>Nagłówek prawy</h3>
+        <p>Tutaj wpisz dowolny tekst, podziękowania, informacje itp.</p>
+    </div>
+
+</div> -->
 
 <!-- BLOK TURNIEJU 2026-09-15 Z LOGO SPONSORA -->
 <div class="turniej-blok z-logo">
@@ -552,30 +593,34 @@
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_historia_95.txt" class="btn">Historia</a>
             <a href="turnieje/0915UF.html" class="btn">Długa Fala</a>
             <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_protokoly_95.txt" class="btn">Protokóły</a>
-            <a href="#" class="btn btn-przesuniety">Boguś omawia</a>
+            <a href="#" class="btn btn-bogus" style="margin-left: 40px;">Boguś omawia</a>
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
         </div>
     </div>
+    
 
+    <!-- Jeśli chcesz ZACHOWAĆ też logo sponsora, wstaw je przed lub po zdjęciach: -->
     <div class="logo-sponsora-kontener">
         <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
     </div>
 </div>
 
-<!-- ARCHIWUM (zawiera oba archiwa) -->
+
+<!-- BLOK ARCHIWUM - tu są starsze pliki do wyboru -->
 <div class="turniej-blok">
     <div class="data-turnieju">📦 Archiwum turniejów i nie tylko</div>
     <div class="przyciski">
         <button class="btn toggle-archiwum" data-target="biuletyn-archiwum">📖 Biuletyn (archiwum)</button>
         <button class="btn toggle-archiwum" data-target="dluga-archiwum">🌊 Długa Fala (archiwum)</button>
     </div>
-
-    <!-- Archiwum Biuletynu -->
-    <div id="biuletyn-archiwum" class="archiwum-content" hidden>
+    
+    <!-- Archiwum Biuletynu - starsze pliki Bogusia -->
+    <div id="biuletyn-archiwum" class="archiwum-content" style="display: none;">
         <div class="folder-tree">
+            
             <button class="folder-toggle" data-target="bogus-2026-folder">📂 2026_01_09</button>
-            <div id="bogus-2026-folder" class="folder-content" hidden>
+            <div id="bogus-2026-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="Archiwa/Biuletyn/2026_01_09/0310UB.html">0310UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026_01_09/0317UB.html">0317UB.html</a></li>
@@ -591,50 +636,52 @@
                     <li><a href="Archiwa/Biuletyn/2026_01_09/0602UB.html">0602UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026_01_09/0609UB.html">0609UB.html</a></li>
                     <li><a href="Archiwa/Biuletyn/2026_01_09/0616UB.html">0616UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0623UB.html">0623UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0630UB.html">0630UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0707UB.html">0707UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0714UB.html">0714UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0721UB.html">0721UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0728UB.html">0728UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0804UB.html">0804UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0811UB.html">0811UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0818UB.html">0818UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0825UB.html">0825UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0901UB.html">0901UB.html</a></li>
-                    <li><a href="Archiwa/Biuletyn/2026_01_09/0908UB.html">0908UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0623UB.html">0623UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0630UB.html">0630UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0707UB.html">0707UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0714UB.html">0714UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0721UB.html">0721UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0728UB.html">0728UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0804UB.html">0804UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0811UB.html">0811UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0818UB.html">0818UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0825UB.html">0825UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0901UB.html">0901UB.html</a></li>
+		                <li><a href="Archiwa/Biuletyn/2026_01_09/0908UB.html">0908UB.html</a></li>
                 </ul>
             </div>
-
+            
             <button class="folder-toggle" data-target="bogus-2025-folder">📂 2026_09_12</button>
-            <div id="bogus-2025-folder" class="folder-content" hidden>
+            <div id="bogus-2025-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="#">1228UB.html</a></li>
                 </ul>
             </div>
+            
+            </div>
         </div>
     </div>
-
-    <!-- Archiwum Długiej Fali -->
-    <div id="dluga-archiwum" class="archiwum-content" hidden>
+    
+    <!-- Archiwum Długiej Fali - starsze pliki -->
+    <div id="dluga-archiwum" class="archiwum-content" style="display: none;">
         <div class="folder-tree">
             <button class="folder-toggle" data-target="dluga-2025-folder">📂 2025</button>
-            <div id="dluga-2025-folder" class="folder-content" hidden>
+            <div id="dluga-2025-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="turnieje/1209UF.html">1209UF.html</a></li>
                 </ul>
             </div>
-
             <button class="folder-toggle" data-target="dluga-2026-folder">📂 2026</button>
-            <div id="dluga-2026-folder" class="folder-content" hidden>
+            <div id="dluga-2026-folder" class="folder-content" style="display: none;">
                 <ul class="file-list">
                     <li><a href="Archiwa/Dluga_fala/2026/0519UF.html">0519UF.html</a></li>
                     <li><a href="Archiwa/Dluga_fala/2026/0915UF.html">0915UF.html</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-</div>
+      </div>
+
+
 
 <!-- STOPKA -->
 <div class="stopka-kontener">
@@ -642,15 +689,14 @@
         <div class="info-text">
             <p>© 2025 Nasz brydż Ustka | Wszystkie prawa zastrzeżone</p>
             <p class="miejsce">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830"
-                   target="_blank"
-                   rel="noopener"
+                <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830" 
+                   target="_blank" 
                    class="btn-gps-stopka">
                     Tu gramy | GPS 54.573088, 16.817830
                     <span style="font-size: 16px;">📍</span>
                 </a>
             </p>
-            <p class="copyright">⚡ Brydż to pasja, wyobraźnia i logiczne myślenie</p>
+            <p class="copyright">⚡ Brydż to pasja , wyobraźnia i logiczne myślenie</p>
         </div>
     </div>
     <div class="stopka-prawa">
@@ -661,43 +707,43 @@
 </div>
 
 <script>
-// Główne przyciski archiwum (Biuletyn / Długa Fala)
+// Obsługa przycisków głównych w archiwum (Biuletyn / Długa fala)
 document.querySelectorAll('.toggle-archiwum').forEach(button => {
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function() {
         const targetId = this.getAttribute('data-target');
         const targetDiv = document.getElementById(targetId);
-        if (!targetDiv) return;
-
-        document.querySelectorAll('.archiwum-content').forEach(content => {
-            if (content.id !== targetId) content.hidden = true;
-        });
-
-        targetDiv.hidden = !targetDiv.hidden;
+        
+        if (targetDiv) {
+            // Zamknij inne otwarte sekcje archiwum
+            document.querySelectorAll('.archiwum-content').forEach(content => {
+                if (content.id !== targetId) {
+                    content.style.display = 'none';
+                }
+            });
+            
+            // Przełącz klikniętą sekcję
+            if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+                targetDiv.style.display = 'block';
+            } else {
+                targetDiv.style.display = 'none';
+            }
+        }
     });
 });
 
-// Rozwijanie folderów w archiwum
+// Obsługa przycisków folderów w archiwum
 document.querySelectorAll('.folder-toggle').forEach(button => {
-    button.addEventListener('click', function (e) {
+    button.addEventListener('click', function(e) {
         e.stopPropagation();
         const targetId = this.getAttribute('data-target');
         const targetDiv = document.getElementById(targetId);
-        if (targetDiv) targetDiv.hidden = !targetDiv.hidden;
-    });
-});
-
-// Klikalne pola tekstowe – otwierają konkretny plik w nowej karcie
-document.querySelectorAll('.pole-klikalne').forEach(pole => {
-    const otworz = () => {
-        const plik = pole.getAttribute('data-plik');
-        if (plik) window.open(plik, '_blank', 'noopener');
-    };
-
-    pole.addEventListener('click', otworz);
-    pole.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            otworz();
+        
+        if (targetDiv) {
+            if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+                targetDiv.style.display = 'block';
+            } else {
+                targetDiv.style.display = 'none';
+            }
         }
     });
 });

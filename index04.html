@@ -75,12 +75,13 @@
         gap: 8px;
     }
 
-    .naglowek-dane div {
+    .naglowek-dane {
         white-space: nowrap;
         text-align: left;
     }
 
     /* ========== STOPKA ========== */
+
     .stopka-kontener {
         display: flex;
         align-items: center;
@@ -144,6 +145,8 @@
     }
 
     /* ========== BLOKI TURNIEJÓW ========== */
+
+
     .turniej-blok {
         background: #ffffff;
         margin: 15px 0;
@@ -286,26 +289,68 @@
         } */
         
 /* ========== ZDJĘCIA ZWYCIĘZCÓW – UKŁAD PODIUM ========== */
-/* NOWE – zewnętrzny blok turnieju */
+
+
+
+
+/* Zewnętrzny blok turnieju – trzy strefy */
 .blok-turnieju {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
+    background: #8c9aa9;/*#d2c8d5;/*#8c9aa9;/*#0F172A; /* ciemny granat */
+    border-radius: 10px;
+    padding: 10px 10px;
 }
 
+/* ========== KLIKALNE POLA TEKSTOWE ========== */
+
+
+/* Pola tekstowe po bokach – elegancki styl */
 .pole-tekstowe {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 20px;
-    min-width: 0;
-    overflow-wrap: break-word;
+
+    background: #755188;              /* granatowa czerń #0F172A */
+    color: #F5F5DC;                   /* kremowy tekst */
+    border: 1px solid #1E293B;        /* delikatna ramka */
+    border-radius: 8px;
+    padding: 18px 22px;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+    transition: all 0.3s ease;
 }
+
+/* Nagłówek w polu tekstowym – złoty akcent */
+.pole-tekstowe h3 {
+    color: #FFD700;                   /* złoto */
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Paragraf */
+.pole-tekstowe p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Wyrównanie tekstu */
 .pole-lewe  { text-align: right; }
 .pole-prawe { text-align: left;  }
+
+/* Hover – delikatne podświetlenie (opcjonalne) */
+.pole-tekstowe:hover {
+    border-color: #FFD700;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.15);
+}
 
 /* TWOJE – bez zmian, tylko dodane margin, żeby ładnie siedziało w środku */
 .zdjecia-zwyciezcow-kontener {
@@ -313,14 +358,14 @@
     align-items: flex-end;
     justify-content: center;
     gap: 12px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #f3edf6;/*linear-gradient(135deg, #f8f9fa 0%, #85d6f0 100%); /* było (135deg, #f8f9fa 0%, #e9ecef 100%); */
     padding: 15px 18px;
     border-left: 2px solid #e0e0e0;
     border-radius: 8px;
     margin: 12px 0;              /* ← zmiana: bez przesunięcia w prawo */
     flex-shrink: 0;
     transition: all 0.3s ease;
-}
+}  
 
 .zdjecie-zwyciezcy {
     width: auto;
@@ -470,6 +515,27 @@
             padding: 0;
         }
     }
+    
+    /* ========== KLIKALNE POLA TEKSTOWE (Podium / Suma pdf) ========== */
+.pole-tekstowe.pole-klikalne {
+    cursor: pointer;
+    user-select: none;
+}
+
+.pole-tekstowe.pole-klikalne:hover {
+    border-color: #FFD700;
+    box-shadow: 0 4px 14px rgba(255, 215, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.pole-tekstowe.pole-klikalne:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.pole-tekstowe.pole-klikalne:focus-visible {
+    outline: 2px solid #FFD700;
+    outline-offset: 3px;
+}
     </style>
 </head>
 <body>
@@ -499,40 +565,49 @@
             <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
         </div>       
     </div>    
-</div> 
-    
+</div>  
 
-<!-- <div class="zdjecia-zwyciezcow-kontener" -->    
-    <!-- LEWE POLE TEKSTOWE 
+  
+   <!-- LEWE POLE TEKSTOWE 
     <div class="pole-tekstowe pole-lewe">
         <h3>Grand Lubicz</h3>
         <p>19 GP 2026 </p>
     </div>  -->
 
 <!-- KONTENER ZEWNĘTRZNY – trzy strefy -->
-
-<!-- Osobny blok na podium, nie zagnieżdżony w innym flexie -->
-<div class="turniej-blok">
-    <div class="blok-turnieju">
-
-        <div class="pole-tekstowe pole-lewe">
-            <h3>Podium 19 cyklu Grand Lubicz</h3>
-            <p>1 miejsce Boguś<br>2 miejsce Olga<br>3 miejsce Jan</p>
-        </div>
-
-        <div class="zdjecia-zwyciezcow-kontener">
-            <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
-            <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
-            <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
-        </div>
-
-        <div class="pole-tekstowe pole-prawe">
-            <h3>Suma pdf z 12 turniejów</h3>
-            <p>....287<br>....269<br>....247</p>
-        </div>
-
+<div class="blok-turnieju">
+        <!-- LEWE POLE (klikalne) -->
+    <div class="pole-tekstowe pole-lewe pole-klikalne"
+         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
+         tabindex="0"
+         role="button"
+         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+        <h3>Podium 19 Grand Lubicz</h3>
+        <p>1 miejsce Boguś<br>2 miejsce Olga<br>3 miejsce Jan</p>
     </div>
-</div>
+      
+
+    <!-- ŚRODEK – bez zmian -->
+    <div class="zdjecia-zwyciezcow-kontener">
+        <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
+        <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
+        <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
+    </div> 
+  
+    
+
+    <!-- PRAWE POLE (klikalne) -->
+    <div class="pole-tekstowe pole-prawe pole-klikalne"
+         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
+         tabindex="0"
+         role="button"
+         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+        <h3>Suma pdf z 12 turniejów</h3>
+        <p>....287<br>....269<br>....247</p>
+    </div>
+  </div>
+   
+  
 
     <!-- PRAWE POLE TEKSTOWE 
     <div class="pole-tekstowe pole-prawe">
@@ -546,7 +621,7 @@
 <div class="turniej-blok z-logo">
     <div class="turniej-tresc">
         <div class="data-turnieju">
-            📆 Turniej 2026-09-15
+            📆 Turniej 2026-09-15 Finał
             <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
         </div>
         <div class="przyciski">
@@ -558,15 +633,15 @@
             <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
             <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
         </div>
-    </div>
+      </div>
     
-<!-- LOGO SPONSORA -->
+    
+
+    <!-- Jeśli chcesz ZACHOWAĆ też logo sponsora, wstaw je przed lub po zdjęciach: -->
     <div class="logo-sponsora-kontener">
         <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
     </div>
-</div>
-
-
+  </div>
 
 <!-- BLOK ARCHIWUM - tu są starsze pliki do wyboru -->
 <div class="turniej-blok">
@@ -640,9 +715,9 @@
                 </ul>
             </div>
         </div>
-    </div>
-</div>
-</div>
+      </div>
+
+
 
 <!-- STOPKA -->
 <div class="stopka-kontener">
@@ -705,6 +780,37 @@ document.querySelectorAll('.folder-toggle').forEach(button => {
             } else {
                 targetDiv.style.display = 'none';
             }
+        }
+    });
+});
+// ====== KLIKALNE FIOLETOWE POLA → otwierają KONKRETNY plik w Długiej Fali ======
+document.querySelectorAll('.pole-klikalne').forEach(pole => {
+    const otworz = () => {
+        const plik = pole.getAttribute('data-plik');
+        if (!plik) return;
+
+        // (opcjonalnie) rozwiń sekcję Długiej Fali w archiwum, żeby użytkownik widział kontekst
+        const sekcja = document.getElementById('dluga-archiwum');
+        if (sekcja) {
+            document.querySelectorAll('.archiwum-content').forEach(c => {
+                if (c.id !== 'dluga-archiwum') c.style.display = 'none';
+            });
+            sekcja.style.display = 'block';
+
+            document.querySelectorAll('.toggle-archiwum').forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-target') === 'dluga-archiwum');
+            });
+        }
+
+        // Otwórz konkretny plik w nowej karcie
+        window.open(plik, '_blank', 'noopener');
+    };
+
+    pole.addEventListener('click', otworz);
+    pole.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            otworz();
         }
     });
 });

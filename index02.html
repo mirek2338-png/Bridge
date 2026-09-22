@@ -266,31 +266,16 @@
 
     /* ========== ZDJĘCIA ZWYCIĘZCÓW – PODIUM ========== */
     .blok-turnieju {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    background: #8c9aa9;
-    border-radius: 10px;
-    padding: 10px;
-    overflow: hidden;          /* przycina ewentualny nadmiar przy skalowaniu */
-}
-
-.podium-scena {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: max-content;        /* naturalna, nie-zawijana szerokość */
-    min-width: 100%;           /* …ale gdy się mieści – wypełnia całość */
-    transform-origin: top left;
-    will-change: transform;
-}
-
-/* gwarancja braku zawijania tekstu w strefach */
-.pole-tekstowe h3,
-.pole-tekstowe p {
-    white-space: nowrap;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        background: #8c9aa9;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
     .pole-tekstowe {
         flex: 1;
@@ -530,32 +515,28 @@
 
 <!-- PODIUM – TRZY STREFY -->
 <div class="blok-turnieju">
-    <div class="podium-scena">
+    <div class="pole-tekstowe pole-lewe pole-klikalne"
+         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
+         tabindex="0"
+         role="button"
+         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+        <h3>Podium 19 Grand Lubicz</h3>
+        <p>1 miejsce Boguś<br>2 miejsce Olga<br>3 miejsce Jan</p>
+    </div>
 
-        <div class="pole-tekstowe pole-lewe pole-klikalne"
-             data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
-             tabindex="0"
-             role="button"
-             aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
-            <h3>Podium 19 Grand Lubicz</h3>
-            <p>1 miejsce Boguś<br>2 miejsce Olga<br>3 miejsce Jan</p>
-        </div>
+    <div class="zdjecia-zwyciezcow-kontener">
+        <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
+        <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
+        <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
+    </div>
 
-        <div class="zdjecia-zwyciezcow-kontener">
-            <img src="Podium/Boguś.png" alt="I miejsce – Boguś"  class="zdjecie-zwyciezcy zloto">
-            <img src="Podium/Olga.png"  alt="II miejsce – Olga"   class="zdjecie-zwyciezcy srebro">
-            <img src="Podium/Jan.png"   alt="III miejsce – Jan"  class="zdjecie-zwyciezcy braz">
-        </div>
-
-        <div class="pole-tekstowe pole-prawe pole-klikalne"
-             data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
-             tabindex="0"
-             role="button"
-             aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
-            <h3>Suma pdf z 12 turniejów</h3>
-            <p>....287<br>....269<br>....247</p>
-        </div>
-
+    <div class="pole-tekstowe pole-prawe pole-klikalne"
+         data-plik="Archiwa/Dluga_fala/2026/0915UF.html"
+         tabindex="0"
+         role="button"
+         aria-label="Otwórz Długą Falę 2026 – plik 0915UF">
+        <h3>Suma pdf z 12 turniejów</h3>
+        <p>....287<br>....269<br>....247</p>
     </div>
 </div>
 
@@ -720,44 +701,6 @@ document.querySelectorAll('.pole-klikalne').forEach(pole => {
         }
     });
 });
-/* ===== Skalowanie sekcji PODIUM do szerokości ekranu (bez zawijania) ===== */
-function dopasujPodium() {
-    document.querySelectorAll('.blok-turnieju').forEach(blok => {
-        const scena = blok.querySelector('.podium-scena');
-        if (!scena) return;
-
-        // reset, żeby zmierzyć naturalne wymiary
-        scena.style.transform = 'none';
-        blok.style.height = 'auto';
-
-        const cs   = getComputedStyle(blok);
-        const padL = parseFloat(cs.paddingLeft)   || 0;
-        const padR = parseFloat(cs.paddingRight)  || 0;
-        const padT = parseFloat(cs.paddingTop)    || 0;
-        const padB = parseFloat(cs.paddingBottom) || 0;
-
-        const dostepna     = blok.clientWidth - padL - padR;
-        const naturalna    = scena.offsetWidth;   // szerokość „jak w poziomie”
-        const naturalnaWys = scena.offsetHeight;
-
-        const skala = (naturalna > dostepna && naturalna > 0)
-            ? dostepna / naturalna
-            : 1;
-
-        scena.style.transform = `scale(${skala})`;
-
-        // dopasuj wysokość kontenera, bo transform nie zmienia layoutu
-        blok.style.height = (naturalnaWys * skala + padT + padB) + 'px';
-    });
-}
-
-window.addEventListener('load', dopasujPodium);
-window.addEventListener('resize', dopasujPodium);
-window.addEventListener('orientationchange', dopasujPodium);
-if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(dopasujPodium);
-}
-dopasujPodium();
 </script>
 
 </body>

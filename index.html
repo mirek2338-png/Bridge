@@ -24,15 +24,22 @@
 
     /* ========== NAGŁÓWEK ========== */
     .naglowek-kontener {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
+        display: block;
         margin-bottom: 20px;
         padding: 20px;
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .naglowek-zawartosc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        transform-origin: top left;
+        will-change: transform;
     }
 
     .naglowek-logo {
@@ -79,16 +86,23 @@
 
     /* ========== STOPKA ========== */
     .stopka-kontener {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
+        display: block;
         margin-top: 20px;
         padding: 20px 30px;
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         color: #2c3e50;
+        overflow: hidden;
+    }
+
+    .stopka-zawartosc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        transform-origin: top left;
+        will-change: transform;
     }
 
     .stopka-lewa {
@@ -151,15 +165,35 @@
     }
 
     .turniej-blok.z-logo {
+        display: block;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .turniej-blok.z-logo .turniej-zawartosc {
         display: flex;
         align-items: stretch;
-        padding: 0;
         flex-wrap: nowrap;
+        transform-origin: top left;
+        will-change: transform;
+        width: max-content;
+        min-width: 100%;
     }
 
     .turniej-blok.z-logo .turniej-tresc {
         flex: 1;
         padding: 20px;
+        min-width: 0;
+    }
+
+    /* Blok "Uwaga" */
+    .blok-uwaga {
+        overflow: hidden;
+    }
+
+    .uwaga-zawartosc {
+        transform-origin: top left;
+        will-change: transform;
     }
 
     .data-turnieju {
@@ -266,31 +300,30 @@
 
     /* ========== ZDJĘCIA ZWYCIĘZCÓW – PODIUM ========== */
     .blok-turnieju {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    background: #8c9aa9;
-    border-radius: 10px;
-    padding: 10px;
-    overflow: hidden;          /* przycina ewentualny nadmiar przy skalowaniu */
-}
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        background: #8c9aa9;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+    }
 
-.podium-scena {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: max-content;        /* naturalna, nie-zawijana szerokość */
-    min-width: 100%;           /* …ale gdy się mieści – wypełnia całość */
-    transform-origin: top left;
-    will-change: transform;
-}
+    .podium-scena {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: max-content;
+        min-width: 100%;
+        transform-origin: top left;
+        will-change: transform;
+    }
 
-/* gwarancja braku zawijania tekstu w strefach */
-.pole-tekstowe h3,
-.pole-tekstowe p {
-    white-space: nowrap;
-}
+    .pole-tekstowe h3,
+    .pole-tekstowe p {
+        white-space: nowrap;
+    }
 
     .pole-tekstowe {
         flex: 1;
@@ -481,6 +514,44 @@
             width: 166.667%;
             padding: 0;
         }
+
+        /* Nagłówek – scene + brak paddingu, żeby wizualna szerokość była identyczna jak innych bloków */
+        .naglowek-kontener {
+            padding: 0;
+            border-radius: 0;
+        }
+        .naglowek-zawartosc {
+            width: max-content;
+            min-width: 100%;
+        }
+
+        /* Blok "Uwaga" */
+        .blok-uwaga {
+            padding: 0;
+        }
+        .uwaga-zawartosc {
+            width: max-content;
+            min-width: 100%;
+            padding: 20px;
+        }
+
+        /* Stopka */
+        .stopka-kontener {
+            padding: 0;
+            border-radius: 0;
+        }
+        .stopka-zawartosc {
+            width: max-content;
+            min-width: 100%;
+        }
+
+        /* Blok turnieju – zawartość nierozwijana (skalowana przez JS) */
+        .turniej-blok.z-logo .turniej-tresc {
+            flex: 0 0 auto;
+        }
+        .przyciski {
+            flex-wrap: nowrap;
+        }
     }
 
     @media (max-width: 700px) {
@@ -506,25 +577,29 @@
 
 <!-- NAGŁÓWEK -->
 <div class="naglowek-kontener">
-    <div class="naglowek-logo">
-        <img src="./image/herb_ustka.svg" alt="Herb Ustki" class="logo-ustka">
-        <img src="./image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsor-naglowek">
-    </div>
-    <div class="naglowek-tytul">
-        <h1>📆 Nasz brydż<br>&nbsp;Ustka</h1>
-    </div>
-    <div class="naglowek-dane">
-        <div>Prezes: Leszek Dunia kom.602 478 116 mail: leszek.dunia@onet.eu</div>
-        <div>Skarbnik: Jarek Dymnicki kom.607 884 489 mail: jard1212@wp.pl</div>
-        <div>Admin: Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
-        <div>Admin: Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
+    <div class="naglowek-zawartosc">
+        <div class="naglowek-logo">
+            <img src="./image/herb_ustka.svg" alt="Herb Ustki" class="logo-ustka">
+            <img src="./image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsor-naglowek">
+        </div>
+        <div class="naglowek-tytul">
+            <h1>📆 Nasz brydż<br>&nbsp;Ustka</h1>
+        </div>
+        <div class="naglowek-dane">
+            <div>Prezes: Leszek Dunia kom.602 478 116 mail: leszek.dunia@onet.eu</div>
+            <div>Skarbnik: Jarek Dymnicki kom.607 884 489 mail: jard1212@wp.pl</div>
+            <div>Admin: Mirek Całka kom.797 802 411 mail: mirek2338@gmail.com</div>
+            <div>Admin: Olga Jackiewicz kom.669 375 189 mail: olga.jackiewicz@gmail.com</div>
+        </div>
     </div>
 </div>
 
 <!-- INFORMACJA O ZAKOŃCZENIU CYKLU -->
-<div class="turniej-blok">
-    <div class="data-turnieju">
-        <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
+<div class="turniej-blok blok-uwaga">
+    <div class="uwaga-zawartosc">
+        <div class="data-turnieju">
+            <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
+        </div>
     </div>
 </div>
 
@@ -561,24 +636,26 @@
 
 <!-- BLOK TURNIEJU 2026-09-15 Z LOGO SPONSORA -->
 <div class="turniej-blok z-logo">
-    <div class="turniej-tresc">
-        <div class="data-turnieju">
-            📆 Turniej 2026-09-15
-            <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
+    <div class="turniej-zawartosc">
+        <div class="turniej-tresc">
+            <div class="data-turnieju">
+                📆 Turniej 2026-09-15 Finał
+                <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
+            </div>
+            <div class="przyciski">
+                <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_wyniki_95.txt" class="btn">Wyniki</a>
+                <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_historia_95.txt" class="btn">Historia</a>
+                <a href="turnieje/0915UF.html" class="btn">Długa Fala</a>
+                <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_protokoly_95.txt" class="btn">Protokóły</a>
+                <a href="#" class="btn btn-przesuniety">Boguś omawia</a>
+                <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
+                <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
+            </div>
         </div>
-        <div class="przyciski">
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_wyniki_95.txt" class="btn">Wyniki</a>
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_historia_95.txt" class="btn">Historia</a>
-            <a href="turnieje/0915UF.html" class="btn">Długa Fala</a>
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_protokoly_95.txt" class="btn">Protokóły</a>
-            <a href="#" class="btn btn-przesuniety">Boguś omawia</a>
-            <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
-            <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
-        </div>
-    </div>
 
-    <div class="logo-sponsora-kontener">
-        <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
+        <div class="logo-sponsora-kontener">
+            <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
+        </div>
     </div>
 </div>
 
@@ -657,24 +734,26 @@
 
 <!-- STOPKA -->
 <div class="stopka-kontener">
-    <div class="stopka-lewa">
-        <div class="info-text">
-            <p>© 2025 Nasz brydż Ustka | Wszystkie prawa zastrzeżone</p>
-            <p class="miejsce">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830"
-                   target="_blank"
-                   rel="noopener"
-                   class="btn-gps-stopka">
-                    Tu gramy | GPS 54.573088, 16.817830
-                    <span style="font-size: 16px;">📍</span>
-                </a>
-            </p>
-            <p class="copyright">⚡ Brydż to pasja, wyobraźnia i logiczne myślenie</p>
+    <div class="stopka-zawartosc">
+        <div class="stopka-lewa">
+            <div class="info-text">
+                <p>© 2025 Nasz brydż Ustka | Wszystkie prawa zastrzeżone</p>
+                <p class="miejsce">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=54.573088,16.817830"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn-gps-stopka">
+                        Tu gramy | GPS 54.573088, 16.817830
+                        <span style="font-size: 16px;">📍</span>
+                    </a>
+                </p>
+                <p class="copyright">⚡ Brydż to pasja, wyobraźnia i logiczne myślenie</p>
+            </div>
         </div>
-    </div>
-    <div class="stopka-prawa">
-        <div class="qr-box">
-            <img src="image/qr-kod.jpg" alt="Kod QR">
+        <div class="stopka-prawa">
+            <div class="qr-box">
+                <img src="image/qr-kod.jpg" alt="Kod QR">
+            </div>
         </div>
     </div>
 </div>
@@ -705,11 +784,12 @@ document.querySelectorAll('.folder-toggle').forEach(button => {
     });
 });
 
-// Klikalne pola tekstowe – otwierają konkretny plik w nowej karcie
+// Klikalne pola tekstowe – otwierają plik w TEJ SAMEJ karcie
+// (powrót realizowany przyciskiem „wstecz" przeglądarki)
 document.querySelectorAll('.pole-klikalne').forEach(pole => {
     const otworz = () => {
         const plik = pole.getAttribute('data-plik');
-        if (plik) window.location.href = plik;  //if (plik) window.open(plik, '_blank', 'noopener');
+        if (plik) window.location.href = plik;
     };
 
     pole.addEventListener('click', otworz);
@@ -720,16 +800,35 @@ document.querySelectorAll('.pole-klikalne').forEach(pole => {
         }
     });
 });
-/* ===== Skalowanie sekcji PODIUM do szerokości ekranu (bez zawijania) ===== */
-function dopasujPodium() {
-    document.querySelectorAll('.blok-turnieju').forEach(blok => {
-        const scena = blok.querySelector('.podium-scena');
-        if (!scena) return;
 
-        // reset, żeby zmierzyć naturalne wymiary
+/* ===== Skalowanie bloków: NAGŁÓWEK, UWAGA, TURNIEJ z logo, PODIUM, STOPKA ===== */
+function dopasujBloki() {
+    // Definicje par: selektor bloku → selektor sceny
+    const mapowanie = [
+        { blok: '.naglowek-kontener',  scena: '.naglowek-zawartosc'  },
+        { blok: '.blok-uwaga',         scena: '.uwaga-zawartosc'     },
+        { blok: '.turniej-blok.z-logo',scena: '.turniej-zawartosc'   },
+        { blok: '.blok-turnieju',      scena: '.podium-scena'        },
+        { blok: '.stopka-kontener',    scena: '.stopka-zawartosc'    }
+    ];
+
+    // Zbierz wszystkie pary (blok, scena)
+    const zadania = [];
+    mapowanie.forEach(({ blok, scena }) => {
+        document.querySelectorAll(blok).forEach(b => {
+            const s = b.querySelector(scena);
+            if (s) zadania.push({ blok: b, scena: s });
+        });
+    });
+
+    // Reset ustawień z poprzedniego wywołania
+    zadania.forEach(({ blok, scena }) => {
         scena.style.transform = 'none';
         blok.style.height = 'auto';
+    });
 
+    // Skaluj każdy blok niezależnie do jego dostępnej szerokości
+    zadania.forEach(({ blok, scena }) => {
         const cs   = getComputedStyle(blok);
         const padL = parseFloat(cs.paddingLeft)   || 0;
         const padR = parseFloat(cs.paddingRight)  || 0;
@@ -737,27 +836,25 @@ function dopasujPodium() {
         const padB = parseFloat(cs.paddingBottom) || 0;
 
         const dostepna     = blok.clientWidth - padL - padR;
-        const naturalna    = scena.offsetWidth;   // szerokość „jak w poziomie”
+        const naturalna    = scena.offsetWidth;
         const naturalnaWys = scena.offsetHeight;
 
-        const skala = (naturalna > dostepna && naturalna > 0)
-            ? dostepna / naturalna
-            : 1;
-
-        scena.style.transform = `scale(${skala})`;
-
-        // dopasuj wysokość kontenera, bo transform nie zmienia layoutu
-        blok.style.height = (naturalnaWys * skala + padT + padB) + 'px';
+        if (naturalna > dostepna && naturalna > 0) {
+            const skala = dostepna / naturalna;
+            scena.style.transformOrigin = 'top left';
+            scena.style.transform = `scale(${skala})`;
+            blok.style.height = (naturalnaWys * skala + padT + padB) + 'px';
+        }
     });
 }
 
-window.addEventListener('load', dopasujPodium);
-window.addEventListener('resize', dopasujPodium);
-window.addEventListener('orientationchange', dopasujPodium);
+window.addEventListener('load', dopasujBloki);
+window.addEventListener('resize', dopasujBloki);
+window.addEventListener('orientationchange', dopasujBloki);
 if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(dopasujPodium);
+    document.fonts.ready.then(dopasujBloki);
 }
-dopasujPodium();
+dopasujBloki();
 </script>
 
 </body>

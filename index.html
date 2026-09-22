@@ -709,7 +709,7 @@ document.querySelectorAll('.folder-toggle').forEach(button => {
 document.querySelectorAll('.pole-klikalne').forEach(pole => {
     const otworz = () => {
         const plik = pole.getAttribute('data-plik');
-        if (plik) window.open(plik, '_blank', 'noopener');
+        if (plik) window.location.href = plik;  //if (plik) window.open(plik, '_blank', 'noopener');
     };
 
     pole.addEventListener('click', otworz);

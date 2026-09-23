@@ -20,7 +20,64 @@ body {
     transform-origin: top left;   /* kluczowe dla skalowania */
 }
 
-/* ===== NAGŁÓWEK ===== */
+/* ===== NAGŁÓWEK dla OSiR ===== */
+
+.naglowek-kontener {
+    display: flex; 
+    align-items: center;              /* wyrównanie w pionie do środka */
+    justify-content: space-between;
+    gap: 15px; 
+    margin-bottom: 20px; 
+    padding: 15px 20px;               /* mniejszy padding */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.naglowek-logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px;                        /* mniejszy odstęp między logami */
+    flex-shrink: 0;
+}
+
+.logo-ustka,
+.logo-sponsor-naglowek { 
+    height: 100px;                     /* ← było 120px – teraz 70px */
+    width: auto; 
+    display: block; 
+    transition: transform .3s;
+    object-fit: contain;
+}
+.logo-ustka:hover,
+.logo-sponsor-naglowek:hover { transform: scale(1.05); }
+
+.naglowek-tytul h1 {
+    font-size: 26px;                  /* ← było 32px */
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    white-space: nowrap; 
+    text-align: center;
+    line-height: 1.2;
+}
+
+.naglowek-dane {
+    display: flex; 
+    flex-direction: column;
+    font-size: 12px;                  /* ← było 13px */
+    line-height: 1.5;
+    border-left: 3px solid #3498db; 
+    padding: 10px 15px;
+    color: #34495e; 
+    background: rgba(255,255,255,.3);
+    border-radius: 10px; 
+    gap: 6px; 
+    white-space: nowrap; 
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* ===== NAGŁÓWEK dla Lubicz ===== 
 .naglowek-kontener {
     display: flex; align-items: center; justify-content: space-between;
     gap: 20px; margin-bottom: 20px; padding: 20px;
@@ -43,7 +100,7 @@ body {
     border-left: 3px solid #3498db; padding: 12px 20px;
     color: #34495e; background: rgba(255,255,255,.3);
     border-radius: 10px; gap: 8px; white-space: nowrap; text-align: left;
-}
+} */
 
 /* ===== STOPKA ===== */
 .stopka-kontener {
@@ -81,7 +138,7 @@ body {
     color: #2c3e50; white-space: nowrap;
 }
 .zloty-tekst {
-    color: #C5A028; text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+    color: #38afe7; text-shadow: 1px 1px 1px rgba(0,0,0,.15);    /* dla złotego tekstu Lubicz #C5A028*/
     font-weight: bold; display: inline-block; padding-left: 40px; white-space: nowrap;
 }
 .przyciski { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
@@ -206,7 +263,7 @@ body {
 <div class="naglowek-kontener">
     <div class="naglowek-logo">
         <img src="./image/herb_ustka.svg" alt="Herb Ustki" class="logo-ustka">
-        <img src="./image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsor-naglowek">
+        <img src="./image/OSiR" alt="Logo sponsora" class="logo-sponsor-naglowek">
     </div>
     <div class="naglowek-tytul">
         <h1>📆 Nasz brydż<br>&nbsp;Ustka</h1>
@@ -219,12 +276,13 @@ body {
     </div>
 </div>
 
-<!-- UWAGA -->
+<!-- UWAGA dla Lubicz
 <div class="turniej-blok">
     <div class="data-turnieju">
         <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
     </div>
-</div>
+</div> -->
+
 
 <!-- PODIUM -->
 <div class="blok-turnieju">
@@ -247,11 +305,18 @@ body {
     </div>
 </div>
 
-<!-- TURNIEJ Z LOGO -->
+<!-- UWAGA -->
+<div class="turniej-blok">
+    <div class="data-turnieju">
+        <span class="zloty-tekst">OSiR<br>29 września zaczynamy nowy cykl pod patronatem OSiR <br> Gramy jak zawsze w Lendowie o 17<br>Pola fioletowe obok zdjęć są klikalne</span>
+    </div>
+</div> 
+
+<!-- TURNIEJ Z LOGO 
 <div class="turniej-blok z-logo">
     <div class="turniej-tresc">
         <div class="data-turnieju">
-            📆 Turniej 2026-09-15 Finał
+            📆 Turniej 2026-09-29
             <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
         </div>
         <div class="przyciski">
@@ -265,9 +330,9 @@ body {
         </div>
     </div>
     <div class="logo-sponsora-kontener">
-        <img src="image/grand-lubicz.jpg" alt="Logo sponsora" class="logo-sponsora">
+        <img src="image/OSiR" alt="Logo sponsora" class="logo-sponsora">
     </div>
-</div>
+</div> -->
 
 <!-- ARCHIWUM -->
 <div class="turniej-blok">

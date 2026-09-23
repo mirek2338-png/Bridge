@@ -137,8 +137,36 @@ body {
     font-weight: bold; margin-bottom: 15px; font-size: 18px;
     color: #2c3e50; white-space: nowrap;
 }
+
+/* Niebieski tekst */
+.btn-regulamin {
+    font-size: 20px;
+    padding: 18px 34px;
+    min-height: 70px;
+    font-weight: 700;
+    border: 3px solid #38afe7;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #e8f6fd 0%, #b8e2f7 100%);
+    color: #0d5a80;
+    letter-spacing: .5px;
+    box-shadow: 0 4px 12px rgba(56,175,231,.35);
+    transition: all .3s;
+}
+.btn-regulamin:hover {
+    background: linear-gradient(to bottom, #b8e2f7 0%, #7fcded 100%);
+    border-color: #1e8bc4;
+    color: #083d59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(56,175,231,.55);
+}
+
+.btn-regulamin:active {
+    transform: translateY(0) scale(.98);
+}
+
+/* Złoty tekst */
 .zloty-tekst {
-    color: #38afe7; text-shadow: 1px 1px 1px rgba(0,0,0,.15);    /* dla złotego tekstu Lubicz #C5A028*/
+    color: #38afe7; text-shadow: 1px 1px 1px rgba(0,0,0,.15);    /*bright-blue dla złotego tekstu Lubicz #C5A028*/
     font-weight: bold; display: inline-block; padding-left: 40px; white-space: nowrap;
 }
 .przyciski { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
@@ -305,12 +333,24 @@ body {
     </div>
 </div>
 
-<!-- UWAGA -->
+<!-- Uwaga z przyciskiem -->
+<div class="turniej-blok">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div class="data-turnieju" style="margin-bottom:0;">
+            <span class="zloty-tekst">OSiR<br>29 września zaczynamy nowy cykl pod patronatem OSiR<br>Gramy jak zawsze w Lędowie o 17<br>Pola fioletowe obok zdjęć są klikalne</span>
+        </div>
+        <div class="przyciski">
+            <a href="shared/Reg7OSiR.html" class="btn btn-regulamin">📜 Regulamin</a>
+        </div>
+    </div>
+</div>
+
+<!-- UWAGA 
 <div class="turniej-blok">
     <div class="data-turnieju">
         <span class="zloty-tekst">OSiR<br>29 września zaczynamy nowy cykl pod patronatem OSiR <br> Gramy jak zawsze w Lędowie o 17<br>Pola fioletowe obok zdjęć są klikalne</span>
     </div>
-</div> 
+</div> -->
 
 <!-- TURNIEJ Z LOGO 
 <div class="turniej-blok z-logo">

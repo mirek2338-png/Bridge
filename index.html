@@ -283,6 +283,29 @@ body {
     background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%) !important;
     border-color: #64b5f6 !important;
 }
+/* ===== GALERIA ZDJĘĆ ===== */
+.galeria-zdjec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+}
+.galeria-zdjec a { display: block; line-height: 0; }
+.galeria-zdjec img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    cursor: pointer;
+}
+.galeria-zdjec img:hover {
+    transform: scale(1.05) translateY(-2px);
+    border-color: #64b5f6;
+    box-shadow: 0 6px 16px rgba(100,181,246,.5);
+}
 </style>
 </head>
 <body>
@@ -381,7 +404,7 @@ body {
         <button class="btn toggle-archiwum" data-target="biuletyn-archiwum">📖 Biuletyn (archiwum)</button>
         <button class="btn toggle-archiwum" data-target="dluga-archiwum">🌊 Długa Fala (archiwum)</button>
                 <!-- NOWE PRZYCISKI -->        
-        <a href="zdjecia/index.html" class="btn" target="_blank" rel="noopener">📷 Zdjęcia</a>
+        <button class="btn toggle-archiwum" data-target="zdjecia-archiwum">📷 Zdjęcia</button>
         <a href="https://brydzslupski.pl/" class="btn btn-przesuniety" target="_blank" rel="noopener">🔗 STB Słupsk</a>
     </div>
     
@@ -441,6 +464,61 @@ body {
             </div>
         </div>
     </div>
+    <!-- ================= ZDJĘCIA W PODFOLDERACH ================= -->
+<div id="zdjecia-archiwum" class="archiwum-content" hidden>
+    <div class="folder-tree">
+
+        <!-- Podfolder: 2025 
+        <button class="folder-toggle" data-target="zdjecia-2025">📂 2025</button>
+        <div id="zdjecia-2025" class="folder-content" hidden>
+            <div class="galeria-zdjec">
+                <a href="zdjecia/2025/zawody-01.jpg" target="_blank" rel="noopener">
+                    <img src="zdjecia/2026/zawody-01.jpg" alt="Zawody 2025-01">
+                </a>
+                <a href="zdjecia/2025/zawody-02.jpg" target="_blank" rel="noopener">
+                    <img src="zdjecia/2025/zawody-02.jpg" alt="Zawody 2025-02">
+                </a>
+            </div>
+        </div> -->
+
+        <!-- Podfolder: 2026 -->
+        <button class="folder-toggle" data-target="zdjecia-2026">📂 2026</button>
+        <div id="zdjecia-2026" class="folder-content" hidden>
+            <div class="galeria-zdjec">
+                <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz" target="_blank" rel="noopener">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/01.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/05.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/04.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/03.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/07.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/08.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/02.jpg" alt="19 GP Lubicz">
+                    <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/06.jpg" alt="19 GP Lubicz">
+                </a>
+                <!--<a href="zdjecia/2026/dluga-fala-02.jpg" target="_blank" rel="noopener">
+                    <img src="zdjecia/2026/dluga-fala-02.jpg" alt="Długa Fala 2026-02">
+                </a> -->
+            </div>
+        </div>
+
+        <!-- Podfolder: Podium (jeśli chcesz trzymać zdjęcia zwycięzców osobno) 
+        <button class="folder-toggle" data-target="zdjecia-podium">📂 Podium</button>
+        <div id="zdjecia-podium" class="folder-content" hidden>
+            <div class="galeria-zdjec">
+                <a href="Podium/Boguś.png" target="_blank" rel="noopener">
+                    <img src="Podium/Boguś.png" alt="Boguś">
+                </a>
+                <a href="Podium/Olga.png" target="_blank" rel="noopener">
+                    <img src="Podium/Olga.png" alt="Olga">
+                </a>
+                <a href="Podium/Jan.png" target="_blank" rel="noopener">
+                    <img src="Podium/Jan.png" alt="Jan">
+                </a>
+            </div>
+        </div>-->
+
+    </div>
+</div>
 </div>
 
 <!-- STOPKA -->

@@ -7,45 +7,39 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { overflow-x: hidden; }
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
     color: #333;
     padding: 20px;
-    width: 1200px;
+    width: 1200px;         /* stała szerokość projektu – skalowana przez JS */
     margin: 0 auto;
-    /*overflow: auto;
-    transform-origin: top left;   /* kluczowe dla skalowania */
+    /* zoom ustawia skrypt na dole */
 }
 
 /* ===== NAGŁÓWEK dla OSiR ===== */
-
 .naglowek-kontener {
-    display: flex; 
-    align-items: center;              /* wyrównanie w pionie do środka */
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 15px; 
-    margin-bottom: 20px; 
-    padding: 15px 20px;               /* mniejszy padding */
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 12px; 
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-.naglowek-logo { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px;                        /* mniejszy odstęp między logami */
+.naglowek-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
 }
-
 .logo-ustka,
-.logo-sponsor-naglowek { 
-    height: 100px;                     /* ← było 120px – teraz 70px */
-    width: auto; 
-    display: block; 
+.logo-sponsor-naglowek {
+    height: 100px;
+    width: auto;
+    display: block;
     transition: transform .3s;
     object-fit: contain;
 }
@@ -53,54 +47,28 @@ body {
 .logo-sponsor-naglowek:hover { transform: scale(1.05); }
 
 .naglowek-tytul h1 {
-    font-size: 26px;                  /* ← było 32px */
+    font-size: 26px;
     color: #2c3e50;
     text-shadow: 1px 1px 2px rgba(0,0,0,.1);
-    white-space: nowrap; 
+    white-space: nowrap;
     text-align: center;
     line-height: 1.2;
 }
-
 .naglowek-dane {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    font-size: 12px;                  /* ← było 13px */
+    font-size: 12px;
     line-height: 1.5;
-    border-left: 3px solid #3498db; 
+    border-left: 3px solid #3498db;
     padding: 10px 15px;
-    color: #34495e; 
+    color: #34495e;
     background: rgba(255,255,255,.3);
-    border-radius: 10px; 
-    gap: 6px; 
-    white-space: nowrap; 
+    border-radius: 10px;
+    gap: 6px;
+    white-space: nowrap;
     text-align: left;
     flex-shrink: 0;
 }
-
-/* ===== NAGŁÓWEK dla Lubicz ===== 
-.naglowek-kontener {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 20px; margin-bottom: 20px; padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.naglowek-logo { display: flex; align-items: center; gap: 15px; }
-.logo-ustka,
-.logo-sponsor-naglowek { height: 120px; width: auto; display: block; transition: transform .3s; }
-.logo-ustka:hover,
-.logo-sponsor-naglowek:hover { transform: scale(1.05); }
-.naglowek-tytul h1 {
-    font-size: 32px; color: #2c3e50;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
-    white-space: nowrap; text-align: center;
-}
-.naglowek-dane {
-    display: flex; flex-direction: column;
-    font-size: 13px; line-height: 1.6;
-    border-left: 3px solid #3498db; padding: 12px 20px;
-    color: #34495e; background: rgba(255,255,255,.3);
-    border-radius: 10px; gap: 8px; white-space: nowrap; text-align: left;
-} */
 
 /* ===== STOPKA ===== */
 .stopka-kontener {
@@ -138,7 +106,6 @@ body {
     color: #2c3e50; white-space: nowrap;
 }
 
-/* Niebieski tekst */
 .btn-regulamin {
     font-size: 20px;
     padding: 18px 34px;
@@ -159,14 +126,10 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(56,175,231,.55);
 }
+.btn-regulamin:active { transform: translateY(0) scale(.98); }
 
-.btn-regulamin:active {
-    transform: translateY(0) scale(.98);
-}
-
-/* Złoty tekst */
 .zloty-tekst {
-    color: #38afe7; text-shadow: 1px 1px 1px rgba(0,0,0,.15);    /*bright-blue dla złotego tekstu Lubicz #C5A028*/
+    color: #38afe7; text-shadow: 1px 1px 1px rgba(0,0,0,.15);
     font-weight: bold; display: inline-block; padding-left: 15px; white-space: nowrap;
 }
 .przyciski { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
@@ -283,6 +246,7 @@ body {
     background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%) !important;
     border-color: #64b5f6 !important;
 }
+
 /* ===== GALERIA ZDJĘĆ ===== */
 .galeria-zdjec {
     display: grid;
@@ -306,24 +270,6 @@ body {
     border-color: #64b5f6;
     box-shadow: 0 6px 16px rgba(100,181,246,.5);
 }
-
-<script>
-(function () {
-    // szerokość projektu: 1200px body + 2 × 20px padding = 1240px
-    const SZEROKOSC_PROJEKTU = 1240;
-
-    function dopasuj() {
-        const skala = Math.min(1, window.innerWidth / SZEROKOSC_PROJEKTU);
-        document.body.style.zoom = skala;
-        // alternatywnie: document.body.style.zoom = skala.toString();
-    }
-
-    window.addEventListener('resize', dopasuj);
-    window.addEventListener('orientationchange', dopasuj);
-    window.addEventListener('load', dopasuj);
-    dopasuj();
-})();
-</script>
 </style>
 </head>
 <body>
@@ -365,15 +311,7 @@ body {
     <div class="logo-sponsora-kontener">
         <img src="image/OSiR" alt="Logo sponsora" class="logo-sponsora">
     </div>
-</div> 
-
-<!-- UWAGA dla Lubicz
-<div class="turniej-blok">
-    <div class="data-turnieju">
-        <span class="zloty-tekst">Uwaga:<br>22 września uroczyste zakończenie cyklu w hotelu Grand Lubicz "Uzdrowisko Ustka" o godzinie 17:00 <br> darmowy parking w ośrodku Słoneczna ul. Wczasowa 6</span>
-    </div>
-</div> -->
-
+</div>
 
 <!-- PODIUM -->
 <div class="blok-turnieju">
@@ -396,58 +334,16 @@ body {
     </div>
 </div>
 
-<!-- Uwaga z przyciskiem 
-<div class="turniej-blok">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
-        <div class="data-turnieju" style="margin-bottom:0;">
-            <span class="zloty-tekst">OSiR<br>29 września zaczynamy nowy cykl pod patronatem OSiR<br>Gramy jak zawsze w Lędowie o 17<br>Pola fioletowe obok zdjęć są klikalne</span>
-        </div>
-        <div class="przyciski">
-            <a href="shared/Reg7OSiR.html" class="btn btn-regulamin">📜 Regulamin</a>
-        </div>
-    </div>
-</div> -->
-
-<!-- UWAGA 
-<div class="turniej-blok">
-    <div class="data-turnieju">
-        <span class="zloty-tekst">OSiR<br>29 września zaczynamy nowy cykl pod patronatem OSiR <br> Gramy jak zawsze w Lędowie o 17<br>Pola fioletowe obok zdjęć są klikalne</span>
-    </div>
-</div> -->
-
-<!-- TURNIEJ Z LOGO 
-<div class="turniej-blok z-logo">
-    <div class="turniej-tresc">
-        <div class="data-turnieju">
-            📆 Turniej 2026-09-29
-            <span class="zloty-tekst">19 GP 2026 patronat Grand Lubicz "Uzdrowisko Ustka"</span>
-        </div>
-        <div class="przyciski">
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_wyniki_95.txt" class="btn">Wyniki</a>
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_historia_95.txt" class="btn">Historia</a>
-            <a href="turnieje/0915UF.html" class="btn">Długa Fala</a>
-            <a href="https://brydzslupski.pl/moduly/kalendarz/pliki/2026_09_15_protokoly_95.txt" class="btn">Protokóły</a>
-            <a href="#" class="btn btn-przesuniety">Boguś omawia</a>
-            <a href="shared/Reg19Lubicz.html" class="btn">Regulamin</a>
-            <a href="shared/Ikona na telefonie.html" class="btn">Ikona na telefonie</a>
-        </div>
-    </div>
-    <div class="logo-sponsora-kontener">
-        <img src="image/OSiR" alt="Logo sponsora" class="logo-sponsora">
-    </div>
-</div> -->
-
 <!-- ARCHIWUM -->
 <div class="turniej-blok">
     <div class="data-turnieju">📦 Archiwum turniejów i nie tylko</div>
     <div class="przyciski">
         <button class="btn toggle-archiwum" data-target="biuletyn-archiwum">📖 Biuletyn (archiwum)</button>
         <button class="btn toggle-archiwum" data-target="dluga-archiwum">🌊 Długa Fala (archiwum)</button>
-                <!-- NOWE PRZYCISKI -->        
         <button class="btn toggle-archiwum" data-target="zdjecia-archiwum">📷 Zdjęcia</button>
         <a href="https://brydzslupski.pl/" class="btn btn-przesuniety" target="_blank" rel="noopener">🔗 STB Słupsk</a>
     </div>
-    
+
     <div id="biuletyn-archiwum" class="archiwum-content" hidden>
         <div class="folder-tree">
             <button class="folder-toggle" data-target="bogus-2026-folder">📂 2026_01_09</button>
@@ -504,72 +400,41 @@ body {
             </div>
         </div>
     </div>
+
     <!-- ================= ZDJĘCIA W PODFOLDERACH ================= -->
-<div id="zdjecia-archiwum" class="archiwum-content" hidden>
-    <div class="folder-tree">
-
-        <!-- Podfolder: 2025 
-        <button class="folder-toggle" data-target="zdjecia-2025">📂 2025</button>
-        <div id="zdjecia-2025" class="folder-content" hidden>
-            <div class="galeria-zdjec">
-                <a href="zdjecia/2025/zawody-01.jpg" target="_blank" rel="noopener">
-                    <img src="zdjecia/2026/zawody-01.jpg" alt="Zawody 2025-01">
-                </a>
-                <a href="zdjecia/2025/zawody-02.jpg" target="_blank" rel="noopener">
-                    <img src="zdjecia/2025/zawody-02.jpg" alt="Zawody 2025-02">
-                </a>
+    <div id="zdjecia-archiwum" class="archiwum-content" hidden>
+        <div class="folder-tree">
+            <button class="folder-toggle" data-target="zdjecia-2026">📂 19 Lubicz 2026</button>
+            <div id="zdjecia-2026" class="folder-content" hidden>
+                <div class="galeria-zdjec">
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/01.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/01.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/05.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/05.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/04.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/04.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/03.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/03.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/07.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/07.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/08.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/08.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/02.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/02.jpg" alt="19 GP Lubicz">
+                    </a>
+                    <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/06.jpg" target="_blank" rel="noopener">
+                        <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/06.jpg" alt="19 GP Lubicz">
+                    </a>
+                </div>
             </div>
-        </div> -->
-
-<!-- Podfolder: 2026 -->
-<button class="folder-toggle" data-target="zdjecia-2026">📂 19 Lubicz 2026</button>
-<div id="zdjecia-2026" class="folder-content" hidden>
-    <div class="galeria-zdjec">
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/01.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/01.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/05.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/05.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/04.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/04.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/03.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/03.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/07.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/07.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/08.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/08.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/02.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/02.jpg" alt="19 GP Lubicz">
-        </a>
-        <a href="zdjęcia/zdjęcia-2026/19-GP-Lubicz/06.jpg" target="_blank" rel="noopener">
-            <img src="zdjęcia/zdjęcia-2026/19-GP-Lubicz/06.jpg" alt="19 GP Lubicz">
-        </a>
+        </div>
     </div>
-</div>
-
-        <!-- Podfolder: Podium (jeśli chcesz trzymać zdjęcia zwycięzców osobno) 
-        <button class="folder-toggle" data-target="zdjecia-podium">📂 Podium</button>
-        <div id="zdjecia-podium" class="folder-content" hidden>
-            <div class="galeria-zdjec">
-                <a href="Podium/Boguś.png" target="_blank" rel="noopener">
-                    <img src="Podium/Boguś.png" alt="Boguś">
-                </a>
-                <a href="Podium/Olga.png" target="_blank" rel="noopener">
-                    <img src="Podium/Olga.png" alt="Olga">
-                </a>
-                <a href="Podium/Jan.png" target="_blank" rel="noopener">
-                    <img src="Podium/Jan.png" alt="Jan">
-                </a>
-            </div>
-        </div>-->
-
-    </div>
-</div>
 </div>
 
 <!-- STOPKA -->
@@ -592,25 +457,62 @@ body {
 </div>
 
 <script>
-/* ---- Skalowanie całej strony do szerokości ekranu ---- */
-function skalujStrone() {
-    const skala = Math.min(1, window.innerWidth / 1200);
-    document.body.style.transform = 'scale(' + skala + ')';
-    // kompensacja wysokości (transform nie zmienia layoutu, tylko wygląd)
-    document.body.style.marginBottom =
-        (-(document.body.offsetHeight * (1 - skala))) + 'px';
-}
-window.addEventListener('load', skalujStrone);
-window.addEventListener('resize', skalujStrone);
-window.addEventListener('orientationchange', skalujStrone);
-skalujStrone();
+/* =====================================================================
+   SKALOWANIE CAŁEJ STRONY DO SZEROKOŚCI EKRANU (bez zawijania)
+   - mierzy REALNĄ szerokość treści (scrollWidth), nie stałą wartość
+   - używa `zoom`, który zmienia layout (nie tylko wygląd jak `transform`)
+   - dzięki temu na telefonie strona mieści się w 100% szerokości ekranu
+   - wysokość pozostaje przewijana w pionie
+   ===================================================================== */
+(function () {
+    var body = document.body;
+
+    function skaluj() {
+        // 1) reset zoomu, żeby zmierzyć naturalną szerokość
+        body.style.zoom = '1';
+        document.documentElement.style.zoom = '1';
+
+        // 2) wymuś przeliczenie layoutu
+        void body.offsetWidth;
+
+        // 3) faktyczna szerokość treści – bierzemy maksimum z kilku metod
+        var szerokosc = Math.max(
+            body.scrollWidth,
+            body.offsetWidth,
+            document.documentElement.scrollWidth,
+            body.getBoundingClientRect().width
+        );
+
+        // 4) dostępna szerokość okna (bez paska przewijania)
+        var dostepna = document.documentElement.clientWidth || window.innerWidth;
+
+        // 5) skala – nigdy > 1 (na dużym ekranie body zostaje 1200px)
+        var skala = Math.min(1, dostepna / szerokosc);
+
+        // 6) zastosuj
+        body.style.zoom = skala;
+    }
+
+    // pierwszy strzał od razu
+    skaluj();
+    // ponownie po sparsowaniu DOM i wczytaniu zasobów
+    document.addEventListener('DOMContentLoaded', skaluj);
+    window.addEventListener('load', skaluj);
+    window.addEventListener('resize', skaluj);
+    window.addEventListener('orientationchange', function () {
+        setTimeout(skaluj, 250);
+    });
+    // poprawki po wczytaniu obrazków / fontów
+    setTimeout(skaluj, 300);
+    setTimeout(skaluj, 1000);
+})();
 
 /* ---- Archiwum: główne przyciski ---- */
-document.querySelectorAll('.toggle-archiwum').forEach(button => {
+document.querySelectorAll('.toggle-archiwum').forEach(function (button) {
     button.addEventListener('click', function () {
-        const targetDiv = document.getElementById(this.getAttribute('data-target'));
+        var targetDiv = document.getElementById(this.getAttribute('data-target'));
         if (!targetDiv) return;
-        document.querySelectorAll('.archiwum-content').forEach(c => {
+        document.querySelectorAll('.archiwum-content').forEach(function (c) {
             if (c.id !== targetDiv.id) c.hidden = true;
         });
         targetDiv.hidden = !targetDiv.hidden;
@@ -618,22 +520,22 @@ document.querySelectorAll('.toggle-archiwum').forEach(button => {
 });
 
 /* ---- Archiwum: rozwijanie folderów ---- */
-document.querySelectorAll('.folder-toggle').forEach(button => {
+document.querySelectorAll('.folder-toggle').forEach(function (button) {
     button.addEventListener('click', function (e) {
         e.stopPropagation();
-        const targetDiv = document.getElementById(this.getAttribute('data-target'));
+        var targetDiv = document.getElementById(this.getAttribute('data-target'));
         if (targetDiv) targetDiv.hidden = !targetDiv.hidden;
     });
 });
 
 /* ---- Fioletowe pola: otwarcie w tej samej karcie ---- */
-document.querySelectorAll('.pole-klikalne').forEach(pole => {
-    const otworz = () => {
-        const plik = pole.getAttribute('data-plik');
+document.querySelectorAll('.pole-klikalne').forEach(function (pole) {
+    var otworz = function () {
+        var plik = pole.getAttribute('data-plik');
         if (plik) window.location.href = plik;
     };
     pole.addEventListener('click', otworz);
-    pole.addEventListener('keydown', e => {
+    pole.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); otworz(); }
     });
 });

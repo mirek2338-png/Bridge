@@ -16,7 +16,7 @@ body {
     padding: 20px;
     width: 1200px;
     margin: 0 auto;
-    overflow: auto;
+    /*overflow: auto;
     transform-origin: top left;   /* kluczowe dla skalowania */
 }
 
@@ -306,6 +306,24 @@ body {
     border-color: #64b5f6;
     box-shadow: 0 6px 16px rgba(100,181,246,.5);
 }
+
+<script>
+(function () {
+    // szerokość projektu: 1200px body + 2 × 20px padding = 1240px
+    const SZEROKOSC_PROJEKTU = 1240;
+
+    function dopasuj() {
+        const skala = Math.min(1, window.innerWidth / SZEROKOSC_PROJEKTU);
+        document.body.style.zoom = skala;
+        // alternatywnie: document.body.style.zoom = skala.toString();
+    }
+
+    window.addEventListener('resize', dopasuj);
+    window.addEventListener('orientationchange', dopasuj);
+    window.addEventListener('load', dopasuj);
+    dopasuj();
+})();
+</script>
 </style>
 </head>
 <body>
